@@ -10,15 +10,15 @@ const config: Config = {
     extend: {
       colors: {
         "cei-blue": "#1d4ed8",
-        "cei-sky": "#38bdf8",
+        "cei-sky": "#2563eb",
         "cei-terminal": "#22c55e",
-        "cei-window": "#e9f2ff",
-        "cei-shadow": "#09245f",
-        "cei-alert": "#facc15"
+        "cei-window": "#e5e7eb",
+        "cei-shadow": "#0f2a5f",
+        "cei-alert": "#fde047"
       },
       boxShadow: {
-        "xp-window": "inset 1px 1px 0 #ffffff, inset -2px -2px 0 #7aa7e8, 8px 10px 0 rgba(7, 24, 75, 0.28)",
-        "pixel": "4px 4px 0 #09245f"
+        "xp-window": "inset 1px 1px 0 #ffffff, inset -1px -1px 0 #8aa0bd, 5px 6px 0 rgba(7, 17, 31, 0.26)",
+        "pixel": "3px 3px 0 rgba(15, 42, 95, 0.7)"
       },
       fontFamily: {
         sans: ["Inter", "Arial", "Helvetica", "sans-serif"],

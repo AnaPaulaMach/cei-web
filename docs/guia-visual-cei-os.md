@@ -1,23 +1,23 @@
-# Guia visual CEI OS
+# Guia visual CEI
 
 ## Concepto
 
-CEI OS es la identidad visual del sitio: un mini sistema operativo de la Comision de Estudiantes de Informatica. Debe sentirse como un escritorio retro universitario, con ventanas, barra de tareas, accesos directos, paneles de sistema, terminales y detalles pixelados.
+La identidad visual del sitio es la de un mini escritorio retro de la Comision de Estudiantes de Informatica. Debe sentirse como un espacio informatico universitario, con ventanas, barra de tareas, accesos directos, paneles de sistema, terminales y detalles pixelados.
 
 La referencia es Windows XP / Minecraft / informatica retro, pero adaptada a CEI. No se copian marcas, logos ni interfaces exactas.
 
-## Paleta inicial
+## Paleta principal
 
-- Azul CEI: `#1d4ed8`
-- Azul cielo: `#38bdf8`
+- Azul sistema: `#1d4ed8`
+- Azul oscuro: `#0f2a5f`
 - Verde terminal: `#22c55e`
-- Gris ventana: `#e9f2ff`
-- Azul sombra: `#09245f`
-- Amarillo alerta: `#facc15`
+- Gris ventana: `#e5e7eb`
+- Fondo laboratorio: `#102a43`
+- Amarillo alerta: `#fde047`
 - Blanco papel: `#ffffff`
 - Negro terminal: `#07111f`
 
-La paleta debe sentirse tecnologica y clara, no solo azul. Usar verde terminal y amarillo alerta para estados, llamados o badges.
+La paleta debe sentirse como un laboratorio de informatica retro: mas oscura y contenida que Windows XP puro, con azul como estructura, verde terminal para estados y amarillo solo para llamados importantes.
 
 ## Tipografias
 

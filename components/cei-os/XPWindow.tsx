@@ -8,13 +8,13 @@ type XPWindowProps = {
 
 export function XPWindow({ title, children, className = "" }: XPWindowProps) {
   return (
-    <div className={`overflow-hidden rounded-sm border-2 border-cei-shadow bg-cei-window shadow-xp-window ${className}`}>
-      <div className="flex items-center justify-between border-b-2 border-cei-shadow bg-gradient-to-r from-cei-blue to-cei-sky px-3 py-2 text-white">
+    <div className={`overflow-hidden rounded-sm border border-cei-shadow/70 bg-cei-window shadow-xp-window ${className}`}>
+      <div className="flex items-center justify-between border-b border-cei-shadow/70 bg-gradient-to-r from-cei-blue to-cei-sky px-3 py-2 text-white">
         <span className="truncate font-mono text-sm font-black">{title}</span>
         <div aria-hidden="true" className="flex gap-1">
-          <span className="grid h-5 w-5 place-items-center border border-white bg-cei-window text-xs font-black text-cei-shadow">_</span>
-          <span className="grid h-5 w-5 place-items-center border border-white bg-cei-window text-xs font-black text-cei-shadow">[]</span>
-          <span className="grid h-5 w-5 place-items-center border border-white bg-red-500 text-xs font-black text-white">x</span>
+          <span className="grid h-5 w-5 place-items-center border border-white/70 bg-cei-window text-xs font-black text-cei-shadow">_</span>
+          <span className="grid h-5 w-5 place-items-center border border-white/70 bg-cei-window text-xs font-black text-cei-shadow">[]</span>
+          <span className="grid h-5 w-5 place-items-center border border-white/70 bg-red-500 text-xs font-black text-white">x</span>
         </div>
       </div>
       <div className="p-5 md:p-6">{children}</div>

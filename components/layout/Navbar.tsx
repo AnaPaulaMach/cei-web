@@ -4,10 +4,10 @@ import { navLinks } from "@/data/commission";
 
 export function Navbar() {
   return (
-    <header className="fixed left-0 right-0 top-0 z-40 border-b-2 border-cei-shadow bg-cei-window/95 shadow-pixel backdrop-blur">
-      <nav className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 lg:flex-row lg:items-center lg:justify-between">
-        <Link className="flex w-fit items-center gap-3 font-mono font-black text-cei-shadow" href="/">
-          <span className="grid h-10 w-10 place-items-center rounded-sm border-2 border-cei-shadow bg-white shadow-pixel">
+    <header className="relative z-40 border-b border-[#07111f] bg-[#123a7a] text-white shadow-[0_3px_0_rgba(7,17,31,0.35)]">
+      <nav className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-3 lg:flex-row lg:items-center lg:justify-between">
+        <Link className="flex w-fit items-center gap-3 font-mono font-black text-white" href="/">
+          <span className="grid h-10 w-10 place-items-center rounded-sm border border-[#07111f] bg-white shadow-[3px_3px_0_rgba(7,17,31,0.55)]">
             <Image
               alt="Logo CEI"
               className="h-8 w-8 object-contain"
@@ -16,11 +16,15 @@ export function Navbar() {
               width={32}
             />
           </span>
-          <span>CEI OS</span>
+          <span className="tracking-wide">CEI</span>
         </Link>
         <div className="flex gap-2 overflow-x-auto pb-1 lg:items-center lg:overflow-visible lg:pb-0">
           {navLinks.map((link) => (
-            <Link className="xp-button shrink-0 rounded-sm px-3 py-2 text-sm font-bold text-cei-shadow" href={link.href} key={link.href}>
+            <Link
+              className="shrink-0 rounded-sm border border-[#07111f] bg-gradient-to-b from-[#dbeafe] via-[#9fb9d8] to-[#6f8db6] px-3 py-2 text-sm font-black text-cei-shadow shadow-[3px_3px_0_rgba(7,17,31,0.5)] transition hover:-translate-y-0.5 hover:brightness-110 focus-visible:brightness-110"
+              href={link.href}
+              key={link.href}
+            >
               {link.label}
             </Link>
           ))}
