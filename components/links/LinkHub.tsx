@@ -11,16 +11,16 @@ type LinkHubProps = {
 
 export function LinkHub({ title, links }: LinkHubProps) {
   return (
-    <div className="rounded-sm border-2 border-cei-shadow bg-cei-window p-5 shadow-xp-window">
-      <p className="terminal-text text-sm font-bold uppercase">shortcuts</p>
-      <h2 className="mb-5 font-mono text-3xl font-black text-cei-shadow">{title}</h2>
+    <div className="rounded-sm border-2 border-cei-shadow bg-cei-window p-4 shadow-xp-window sm:p-5">
+      <p className="terminal-text text-xs font-bold uppercase sm:text-sm">shortcuts</p>
+      <h2 className="mb-4 font-mono text-2xl font-black text-cei-shadow sm:mb-5 sm:text-3xl">{title}</h2>
       <div className="grid gap-3">
         {links.map((link) => {
           const isExternal = link.href.startsWith("http");
 
           return (
             <a
-              className="xp-button rounded-sm p-4 text-cei-shadow"
+              className="xp-button rounded-sm p-3 text-cei-shadow sm:p-4"
               href={link.href}
               key={link.label}
               rel={isExternal ? "noopener noreferrer" : undefined}

@@ -17,7 +17,7 @@ export function XPWindow({ title, children, className = "" }: XPWindowProps) {
           <span className="grid h-5 w-5 place-items-center border border-white/70 bg-red-500 text-xs font-black text-white">x</span>
         </div>
       </div>
-      <div className="flex-1 p-5 md:p-6">{children}</div>
+      <div className="flex-1 p-4 md:p-6">{children}</div>
     </div>
   );
 }
