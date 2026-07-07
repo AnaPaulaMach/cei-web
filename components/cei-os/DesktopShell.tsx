@@ -7,7 +7,7 @@ type DesktopShellProps = {
 
 export function DesktopShell({ children }: DesktopShellProps) {
   return (
-    <div className="desktop-grid min-h-screen">
+    <div className="desktop-grid flex min-h-screen flex-col">
       {children}
       <Taskbar />
     </div>

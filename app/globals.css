@@ -52,8 +52,10 @@ textarea {
 }
 
 .site-main {
-  min-height: calc(100vh - 160px);
-  padding: 28px 16px 88px;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  padding: 28px 16px 32px;
 }
 
 .skip-link {
@@ -171,6 +173,7 @@ textarea {
 
 @media (min-width: 1024px) {
   .site-main {
-    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-top: 32px;
   }
 }
