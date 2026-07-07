@@ -6,11 +6,14 @@ import { Section } from "@/components/layout/Section";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { googleFormLinks } from "@/data/form-links";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Hackathon | CEI UNSE",
-  description: "Hackathon del Dia del Programador organizado por la CEI UNSE."
-};
+export const metadata = createPageMetadata({
+  title: "Hackathon",
+  description:
+    "Hackathon del Dia del Programador organizado por la CEI de la Universidad Nacional de Santiago del Estero el 12 y 13 de septiembre de 2026.",
+  path: "/hackathon"
+});
 
 const challengeTracks = [
   {
@@ -60,7 +63,8 @@ const faqs = [
   },
   {
     question: "Quien puede participar?",
-    answer: "Estudiantes de informatica y personas interesadas en tecnologia, especialmente de la comunidad UNSE."
+    answer:
+      "Estudiantes de informatica y personas interesadas en tecnologia, especialmente de la comunidad de la Universidad Nacional de Santiago del Estero."
   },
   {
     question: "Que tengo que llevar?",
@@ -93,7 +97,7 @@ export default function HackathonPage() {
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   <Badge>12-13 septiembre 2026</Badge>
-                  <Badge>FCEyT - UNSE</Badge>
+                  <Badge>FCEyT - Universidad Nacional de Santiago del Estero</Badge>
                 </div>
               </div>
             </div>

@@ -2,10 +2,14 @@ import { XPWindow } from "@/components/cei-os/XPWindow";
 import { GoogleFormPanel } from "@/components/forms/GoogleFormPanel";
 import { Section } from "@/components/layout/Section";
 import { googleFormLinks } from "@/data/form-links";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Censo | CEI UNSE"
-};
+export const metadata = createPageMetadata({
+  title: "Censo estudiantil",
+  description:
+    "Censo estudiantil de la CEI de la Universidad Nacional de Santiago del Estero para relevar necesidades de las carreras de informatica.",
+  path: "/censo"
+});
 
 export default function CensoPage() {
   return (
