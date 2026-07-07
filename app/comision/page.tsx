@@ -36,10 +36,6 @@ export default function ComisionPage() {
                 Somos una organizacion estudiantil sin fines de lucro que representa a estudiantes de informatica de la
                 Universidad Nacional de Santiago del Estero.
               </p>
-              <p>
-                Buscamos acompanar la vida academica, abrir espacios de participacion y fortalecer el vinculo entre
-                estudiantes, docentes y autoridades.
-              </p>
             </div>
           </div>
         </XPWindow>
