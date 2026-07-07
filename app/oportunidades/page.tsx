@@ -3,10 +3,14 @@ import { Section } from "@/components/layout/Section";
 import { OpportunityFolder } from "@/components/opportunities/OpportunityFolder";
 import { DataNotice } from "@/components/ui/DataNotice";
 import { getAllOpportunities } from "@/lib/opportunities";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Oportunidades | CEI UNSE"
-};
+export const metadata = createPageMetadata({
+  title: "Oportunidades",
+  description:
+    "Cursos, becas, pasantias, trabajos, convocatorias, recursos y avisos utiles para estudiantes de informatica.",
+  path: "/oportunidades"
+});
 
 export default async function OportunidadesPage() {
   const opportunitiesResult = await getAllOpportunities();

@@ -1,11 +1,12 @@
 import { mockOpportunities } from "@/data/mock-opportunities";
 import { formatShortDateLabel } from "@/lib/format";
 import { hasSupabaseConfig, supabase } from "@/lib/supabase";
-import type { ContentResult } from "@/lib/events";
+import type { ContentResult } from "@/types/content";
 import type { Database } from "@/types/database";
 import type { OpportunityItem } from "@/types/opportunities";
 
 type OpportunityRow = Database["public"]["Tables"]["oportunidades"]["Row"];
+const HOME_OPPORTUNITIES_LIMIT = 3;
 
 function sortOpportunities(opportunities: OpportunityItem[]) {
   return [...opportunities].sort((a, b) => Number(Boolean(b.highlighted)) - Number(Boolean(a.highlighted)));
@@ -30,7 +31,7 @@ function mapOpportunity(row: OpportunityRow): OpportunityItem {
 
 export async function getHomeOpportunities(): Promise<ContentResult<OpportunityItem>> {
   if (!hasSupabaseConfig || !supabase) {
-    return { items: sortOpportunities(mockOpportunities).slice(0, 4), source: "mock" };
+    return { items: sortOpportunities(mockOpportunities).slice(0, HOME_OPPORTUNITIES_LIMIT), source: "mock" };
   }
 
   const { data, error } = await supabase
@@ -38,11 +39,11 @@ export async function getHomeOpportunities(): Promise<ContentResult<OpportunityI
     .select("*")
     .order("destacado", { ascending: false })
     .order("fecha_publicacion", { ascending: false, nullsFirst: false })
-    .limit(4);
+    .limit(HOME_OPPORTUNITIES_LIMIT);
 
   if (error) {
     return {
-      items: sortOpportunities(mockOpportunities).slice(0, 4),
+      items: sortOpportunities(mockOpportunities).slice(0, HOME_OPPORTUNITIES_LIMIT),
       source: "mock",
       error: "No se pudo leer oportunidades desde Supabase. Mostramos datos de ejemplo."
     };

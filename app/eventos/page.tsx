@@ -2,10 +2,14 @@ import { EventBoard } from "@/components/events/EventBoard";
 import { Section } from "@/components/layout/Section";
 import { DataNotice } from "@/components/ui/DataNotice";
 import { getAllEvents } from "@/lib/events";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Eventos | CEI UNSE"
-};
+export const metadata = createPageMetadata({
+  title: "Eventos",
+  description:
+    "Eventos, asambleas, charlas, congresos y actividades de la CEI de la Universidad Nacional de Santiago del Estero.",
+  path: "/eventos"
+});
 
 export default async function EventosPage() {
   const eventsResult = await getAllEvents();

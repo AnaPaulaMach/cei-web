@@ -1,16 +1,11 @@
 import { mockEvents } from "@/data/mock-events";
 import { formatDateLabel } from "@/lib/format";
 import { hasSupabaseConfig, supabase } from "@/lib/supabase";
+import type { ContentResult } from "@/types/content";
 import type { Database } from "@/types/database";
 import type { EventItem } from "@/types/events";
 
 type EventRow = Database["public"]["Tables"]["eventos"]["Row"];
-
-export type ContentResult<T> = {
-  items: T[];
-  error?: string;
-  source: "mock" | "supabase";
-};
 
 function mapEvent(row: EventRow): EventItem {
   const category = row.categoria ?? "Aviso";
