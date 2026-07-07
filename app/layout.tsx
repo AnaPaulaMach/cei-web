@@ -1,13 +1,24 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { DesktopShell } from "@/components/cei-os/DesktopShell";
-import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import { createPageMetadata, siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "CEI UNSE",
-  description: "Sitio oficial de la Comision de Estudiantes de Informatica de la UNSE.",
+  ...createPageMetadata(),
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
+  keywords: [
+    "CEI UNSE",
+    "Comision de Estudiantes de Informatica",
+    "UNSE",
+    "FCEyT",
+    "informatica",
+    "eventos estudiantiles",
+    "hackathon"
+  ],
   icons: {
     icon: "/logo/logo_sin_fondo.png"
   }
@@ -21,11 +32,16 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
+        <a className="skip-link" href="#contenido">
+          Saltar al contenido
+        </a>
         <DesktopShell>
           <Navbar />
-          <main className="site-main">{children}</main>
-          <Footer />
+          <main className="site-main" id="contenido" tabIndex={-1}>
+            {children}
+          </main>
         </DesktopShell>
+        <Analytics />
       </body>
     </html>
   );
