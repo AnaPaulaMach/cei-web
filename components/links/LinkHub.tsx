@@ -23,10 +23,17 @@ export function LinkHub({ title, links }: LinkHubProps) {
               className="xp-button rounded-sm p-4 text-cei-shadow"
               href={link.href}
               key={link.label}
-              rel={isExternal ? "noreferrer" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
               target={isExternal ? "_blank" : undefined}
             >
-              <span className="block font-mono font-black">{link.label}</span>
+              <span className="flex flex-wrap items-center gap-2 font-mono font-black">
+                {link.label}
+                {isExternal ? (
+                  <span className="rounded-sm border border-cei-shadow bg-white px-2 py-0.5 text-[10px] uppercase">
+                    externo
+                  </span>
+                ) : null}
+              </span>
               <span className="block text-sm">{link.description}</span>
             </a>
           );

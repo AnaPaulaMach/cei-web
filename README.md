@@ -13,7 +13,19 @@ Sitio oficial de la Comision de Estudiantes de Informatica (CEI - UNSE).
 
 ## Estilo
 
-La direccion visual es **CEI OS**: un escritorio retro de informatica universitaria inspirado en Windows XP, Minecraft, pixel art, terminales y ventanas clasicas, sin perder accesibilidad ni claridad.
+La direccion visual es un escritorio retro de informatica universitaria inspirado en Windows XP, Minecraft, pixel art, terminales y ventanas clasicas, sin perder accesibilidad ni claridad.
+
+## Colaboracion y sugerencias
+
+El repositorio es publico para que estudiantes y personas interesadas puedan ver como esta construido el sitio.
+
+Por ahora, si queres sugerir cambios, reportar un problema o colaborar, contactate primero con la Comision:
+
+- Mail: comisionlsiafines@gmail.com
+- Instagram: https://www.instagram.com/cei.unse/
+- Canal de WhatsApp: https://whatsapp.com/channel/0029Vb7pCRx2kNFuudDotL3R
+
+Si la propuesta avanza, la administracion del repositorio puede invitar colaboradores aprobados o recibir un pull request. No subas datos personales, claves, capturas privadas ni informacion sensible al repositorio.
 
 ## Primeros pasos
 

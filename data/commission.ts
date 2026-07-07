@@ -7,26 +7,50 @@ export const navLinks = [
   { label: "Contacto", href: "/contacto" }
 ];
 
-export const socialLinks = [
-  {
-    label: "Instagram",
-    href: "https://instagram.com/",
-    description: "Noticias, actividades y recordatorios."
-  },
-  {
-    label: "Canal de WhatsApp",
-    href: "https://whatsapp.com/channel/",
-    description: "Avisos rapidos para estudiantes."
-  },
-  {
-    label: "Discord",
-    href: "https://discord.com/",
-    description: "Comunidad, consultas y acompanamiento."
-  },
+export const contactLinks = [
   {
     label: "Mail",
     href: "mailto:comisionlsiafines@gmail.com",
     description: "Contacto institucional."
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/cei.unse/",
+    description: "Noticias, actividades y recordatorios."
+  },
+  {
+    label: "Canal de WhatsApp",
+    href: "https://whatsapp.com/channel/0029Vb7pCRx2kNFuudDotL3R",
+    description: "Avisos rapidos para estudiantes."
+  }
+];
+
+export const repositoryLink = {
+  label: "Codigo fuente",
+  href: "https://github.com/AnaPaulaMach/cei-web"
+};
+
+export const contactActionLinks = [
+  {
+    label: "Tengo una propuesta",
+    href: "mailto:comisionlsiafines@gmail.com?subject=Propuesta%20para%20la%20CEI",
+    eyebrow: "idea desbloqueada",
+    description: "Actividades, charlas o mejoras.",
+    shortcut: "IDEA"
+  },
+  {
+    label: "Quiero recibir avisos",
+    href: "https://whatsapp.com/channel/0029Vb7pCRx2kNFuudDotL3R",
+    eyebrow: "notificaciones",
+    description: "Comunicados y recordatorios.",
+    shortcut: "WA"
+  },
+  {
+    label: "Quiero ver novedades",
+    href: "https://www.instagram.com/cei.unse/",
+    eyebrow: "feed oficial",
+    description: "Fotos, placas y actividades.",
+    shortcut: "IG"
   }
 ];
 
