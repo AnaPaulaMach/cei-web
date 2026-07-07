@@ -23,6 +23,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   background:
     linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(29, 78, 216, 0.4)),
     radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.22), transparent 28%),
@@ -50,7 +51,7 @@ textarea {
 
 .site-main {
   min-height: calc(100vh - 160px);
-  padding: 112px 16px 96px;
+  padding: 148px 16px 96px;
 }
 
 .desktop-grid {
@@ -87,8 +88,68 @@ textarea {
   text-shadow: 0 0 12px rgba(34, 197, 94, 0.45);
 }
 
+.window-pop {
+  animation: window-pop 480ms ease-out both;
+}
+
+.boot-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.boot-line::after {
+  animation: scan 2.8s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateX(-100%);
+}
+
+@keyframes window-pop {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  45%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
 @media (min-width: 768px) {
   .site-main {
     padding-inline: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-main {
+    padding-top: 112px;
   }
 }

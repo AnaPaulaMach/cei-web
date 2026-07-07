@@ -16,6 +16,14 @@ export function Button({ children, href, variant = "primary", className = "" }: 
   ].join(" ");
 
   if (href) {
+    if (href.startsWith("http") || href.startsWith("mailto:")) {
+      return (
+        <a className={classes} href={href} rel={href.startsWith("http") ? "noreferrer" : undefined} target={href.startsWith("http") ? "_blank" : undefined}>
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link className={classes} href={href}>
         {children}

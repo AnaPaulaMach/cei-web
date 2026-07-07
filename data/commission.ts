@@ -33,27 +33,33 @@ export const socialLinks = [
 export const actionAreas = [
   {
     title: "Representacion",
-    description: "Canalizamos inquietudes, propuestas y reclamos ante autoridades."
+    description: "Canalizamos inquietudes, propuestas y reclamos ante autoridades.",
+    shortcut: "REP"
   },
   {
     title: "Desarrollo academico",
-    description: "Impulsamos jornadas, charlas, cursos y talleres para estudiantes."
+    description: "Impulsamos jornadas, charlas, cursos y talleres para estudiantes.",
+    shortcut: "DEV"
   },
   {
     title: "Comunidad",
-    description: "Creamos espacios de integracion, participacion y actividades."
+    description: "Creamos espacios de integracion, participacion y actividades.",
+    shortcut: "COM"
   },
   {
     title: "Vinculacion",
-    description: "Acompanamos proyectos con docentes, instituciones y comunidades tech."
+    description: "Acompanamos proyectos con docentes, instituciones y comunidades tech.",
+    shortcut: "NET"
   },
   {
     title: "Extension",
-    description: "Aplicamos la informatica para aportar a la comunidad."
+    description: "Aplicamos la informatica para aportar a la comunidad.",
+    shortcut: "EXT"
   },
   {
     title: "Censo anual",
-    description: "Relevamos necesidades para mejorar la situacion de las tres carreras."
+    description: "Relevamos necesidades para mejorar la situacion de las tres carreras.",
+    shortcut: "SQL"
   }
 ];
 

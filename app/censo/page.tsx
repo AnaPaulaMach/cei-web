@@ -1,5 +1,7 @@
 import { XPWindow } from "@/components/cei-os/XPWindow";
+import { GoogleFormPanel } from "@/components/forms/GoogleFormPanel";
 import { Section } from "@/components/layout/Section";
+import { googleFormLinks } from "@/data/form-links";
 
 export const metadata = {
   title: "Censo | CEI UNSE"
@@ -15,6 +17,11 @@ export default function CensoPage() {
           <p className="leading-7 text-slate-800">
             Este formulario servira para relevar necesidades de estudiantes de las tres carreras.
           </p>
+          <GoogleFormPanel
+            description="El censo se respondera desde Google Forms. Asi el sitio solo enlaza al formulario y los datos personales quedan administrados fuera de Supabase."
+            href={googleFormLinks.censo}
+            title="Formulario del censo"
+          />
         </div>
       </XPWindow>
     </Section>

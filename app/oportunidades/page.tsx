@@ -1,13 +1,16 @@
 import { XPWindow } from "@/components/cei-os/XPWindow";
 import { Section } from "@/components/layout/Section";
-import { OpportunityCard } from "@/components/opportunities/OpportunityCard";
-import { mockOpportunities } from "@/data/mock-opportunities";
+import { OpportunityFolder } from "@/components/opportunities/OpportunityFolder";
+import { DataNotice } from "@/components/ui/DataNotice";
+import { getAllOpportunities } from "@/lib/opportunities";
 
 export const metadata = {
   title: "Oportunidades | CEI UNSE"
 };
 
-export default function OportunidadesPage() {
+export default async function OportunidadesPage() {
+  const opportunitiesResult = await getAllOpportunities();
+
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
       <Section>
@@ -21,10 +24,9 @@ export default function OportunidadesPage() {
           </div>
         </XPWindow>
       </Section>
-      <Section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {mockOpportunities.map((opportunity) => (
-          <OpportunityCard key={opportunity.id} opportunity={opportunity} />
-        ))}
+      <DataNotice message={opportunitiesResult.error} />
+      <Section>
+        <OpportunityFolder opportunities={opportunitiesResult.items} />
       </Section>
     </div>
   );
