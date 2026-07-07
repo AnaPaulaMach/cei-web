@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cei-blue: #1d4ed8;
+  --cei-sky: #38bdf8;
+  --cei-terminal: #22c55e;
+  --cei-window: #e9f2ff;
+  --cei-shadow: #09245f;
+  --cei-alert: #facc15;
+  --cei-ink: #07111f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(29, 78, 216, 0.4)),
+    radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.22), transparent 28%),
+    linear-gradient(180deg, #7dd3fc 0%, #1d4ed8 52%, #0b2d78 100%);
+  color: var(--cei-ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cei-alert);
+  outline-offset: 3px;
+}
+
+.site-main {
+  min-height: calc(100vh - 160px);
+  padding: 112px 16px 96px;
+}
+
+.desktop-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.pixel-border {
+  border: 2px solid #07111f;
+  box-shadow: 4px 4px 0 #09245f;
+}
+
+.xp-button {
+  border: 2px solid #09245f;
+  background: linear-gradient(180deg, #ffffff 0%, #cfe6ff 52%, #8bbcff 100%);
+  box-shadow: inset 1px 1px 0 #ffffff, inset -2px -2px 0 #5a8ee6, 3px 3px 0 rgba(9, 36, 95, 0.32);
+}
+
+.xp-button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: inset 1px 1px 0 #ffffff, inset -2px -2px 0 #5a8ee6, 5px 5px 0 rgba(9, 36, 95, 0.32);
+}
+
+.xp-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: inset 2px 2px 0 #5a8ee6;
+}
+
+.terminal-text {
+  color: var(--cei-terminal);
+  font-family: "Courier New", ui-monospace, monospace;
+  text-shadow: 0 0 12px rgba(34, 197, 94, 0.45);
+}
+
+@media (min-width: 768px) {
+  .site-main {
+    padding-inline: 32px;
+  }
+}

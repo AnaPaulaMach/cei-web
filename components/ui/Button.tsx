@@ -1,0 +1,27 @@
+import Link from "next/link";
+import type { ReactNode } from "react";
+
+type ButtonProps = {
+  children: ReactNode;
+  href?: string;
+  variant?: "primary" | "secondary";
+  className?: string;
+};
+
+export function Button({ children, href, variant = "primary", className = "" }: ButtonProps) {
+  const classes = [
+    "xp-button inline-flex items-center justify-center rounded-sm px-4 py-2 font-mono text-sm font-black transition",
+    variant === "primary" ? "text-cei-shadow" : "bg-white text-cei-shadow",
+    className
+  ].join(" ");
+
+  if (href) {
+    return (
+      <Link className={classes} href={href}>
+        {children}
+      </Link>
+    );
+  }
+
+  return <button className={classes}>{children}</button>;
+}
