@@ -20,8 +20,7 @@ export default function ContactoPage() {
             <p className="terminal-text text-sm font-bold uppercase">canales oficiales</p>
             <h1 className="font-mono text-4xl font-black text-cei-shadow">Contacto</h1>
             <p className="max-w-2xl leading-7 text-slate-800">
-              Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comision. No usamos
-              formulario interno por ahora.
+              Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comision.
             </p>
           </div>
 

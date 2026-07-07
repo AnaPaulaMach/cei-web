@@ -5,7 +5,7 @@ import { navLinks } from "@/data/commission";
 export function Navbar() {
   return (
     <header className="relative z-40 border-b border-[#07111f] bg-[#123a7a] text-white shadow-[0_3px_0_rgba(7,17,31,0.35)]">
-      <nav className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-3 lg:flex-row lg:items-center lg:justify-between">
+      <nav className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 lg:flex-row lg:items-center lg:justify-between">
         <Link className="flex w-fit items-center gap-3 font-mono font-black text-white" href="/">
           <span className="grid h-10 w-10 place-items-center rounded-sm border border-[#07111f] bg-white shadow-[3px_3px_0_rgba(7,17,31,0.55)]">
             <Image
@@ -18,10 +18,10 @@ export function Navbar() {
           </span>
           <span className="tracking-wide">CEI</span>
         </Link>
-        <div className="flex gap-2 overflow-x-auto pb-1 lg:items-center lg:overflow-visible lg:pb-0">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:flex lg:items-center lg:overflow-visible">
           {navLinks.map((link) => (
             <Link
-              className="shrink-0 rounded-sm border border-[#07111f] bg-gradient-to-b from-[#dbeafe] via-[#9fb9d8] to-[#6f8db6] px-3 py-2 text-sm font-black text-cei-shadow shadow-[3px_3px_0_rgba(7,17,31,0.5)] transition hover:-translate-y-0.5 hover:brightness-110 focus-visible:brightness-110"
+              className="min-h-10 rounded-sm border border-[#07111f] bg-gradient-to-b from-[#dbeafe] via-[#9fb9d8] to-[#6f8db6] px-2.5 py-2 text-center text-xs font-black text-cei-shadow shadow-[2px_2px_0_rgba(7,17,31,0.45)] transition hover:-translate-y-0.5 hover:brightness-110 focus-visible:brightness-110 sm:text-sm lg:shrink-0 lg:px-3"
               href={link.href}
               key={link.href}
             >
