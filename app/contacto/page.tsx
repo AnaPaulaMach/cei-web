@@ -13,9 +13,9 @@ export const metadata = createPageMetadata({
 
 export default function ContactoPage() {
   return (
-    <Section className="mx-auto w-full max-w-4xl">
+    <Section className="mx-auto w-full max-w-5xl">
       <XPWindow title="contacto">
-        <div className="space-y-6">
+        <div className="space-y-7 lg:p-2">
           <div className="space-y-3">
             <p className="terminal-text text-sm font-bold uppercase">canales oficiales</p>
             <h1 className="font-mono text-4xl font-black text-cei-shadow">Contacto</h1>
@@ -25,13 +25,13 @@ export default function ContactoPage() {
             </p>
           </div>
 
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3">
             {contactLinks.map((link) => {
               const isExternal = link.href.startsWith("http");
 
               return (
                 <a
-                  className="rounded-sm border border-cei-shadow bg-white p-4 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-cei-window"
+                  className="rounded-sm border border-cei-shadow bg-white p-5 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-cei-window"
                   href={link.href}
                   key={link.label}
                   rel={isExternal ? "noopener noreferrer" : undefined}
