@@ -7,6 +7,8 @@ type EventCardProps = {
 };
 
 export function EventCard({ event }: EventCardProps) {
+  const imageUrls = event.imageUrls?.slice(0, 2) ?? [];
+
   return (
     <article
       className={`group relative overflow-hidden rounded-sm border-2 border-cei-shadow p-4 shadow-pixel transition hover:-translate-y-1 sm:p-5 ${
@@ -16,6 +18,19 @@ export function EventCard({ event }: EventCardProps) {
       <div className="absolute right-3 top-3 hidden font-mono text-5xl font-black text-cei-shadow/10 sm:block">
         {event.category.slice(0, 2).toUpperCase()}
       </div>
+      {imageUrls.length > 0 ? (
+        <div className="mb-4 grid gap-2 sm:grid-cols-2">
+          {imageUrls.map((url, index) => (
+            <div
+              aria-label={`Imagen ${index + 1} de ${event.title}`}
+              className="h-40 rounded-sm border-2 border-cei-shadow bg-cover bg-center shadow-[2px_2px_0_rgba(15,42,95,0.2)] sm:h-48"
+              key={url}
+              role="img"
+              style={{ backgroundImage: `url(${JSON.stringify(url)})` }}
+            />
+          ))}
+        </div>
+      ) : null}
       <div className="mb-3 flex flex-wrap items-center gap-2 sm:mb-4 sm:pr-16">
         <Badge>{event.category}</Badge>
         {event.highlighted ? <Badge>Destacado</Badge> : null}

@@ -10,7 +10,8 @@ insert into eventos (
   categoria,
   estado,
   destacado,
-  link
+  link,
+  imagen_url
 ) values
   (
     'Hackathon del Dia del Programador',
@@ -20,7 +21,8 @@ insert into eventos (
     'Hackathon',
     'proximo',
     true,
-    '/hackathon'
+    '/hackathon',
+    null
   ),
   (
     'Charla: como armar tu portfolio',
@@ -30,7 +32,8 @@ insert into eventos (
     'Charla',
     'proximo',
     false,
-    '/eventos'
+    '/eventos',
+    null
   ),
   (
     'Censo estudiantil anual',
@@ -40,7 +43,8 @@ insert into eventos (
     'Censo',
     'proximo',
     false,
-    '/censo'
+    '/censo',
+    null
   ),
   (
     'UNSE abre sus puertas',
@@ -50,7 +54,8 @@ insert into eventos (
     'Difusion',
     'proximo',
     false,
-    '/eventos'
+    '/eventos',
+    null
   ),
   (
     'Primera asamblea CEI',
@@ -60,7 +65,8 @@ insert into eventos (
     'Asamblea',
     'pasado',
     false,
-    '/eventos'
+    '/eventos',
+    '/eventos/asamblea-primera-1.jpeg, /eventos/asamblea-primera-2.jpeg'
   );
 
 insert into oportunidades (

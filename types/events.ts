@@ -11,4 +11,5 @@ export type EventItem = {
   status: "proximo" | "pasado";
   statusLabel?: string;
   highlighted?: boolean;
+  imageUrls?: string[];
 };

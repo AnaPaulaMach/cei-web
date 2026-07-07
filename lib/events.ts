@@ -7,6 +7,19 @@ import type { EventItem } from "@/types/events";
 
 type EventRow = Database["public"]["Tables"]["eventos"]["Row"];
 
+function parseImageUrls(value: string | null) {
+  if (!value) {
+    return undefined;
+  }
+
+  const urls = value
+    .split(/[\n,|]+/)
+    .map((url) => url.trim())
+    .filter((url) => url.startsWith("/") || url.startsWith("http://") || url.startsWith("https://"));
+
+  return urls.length > 0 ? urls : undefined;
+}
+
 function mapEvent(row: EventRow): EventItem {
   const category = row.categoria ?? "Aviso";
   const isHackathon = category.toLowerCase().includes("hack");
@@ -25,7 +38,8 @@ function mapEvent(row: EventRow): EventItem {
     cta: isHackathon ? "Inscribirme" : "Ver mas",
     status,
     statusLabel: status === "pasado" ? "Pasado" : "Proximo",
-    highlighted: Boolean(row.destacado)
+    highlighted: Boolean(row.destacado),
+    imageUrls: parseImageUrls(row.imagen_url)
   };
 }
 

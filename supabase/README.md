@@ -12,3 +12,5 @@ Para crear las tablas, correr `schema.sql` en el editor SQL de Supabase.
 Para cargar contenido inicial de ejemplo, correr `seed-public-content.sql` despues de crear las tablas. Conviene ejecutarlo una sola vez para no duplicar filas.
 
 Para actualizar eventos y oportunidades despues de la carga inicial, ver `docs/actualizar-contenido-supabase.md`.
+
+Si la asamblea ya estaba cargada antes de agregar imagenes, correr `update-asamblea-images.sql` para asociarle las fotos de prueba.

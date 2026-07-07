@@ -65,6 +65,7 @@ export const mockEvents: EventItem[] = [
     href: "/eventos",
     cta: "Ver resumen",
     status: "pasado",
-    statusLabel: "Pasado"
+    statusLabel: "Pasado",
+    imageUrls: ["/eventos/asamblea-primera-1.jpeg", "/eventos/asamblea-primera-2.jpeg"]
   }
 ];

@@ -27,6 +27,7 @@ No hace falta tocar codigo para cambiar fechas, titulos, links, descripciones o 
 - `estado`: `proximo` o `pasado`.
 - `destacado`: `true` para que aparezca primero en el tablero.
 - `link`: ruta interna, como `/hackathon`, `/censo`, `/eventos`, o link externo.
+- `imagen_url`: opcional. Puede ser una URL o varias URLs separadas por coma o salto de linea.
 
 ## Campos de oportunidades
 
@@ -38,6 +39,7 @@ No hace falta tocar codigo para cambiar fechas, titulos, links, descripciones o 
 - `fecha_limite`: opcional.
 - `destacado`: `true` para priorizarla.
 - `link`: enlace externo o interno.
+- `imagen_url`: opcional. El sitio puede usarla cuando se active visualmente para oportunidades.
 
 ## Prompt reutilizable
 
@@ -57,6 +59,7 @@ Tabla eventos:
 - estado: proximo o pasado
 - destacado: true o false
 - link
+- imagen_url: opcional, una URL o varias separadas por coma
 
 Tabla oportunidades:
 - titulo
@@ -67,6 +70,7 @@ Tabla oportunidades:
 - fecha_limite
 - destacado: true o false
 - link
+- imagen_url: opcional
 
 Reglas:
 - No inventes datos importantes. Si falta fecha, link o lugar, usa null o "A confirmar" segun corresponda.
