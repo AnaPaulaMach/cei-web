@@ -1,10 +1,7 @@
-import { TerminalPanel } from "@/components/cei-os/TerminalPanel";
 import { XPWindow } from "@/components/cei-os/XPWindow";
-import { LinkHub } from "@/components/links/LinkHub";
-import { QuickActionPanel } from "@/components/links/QuickActionPanel";
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
-import { contactActionLinks, contactLinks } from "@/data/commission";
+import { contactLinks } from "@/data/commission";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -16,52 +13,50 @@ export const metadata = createPageMetadata({
 
 export default function ContactoPage() {
   return (
-    <div className="mx-auto grid w-full max-w-6xl gap-6 lg:grid-cols-[1fr_0.85fr]">
-      <Section className="grid gap-6">
-        <XPWindow title="contacto/mensaje">
-          <div className="space-y-5">
-            <p className="terminal-text text-sm font-bold uppercase">contact channels</p>
+    <Section className="mx-auto w-full max-w-4xl">
+      <XPWindow title="contacto">
+        <div className="space-y-6">
+          <div className="space-y-3">
+            <p className="terminal-text text-sm font-bold uppercase">canales oficiales</p>
             <h1 className="font-mono text-4xl font-black text-cei-shadow">Contacto</h1>
-            <p className="leading-7 text-slate-800">
-              Para consultas, propuestas, avisos o actividades, escribinos por los canales oficiales. Por ahora no
-              usamos un formulario interno en el sitio.
+            <p className="max-w-2xl leading-7 text-slate-800">
+              Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comision. No usamos
+              formulario interno por ahora.
             </p>
-            <div className="grid gap-3">
-              <div className="rounded-sm border-2 border-cei-shadow bg-white p-4 shadow-pixel">
-                <p className="font-mono text-xs font-black uppercase text-cei-shadow">mail institucional</p>
-                <p className="mt-1 break-words text-lg font-black text-slate-900">comisionlsiafines@gmail.com</p>
-              </div>
-              <div className="rounded-sm border-2 border-cei-shadow bg-white p-4 shadow-pixel">
-                <p className="font-mono text-xs font-black uppercase text-cei-shadow">discord</p>
-                <p className="mt-1 font-bold text-slate-800">Por ahora no usamos este canal.</p>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <Button href="mailto:comisionlsiafines@gmail.com">Escribir mail</Button>
-              <Button href="https://www.instagram.com/cei.unse/" variant="secondary">
-                Ir a Instagram
-              </Button>
-            </div>
           </div>
-        </XPWindow>
-        <TerminalPanel
-          lines={[
-            "contacto.estado = canales_oficiales",
-            "mail = comisionlsiafines@gmail.com",
-            "instagram = @cei.unse",
-            "whatsapp = canal_de_avisos",
-            "discord = offline"
-          ]}
-        />
-        <QuickActionPanel
-          actions={contactActionLinks}
-          subtitle="Elegí segun lo que queres hacer. Menos vueltas, mas accion."
-          title="Necesito..."
-        />
-      </Section>
-      <Section>
-        <LinkHub links={contactLinks} title="Accesos directos" />
-      </Section>
-    </div>
+
+          <div className="grid gap-3 md:grid-cols-3">
+            {contactLinks.map((link) => {
+              const isExternal = link.href.startsWith("http");
+
+              return (
+                <a
+                  className="rounded-sm border border-cei-shadow bg-white p-4 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-cei-window"
+                  href={link.href}
+                  key={link.label}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  target={isExternal ? "_blank" : undefined}
+                >
+                  <span className="block font-mono text-xs font-black uppercase text-cei-shadow/75">
+                    {isExternal ? "externo" : "mail"}
+                  </span>
+                  <span className="mt-2 block font-mono text-xl font-black">{link.label}</span>
+                  <span className="mt-2 block text-sm leading-6 text-slate-700">{link.description}</span>
+                </a>
+              );
+            })}
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <Button href="mailto:comisionlsiafines@gmail.com?subject=Consulta%20para%20la%20CEI">
+              Escribir mail
+            </Button>
+            <Button href="https://whatsapp.com/channel/0029Vb7pCRx2kNFuudDotL3R" variant="secondary">
+              Canal de WhatsApp
+            </Button>
+          </div>
+        </div>
+      </XPWindow>
+    </Section>
   );
 }
