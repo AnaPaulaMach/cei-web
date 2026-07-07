@@ -11,7 +11,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "Hackathon",
   description:
-    "Hackathon del Dia del Programador organizado por la CEI de la Universidad Nacional de Santiago del Estero el 12 y 13 de septiembre de 2026.",
+    "Hackathon del Día del Programador organizado por la CEI de la Universidad Nacional de Santiago del Estero el 12 y 13 de septiembre de 2026.",
   path: "/hackathon"
 });
 
@@ -19,12 +19,12 @@ const challengeTracks = [
   {
     title: "Campus inteligente",
     tag: "UNSE",
-    description: "Ideas para mejorar la vida universitaria: turnos, avisos, mapas, recursos o acompanamiento."
+    description: "Ideas para mejorar la vida universitaria: turnos, avisos, mapas, recursos o acompañamiento."
   },
   {
     title: "Impacto social",
     tag: "EXT",
-    description: "Soluciones tecnologicas para necesidades reales de la comunidad y organizaciones locales."
+    description: "Soluciones tecnológicas para necesidades reales de la comunidad y organizaciones locales."
   },
   {
     title: "Herramientas para estudiar",
@@ -35,40 +35,40 @@ const challengeTracks = [
 
 const schedule = [
   {
-    day: "Sabado 12/09",
-    items: ["Acreditacion y apertura", "Presentacion de desafios", "Armado de equipos", "Talleres y hacking"]
+    day: "Sábado 12/09",
+    items: ["Acreditación y apertura", "Presentación de desafíos", "Armado de equipos", "Talleres y hacking"]
   },
   {
     day: "Domingo 13/09",
-    items: ["Mentorias", "Cierre de prototipos", "Demos finales", "Premiacion"]
+    items: ["Mentorías", "Cierre de prototipos", "Demos finales", "Premiación"]
   }
 ];
 
 const learningItems = [
   "Trabajo en equipo con tiempos reales",
-  "Prototipado rapido y validacion de ideas",
-  "Presentacion de proyectos frente a jurado",
-  "Buenas practicas para portfolio tecnico",
-  "Charlas, talleres y mentorias"
+  "Prototipado rápido y validación de ideas",
+  "Presentación de proyectos frente a jurado",
+  "Buenas prácticas para portfolio técnico",
+  "Charlas, talleres y mentorías"
 ];
 
 const faqs = [
   {
-    question: "Cuantas personas por equipo?",
-    answer: "La idea base es equipos de 3 o 4 personas. Tambien vamos a ayudar a formar equipos durante la apertura."
+    question: "¿Cuántas personas por equipo?",
+    answer: "La idea base es equipos de 3 o 4 personas. También vamos a ayudar a formar equipos durante la apertura."
   },
   {
-    question: "Es gratis?",
-    answer: "Si, la participacion esta pensada como gratuita para estudiantes. Los detalles finales se van a confirmar cerca del evento."
+    question: "¿Es gratis?",
+    answer: "Sí, la participación está pensada como gratuita para estudiantes. Los detalles finales se van a confirmar cerca del evento."
   },
   {
-    question: "Quien puede participar?",
+    question: "¿Quién puede participar?",
     answer:
-      "Estudiantes de informatica y personas interesadas en tecnologia, especialmente de la comunidad de la Universidad Nacional de Santiago del Estero."
+      "Estudiantes de informática y personas interesadas en tecnología, especialmente de la comunidad de la Universidad Nacional de Santiago del Estero."
   },
   {
-    question: "Que tengo que llevar?",
-    answer: "Notebook si tenes, cargador, DNI, algo para tomar notas y muchas ganas de crear. Si no tenes equipo, no pasa nada."
+    question: "¿Qué tengo que llevar?",
+    answer: "Notebook si tenés, cargador, DNI, algo para tomar notas y muchas ganas de crear. Si no tenés equipo, no pasa nada."
   }
 ];
 
@@ -104,11 +104,11 @@ export default function HackathonPage() {
 
             <div className="space-y-4">
               <h1 className="max-w-4xl font-mono text-4xl font-black leading-tight text-cei-shadow md:text-6xl">
-                Hackathon del Dia del Programador
+                Hackathon del Día del Programador
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-slate-800">
-                Un fin de semana para formar equipos, resolver desafios, aprender con mentores y presentar prototipos
-                creados por estudiantes de informatica.
+                Un fin de semana para formar equipos, resolver desafíos, aprender con mentores y presentar prototipos
+                creados por estudiantes de informática.
               </p>
             </div>
 
@@ -124,19 +124,24 @@ export default function HackathonPage() {
         <div className="grid gap-4">
           <TerminalPanel
             lines={[
-              "event: hackathon_dia_programador",
-              "date: sabado 12 + domingo 13",
-              "place: Facultad de Ciencias Exactas y Tecnologias",
-              "status: preparando desafios",
+              "event: hackathon_día_programador",
+              "date: sábado 12 + domingo 13",
+              "place: Facultad de Ciencias Exactas y Tecnologías",
+              "status: preparando desafíos",
               "output: demo final"
             ]}
           />
           <XPWindow title="evento/accesos">
             <div className="grid gap-3 sm:grid-cols-2">
-              {["Desafios", "Cronograma", "Sponsors", "FAQ"].map((item) => (
+              {[
+                ["Desafíos", "desafios"],
+                ["Cronograma", "cronograma"],
+                ["Sponsors", "sponsors"],
+                ["FAQ", "faq"]
+              ].map(([item, anchor]) => (
                 <a
                   className="xp-button rounded-sm px-4 py-3 text-center font-mono text-sm font-black text-cei-shadow"
-                  href={`#${item.toLowerCase()}`}
+                  href={`#${anchor}`}
                   key={item}
                 >
                   {item}
@@ -151,10 +156,10 @@ export default function HackathonPage() {
         <XPWindow title="que-es.txt" className="h-full">
           <div className="space-y-4">
             <p className="terminal-text text-sm font-bold uppercase">about/hackathon</p>
-            <h2 className="font-mono text-3xl font-black text-cei-shadow">Que es y por que participar</h2>
+            <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué es y por qué participar</h2>
             <p className="leading-7 text-slate-800">
-              Es una experiencia intensiva para convertir ideas en prototipos. No se trata solo de programar: tambien
-              hay que pensar problemas, organizarse, comunicar y aprender a presentar una solucion.
+              Es una experiencia intensiva para convertir ideas en prototipos. No se trata solo de programar: también
+              hay que pensar problemas, organizarse, comunicar y aprender a presentar una solución.
             </p>
           </div>
         </XPWindow>
@@ -176,7 +181,7 @@ export default function HackathonPage() {
       <Section id="desafios">
         <div className="mb-5">
           <p className="terminal-text text-sm font-bold uppercase">tracks/editables</p>
-          <h2 className="font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Ejes y desafios</h2>
+          <h2 className="font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Ejes y desafíos</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {challengeTracks.map((track) => (
@@ -223,7 +228,7 @@ export default function HackathonPage() {
         <XPWindow title="aprendizajes.log">
           <div className="space-y-4">
             <p className="terminal-text text-sm font-bold uppercase">skills unlocked</p>
-            <h2 className="font-mono text-3xl font-black text-cei-shadow">Que vas a aprender</h2>
+            <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué vas a aprender</h2>
             <ul className="grid gap-3">
               {learningItems.map((item) => (
                 <li className="rounded-sm border-2 border-cei-shadow bg-white px-4 py-3 font-bold text-slate-800 shadow-pixel" key={item}>
@@ -240,7 +245,7 @@ export default function HackathonPage() {
             <h2 className="font-mono text-3xl font-black text-cei-shadow">Premios</h2>
             <p className="leading-7 text-slate-800">
               Se van a definir premios, menciones y reconocimientos. Por ahora dejamos este espacio preparado para
-              actualizarlo sin cambiar la estructura de la pagina.
+              actualizarlo sin cambiar la estructura de la página.
             </p>
             <div className="rounded-sm border-2 border-dashed border-cei-shadow bg-white px-4 py-3 font-mono text-sm font-black text-cei-shadow">
               premios = [definir]
@@ -256,7 +261,7 @@ export default function HackathonPage() {
               <p className="terminal-text text-sm font-bold uppercase">partners</p>
               <h2 className="font-mono text-3xl font-black text-cei-shadow">Sponsors</h2>
               <p className="mt-2 max-w-2xl leading-7 text-slate-800">
-                Espacio reservado para instituciones, empresas y comunidades que quieran acompanar el evento.
+                Espacio reservado para instituciones, empresas y comunidades que quieran acompañar el evento.
               </p>
             </div>
             <Button href="mailto:comisionlsiafines@gmail.com?subject=Quiero%20ser%20sponsor%20del%20hackathon">
@@ -289,9 +294,9 @@ export default function HackathonPage() {
 
       <Section id="inscripcion">
         <GoogleFormPanel
-          description="La inscripcion se hara con Google Forms para no guardar datos personales del hackathon en Supabase. Cuando tengas el formulario, pegamos el enlace aca."
+          description="La inscripción se hará con Google Forms para no guardar datos personales del hackathon en Supabase. Cuando tengas el formulario, pegamos el enlace acá."
           href={googleFormLinks.hackathon}
-          title="Inscripcion al hackathon"
+          title="Inscripción al hackathon"
         />
       </Section>
     </div>

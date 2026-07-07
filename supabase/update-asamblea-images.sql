@@ -1,4 +1,4 @@
--- Agrega imagenes de prueba a la asamblea ya cargada.
+-- Agrega imágenes de prueba a la asamblea ya cargada.
 -- Ejecutar solo si la fila "Primera asamblea CEI" ya existe en Supabase.
 
 update eventos

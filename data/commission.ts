@@ -1,5 +1,5 @@
 export const navLinks = [
-  { label: "Comision", href: "/comision" },
+  { label: "Comisión", href: "/comision" },
   { label: "Eventos", href: "/eventos" },
   { label: "Oportunidades", href: "/oportunidades" },
   { label: "Hackathon", href: "/hackathon" },
@@ -21,12 +21,12 @@ export const contactLinks = [
   {
     label: "Canal de WhatsApp",
     href: "https://whatsapp.com/channel/0029Vb7pCRx2kNFuudDotL3R",
-    description: "Avisos rapidos para estudiantes."
+    description: "Avisos rápidos para estudiantes."
   }
 ];
 
 export const repositoryLink = {
-  label: "Codigo fuente",
+  label: "Código fuente",
   href: "https://github.com/AnaPaulaMach/cei-web"
 };
 
@@ -56,44 +56,44 @@ export const contactActionLinks = [
 
 export const actionAreas = [
   {
-    title: "Representacion",
+    title: "Representación",
     description: "Canalizamos inquietudes, propuestas y reclamos ante autoridades.",
     shortcut: "REP"
   },
   {
-    title: "Desarrollo academico",
+    title: "Desarrollo académico",
     description: "Impulsamos jornadas, charlas, cursos y talleres para estudiantes.",
     shortcut: "DEV"
   },
   {
     title: "Comunidad",
-    description: "Creamos espacios de integracion, participacion y actividades.",
+    description: "Creamos espacios de integración, participación y actividades.",
     shortcut: "COM"
   },
   {
-    title: "Vinculacion",
-    description: "Acompanamos proyectos con docentes, instituciones y comunidades tech.",
+    title: "Vinculación",
+    description: "Acompañamos proyectos con docentes, instituciones y comunidades tech.",
     shortcut: "NET"
   },
   {
-    title: "Extension",
-    description: "Aplicamos la informatica para aportar a la comunidad.",
+    title: "Extensión",
+    description: "Aplicamos la informática para aportar a la comunidad.",
     shortcut: "EXT"
   },
   {
     title: "Censo anual",
-    description: "Relevamos necesidades para mejorar la situacion de las tres carreras.",
+    description: "Relevamos necesidades para mejorar la situación de las tres carreras.",
     shortcut: "SQL"
   }
 ];
 
 export const commissionMembers = [
-  { role: "Presidente", name: "Gaston Andres Coronel" },
+  { role: "Presidente", name: "Gastón Andrés Coronel" },
   { role: "Vicepresidenta", name: "Aylen Orlandi" },
   { role: "Finanzas", name: "Marta Gerez" },
-  { role: "Prensa y Difusion", name: "Elliot Alejandro Contreras" },
-  { role: "Eventos y Recreacion", name: "Jeronimo Gili" },
-  { role: "Recursos y Asuntos Academicos", name: "Luca Valentin Soto Puentes" },
-  { role: "Asociada", name: "Rocio Albarracin" },
+  { role: "Prensa y Difusión", name: "Elliot Alejandro Contreras" },
+  { role: "Eventos y Recreación", name: "Jerónimo Gili" },
+  { role: "Recursos y Asuntos Académicos", name: "Luca Valentín Soto Puentes" },
+  { role: "Asociada", name: "Rocío Albarracín" },
   { role: "Asociada", name: "Ana Paula Machado" }
 ];

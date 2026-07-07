@@ -13,7 +13,7 @@ type EventBoardProps = {
 };
 
 export function EventBoard({
-  description = "Eventos, avisos y actividades importantes para estudiantes de informatica.",
+  description = "Eventos, avisos y actividades importantes para estudiantes de informática.",
   emptyMessage = "No hay eventos cargados por ahora.",
   events,
   highlightFirst = true,

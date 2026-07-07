@@ -1,5 +1,5 @@
--- CEI web: Supabase minimo
--- Solo contenido publico editable desde Supabase.
+-- CEI web: Supabase mínimo
+-- Solo contenido público editable desde Supabase.
 -- Formularios con datos personales (censo, hackathon, contacto) quedan fuera:
 -- se enlazan con Google Forms u otros servicios externos.
 

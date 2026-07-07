@@ -11,7 +11,7 @@ export function Taskbar() {
           CEI Start
         </Link>
         <p className="min-w-0 flex-1 truncate text-right font-mono text-[11px] text-white sm:text-left sm:text-xs">
-          CEI - comunidad informatica online
+          CEI - comunidad informática online
         </p>
         <div className="hidden gap-2 font-mono text-xs font-black lg:flex lg:justify-end">
           {taskbarLinks.map((link) => {

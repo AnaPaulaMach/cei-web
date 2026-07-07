@@ -4,9 +4,9 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const siteConfig = {
   name: "CEI UNSE",
-  title: "CEI UNSE | Comision de Estudiantes de Informatica",
+  title: "CEI UNSE | Comisión de Estudiantes de Informática",
   description:
-    "Sitio oficial de la Comision de Estudiantes de Informatica de la Universidad Nacional de Santiago del Estero (UNSE): eventos, oportunidades, hackathon, censo y contacto.",
+    "Sitio oficial de la Comisión de Estudiantes de Informática de la Universidad Nacional de Santiago del Estero (UNSE): eventos, oportunidades, hackathon, censo y contacto.",
   url: siteUrl,
   ogImage: "/opengraph-image"
 };
@@ -40,7 +40,7 @@ export function createPageMetadata({
           url: siteConfig.ogImage,
           width: 1200,
           height: 630,
-          alt: "Comision de Estudiantes de Informatica de la Universidad Nacional de Santiago del Estero"
+          alt: "Comisión de Estudiantes de Informática de la Universidad Nacional de Santiago del Estero"
         }
       ],
       locale: "es_AR",

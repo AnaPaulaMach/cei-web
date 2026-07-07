@@ -21,7 +21,7 @@ export default function ContactoPage() {
               <p className="terminal-text text-sm font-bold uppercase">canales oficiales</p>
               <h1 className="font-mono text-4xl font-black text-cei-shadow">Contacto</h1>
               <p className="max-w-2xl leading-7 text-slate-800">
-                Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comision.
+                Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comisión.
               </p>
             </div>
             <div className="flex w-fit max-w-full rotate-1 items-center gap-3 rounded-sm border-2 border-cei-shadow bg-white px-3 py-2 shadow-pixel">

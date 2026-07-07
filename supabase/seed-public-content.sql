@@ -1,6 +1,6 @@
--- CEI web: contenido publico inicial
--- Ejecutar en Supabase SQL Editor despues de crear las tablas de schema.sql.
--- No inserta IDs: Supabase genera UUIDs automaticamente.
+-- CEI web: contenido público inicial
+-- Ejecutar en Supabase SQL Editor después de crear las tablas de schema.sql.
+-- No inserta IDs: Supabase genera UUIDs automáticamente.
 
 insert into eventos (
   titulo,
@@ -14,8 +14,8 @@ insert into eventos (
   imagen_url
 ) values
   (
-    'Hackathon del Dia del Programador',
-    'Fin de semana de desafios, equipos, charlas, mentorias y presentaciones para crear proyectos utiles.',
+    'Hackathon del Día del Programador',
+    'Fin de semana de desafíos, equipos, charlas, mentorías y presentaciones para crear proyectos útiles.',
     '2026-09-12 09:00:00-03',
     'FCEyT - Universidad Nacional de Santiago del Estero',
     'Hackathon',
@@ -25,8 +25,8 @@ insert into eventos (
     null
   ),
   (
-    'Charla: como armar tu portfolio',
-    'Encuentro para preparar proyectos, CV tecnico, GitHub y presencia online para primeras oportunidades.',
+    'Charla: cómo armar tu portfolio',
+    'Encuentro para preparar proyectos, CV técnico, GitHub y presencia online para primeras oportunidades.',
     '2026-08-15 18:00:00-03',
     'Universidad Nacional de Santiago del Estero',
     'Charla',
@@ -48,10 +48,10 @@ insert into eventos (
   ),
   (
     'UNSE abre sus puertas',
-    'Difusion de las carreras de informatica y actividades para acercar la facultad a nuevos estudiantes.',
+    'Difusión de las carreras de informática y actividades para acercar la facultad a nuevos estudiantes.',
     '2026-10-01 09:00:00-03',
     'FCEyT - Universidad Nacional de Santiago del Estero',
-    'Difusion',
+    'Difusión',
     'proximo',
     false,
     '/eventos',
@@ -59,9 +59,9 @@ insert into eventos (
   ),
   (
     'Primera asamblea CEI',
-    'Encuentro inicial para organizar la comision, presentar ideas y abrir la participacion estudiantil.',
+    'Encuentro inicial para organizar la comisión, presentar ideas y abrir la participación estudiantil.',
     '2026-05-29 19:00:00-03',
-    'Salon Azul - FCEyT',
+    'Salón Azul - FCEyT',
     'Asamblea',
     'pasado',
     false,
@@ -91,7 +91,7 @@ insert into oportunidades (
   ),
   (
     'Becas y convocatorias',
-    'Espacio para publicar becas, programas y oportunidades academicas.',
+    'Espacio para publicar becas, programas y oportunidades académicas.',
     'Beca',
     'Convocatorias',
     '2026-07-06',
@@ -100,9 +100,9 @@ insert into oportunidades (
     'https://www.argentina.gob.ar/educacion/becas'
   ),
   (
-    'Pasantias y trabajos junior',
-    'Busqueda de oportunidades laborales para estudiantes de informatica.',
-    'Pasantia',
+    'Pasantías y trabajos junior',
+    'Búsqueda de oportunidades laborales para estudiantes de informática.',
+    'Pasantía',
     'Comunidad tech',
     '2026-07-05',
     null,
@@ -111,7 +111,7 @@ insert into oportunidades (
   ),
   (
     'Recursos para cursar',
-    'Apuntes, herramientas, guias y repositorios utiles para la carrera.',
+    'Apuntes, herramientas, guías y repositorios útiles para la carrera.',
     'Recurso',
     'CEI',
     '2026-07-04',
@@ -120,8 +120,8 @@ insert into oportunidades (
     'https://github.com/'
   ),
   (
-    'Busqueda laboral junior',
-    'Espacio para compartir busquedas de primer empleo, trainee y junior en tecnologia.',
+    'Búsqueda laboral junior',
+    'Espacio para compartir búsquedas de primer empleo, trainee y junior en tecnología.',
     'Trabajo',
     'Empresas y comunidad',
     '2026-07-03',
@@ -150,8 +150,8 @@ insert into oportunidades (
     'https://discord.com/'
   ),
   (
-    'Donacion de apuntes y material',
-    'Avisos utiles de la comision para circular material academico entre estudiantes.',
+    'Donación de apuntes y material',
+    'Avisos útiles de la comisión para circular material académico entre estudiantes.',
     'Aviso',
     'CEI',
     '2026-06-30',

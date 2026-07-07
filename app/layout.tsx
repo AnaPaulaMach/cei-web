@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   applicationName: siteConfig.name,
   keywords: [
     "CEI UNSE",
-    "Comision de Estudiantes de Informatica",
+    "Comisión de Estudiantes de Informática",
     "UNSE",
     "FCEyT",
-    "informatica",
+    "informática",
     "eventos estudiantiles",
     "hackathon"
   ],

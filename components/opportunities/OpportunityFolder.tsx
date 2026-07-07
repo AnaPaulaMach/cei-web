@@ -11,7 +11,7 @@ const categories = [
   "Todas",
   "Curso",
   "Beca",
-  "Pasantia",
+  "Pasantía",
   "Trabajo",
   "Convocatoria",
   "Recurso",
@@ -47,7 +47,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
               <p className="max-w-3xl leading-7 text-slate-800">{featured.description}</p>
               <p className="font-mono text-sm font-bold text-cei-shadow">
                 Fuente: {featured.source}
-                {featured.deadline ? ` / Limite: ${featured.deadline}` : ""}
+                {featured.deadline ? ` / Límite: ${featured.deadline}` : ""}
               </p>
             </div>
             {featured.href ? (
@@ -67,7 +67,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
             <p className="terminal-text text-sm font-bold uppercase">filter/categories</p>
             <h2 className="font-mono text-3xl font-black text-cei-shadow">Carpeta de oportunidades</h2>
             <p className="mt-2 max-w-2xl leading-7 text-slate-800">
-              Filtra por tipo de archivo para encontrar cursos, becas, pasantias, trabajos, recursos y avisos.
+              Filtrá por tipo de archivo para encontrar cursos, becas, pasantías, trabajos, recursos y avisos.
             </p>
           </div>
           <div className="rounded-sm border-2 border-cei-shadow bg-white px-3 py-2 font-mono text-xs font-black text-cei-shadow shadow-pixel">
@@ -102,7 +102,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
           </div>
         ) : (
           <div className="rounded-sm border-2 border-dashed border-cei-shadow bg-white p-6 text-center font-mono font-bold text-cei-shadow">
-            No hay oportunidades cargadas en esta categoria por ahora.
+            No hay oportunidades cargadas en esta categoría por ahora.
           </div>
         )}
       </XPWindow>

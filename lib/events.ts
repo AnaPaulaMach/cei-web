@@ -35,9 +35,9 @@ function mapEvent(row: EventRow): EventItem {
     place: row.lugar ?? "Lugar a confirmar",
     category,
     href,
-    cta: isHackathon ? "Inscribirme" : "Ver mas",
+    cta: isHackathon ? "Inscribirme" : "Ver más",
     status,
-    statusLabel: status === "pasado" ? "Pasado" : "Proximo",
+    statusLabel: status === "pasado" ? "Pasado" : "Próximo",
     highlighted: Boolean(row.destacado),
     imageUrls: parseImageUrls(row.imagen_url)
   };

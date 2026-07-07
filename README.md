@@ -1,31 +1,31 @@
 # CEI Web
 
-Sitio oficial de la Comision de Estudiantes de Informatica (CEI - UNSE).
+Sitio oficial de la Comisión de Estudiantes de Informática (CEI - UNSE).
 
 ## Stack
 
 - Next.js App Router
 - TypeScript
 - Tailwind CSS
-- Supabase para contenido publico
+- Supabase para contenido público
 - Google Forms para formularios con datos personales
 - Deploy previsto en Vercel
 
 ## Estilo
 
-La direccion visual es un escritorio retro de informatica universitaria inspirado en Windows XP, Minecraft, pixel art, terminales y ventanas clasicas, sin perder accesibilidad ni claridad.
+La dirección visual es un escritorio retro de informática universitaria inspirado en Windows XP, Minecraft, pixel art, terminales y ventanas clásicas, sin perder accesibilidad ni claridad.
 
 ## Colaboracion y sugerencias
 
-El repositorio es publico para que estudiantes y personas interesadas puedan ver como esta construido el sitio.
+El repositorio es público para que estudiantes y personas interesadas puedan ver cómo está construido el sitio.
 
-Por ahora, si queres sugerir cambios, reportar un problema o colaborar, contactate primero con la Comision:
+Por ahora, si querés sugerir cambios, reportar un problema o colaborar, contactate primero con la Comisión:
 
 - Mail: comisionlsiafines@gmail.com
 - Instagram: https://www.instagram.com/cei.unse/
 - Canal de WhatsApp: https://whatsapp.com/channel/0029Vb7pCRx2kNFuudDotL3R
 
-Si la propuesta avanza, la administracion del repositorio puede invitar colaboradores aprobados o recibir un pull request. No subas datos personales, claves, capturas privadas ni informacion sensible al repositorio.
+Si la propuesta avanza, la administración del repositorio puede invitar colaboradores aprobados o recibir un pull request. No subas datos personales, claves, capturas privadas ni información sensible al repositorio.
 
 ## Primeros pasos
 
@@ -46,11 +46,11 @@ Usar `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` con la Publishable key actual de Sup
 
 ## Datos
 
-Supabase se usa solo para tablas publicas de lectura:
+Supabase se usa solo para tablas públicas de lectura:
 
 - `eventos`
 - `oportunidades`
 
 El SQL esta en `supabase/schema.sql`.
 
-Censo e inscripcion al hackathon se enlazan con Google Forms. Los placeholders de esos enlaces estan en `data/form-links.ts`.
+Censo e inscripción al hackathon se enlazan con Google Forms. Los placeholders de esos enlaces están en `data/form-links.ts`.

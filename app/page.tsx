@@ -13,7 +13,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
   description:
-    "Home oficial de la CEI de la Universidad Nacional de Santiago del Estero con tablero de eventos, oportunidades utiles y accesos de participacion estudiantil."
+    "Home oficial de la CEI de la Universidad Nacional de Santiago del Estero con tablero de eventos, oportunidades útiles y accesos de participación estudiantil."
 });
 
 export default async function HomePage() {
@@ -33,10 +33,10 @@ export default async function HomePage() {
             CEI UNSE
           </p>
           <h1 className="font-mono text-2xl font-black leading-tight text-cei-shadow">
-            Comision de Estudiantes de Informatica
+            Comisión de Estudiantes de Informática
           </h1>
           <p className="mt-3 text-sm leading-6 text-slate-800">
-            Eventos, oportunidades y canales para estudiantes de informatica de la Universidad Nacional de Santiago del
+            Eventos, oportunidades y canales para estudiantes de informática de la Universidad Nacional de Santiago del
             Estero.
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3">
@@ -76,11 +76,11 @@ export default async function HomePage() {
 
             <div className="space-y-4">
               <h1 className="max-w-4xl font-mono text-3xl font-black leading-tight text-cei-shadow sm:text-4xl md:text-5xl">
-                Comision de Estudiantes de Informatica
+                Comisión de Estudiantes de Informática
               </h1>
               <p className="max-w-3xl text-base leading-7 text-slate-800 sm:text-lg sm:leading-8">
-                Representamos a estudiantes de informatica de la Universidad Nacional de Santiago del Estero y
-                acercamos eventos, oportunidades y canales de participacion.
+                Representamos a estudiantes de informática de la Universidad Nacional de Santiago del Estero y
+                acercamos eventos, oportunidades y canales de participación.
               </p>
             </div>
 
@@ -147,10 +147,10 @@ export default async function HomePage() {
           <div>
             <p className="terminal-text text-xs font-bold uppercase sm:text-sm">folder/oportunidades</p>
             <h2 className="font-mono text-2xl font-black text-white drop-shadow lg:text-3xl xl:text-4xl">
-              Oportunidades y novedades utiles
+              Oportunidades y novedades útiles
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-white lg:text-base lg:leading-7">
-              Cursos, becas, pasantias, busquedas laborales, convocatorias y recursos para estudiantes.
+              Cursos, becas, pasantías, búsquedas laborales, convocatorias y recursos para estudiantes.
             </p>
           </div>
           <Button className="hidden lg:inline-flex" href="/oportunidades" variant="secondary">
@@ -200,15 +200,15 @@ export default async function HomePage() {
 
       <Section className="lg:hidden">
         <div className="rounded-sm border border-cei-shadow/70 bg-cei-window p-4 shadow-xp-window">
-          <p className="terminal-text text-xs font-bold uppercase">participacion</p>
+          <p className="terminal-text text-xs font-bold uppercase">participación</p>
           <h2 className="mt-1 font-mono text-2xl font-black text-cei-shadow">Sumate a la comunidad</h2>
           <p className="mt-2 text-sm leading-6 text-slate-800">
-            Somos una organizacion estudiantil sin fines de lucro de informatica en la Universidad Nacional de Santiago
+            Somos una organización estudiantil sin fines de lucro de informática en la Universidad Nacional de Santiago
             del Estero.
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3">
             <Button className="w-full px-3 text-xs" href="/comision">
-              Comision
+              Comisión
             </Button>
             <Button className="w-full px-3 text-xs" href="/contacto" variant="secondary">
               Contacto
@@ -222,14 +222,14 @@ export default async function HomePage() {
           <div className="flex h-full flex-col justify-between gap-6">
             <div className="space-y-4">
               <p className="terminal-text text-sm font-bold uppercase">mission.loaded</p>
-              <h2 className="font-mono text-2xl font-black text-cei-shadow sm:text-3xl">Quienes somos</h2>
+              <h2 className="font-mono text-2xl font-black text-cei-shadow sm:text-3xl">Quiénes somos</h2>
               <p className="leading-7 text-slate-800">
-                Somos una organizacion estudiantil sin fines de lucro que representa a las carreras de informatica de
-                la Universidad Nacional de Santiago del Estero, acompana a estudiantes y da visibilidad a sus
+                Somos una organización estudiantil sin fines de lucro que representa a las carreras de informática de
+                la Universidad Nacional de Santiago del Estero, acompaña a estudiantes y da visibilidad a sus
                 actividades dentro y fuera de la facultad.
               </p>
             </div>
-            <Button href="/comision">Conocer la comision</Button>
+            <Button href="/comision">Conocer la comisión</Button>
           </div>
         </XPWindow>
         <LinkHub links={contactLinks} title="Conectate con CEI" />

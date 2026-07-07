@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "Oportunidades",
   description:
-    "Cursos, becas, pasantias, trabajos, convocatorias, recursos y avisos utiles para estudiantes de informatica.",
+    "Cursos, becas, pasantías, trabajos, convocatorias, recursos y avisos útiles para estudiantes de informática.",
   path: "/oportunidades"
 });
 
@@ -23,7 +23,7 @@ export default async function OportunidadesPage() {
             <p className="terminal-text text-sm font-bold uppercase">folder opened</p>
             <h1 className="font-mono text-4xl font-black text-cei-shadow">Oportunidades</h1>
             <p className="max-w-3xl leading-7 text-slate-800">
-              Cursos, becas, pasantias, trabajos, recursos y convocatorias utiles para estudiantes de informatica.
+              Cursos, becas, pasantías, trabajos, recursos y convocatorias útiles para estudiantes de informática.
             </p>
           </div>
         </XPWindow>

@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "Censo estudiantil",
   description:
-    "Censo estudiantil de la CEI de la Universidad Nacional de Santiago del Estero para relevar necesidades de las carreras de informatica.",
+    "Censo estudiantil de la CEI de la Universidad Nacional de Santiago del Estero para relevar necesidades de las carreras de informática.",
   path: "/censo"
 });
 
@@ -19,10 +19,10 @@ export default function CensoPage() {
           <p className="terminal-text text-sm font-bold uppercase">input required</p>
           <h1 className="font-mono text-4xl font-black text-cei-shadow">Censo estudiantil</h1>
           <p className="leading-7 text-slate-800">
-            Este formulario servira para relevar necesidades de estudiantes de las tres carreras.
+            Este formulario servirá para relevar necesidades de estudiantes de las tres carreras.
           </p>
           <GoogleFormPanel
-            description="El censo se respondera desde Google Forms. Asi el sitio solo enlaza al formulario y los datos personales quedan administrados fuera de Supabase."
+            description="El censo se responderá desde Google Forms. Así el sitio solo enlaza al formulario y los datos personales quedan administrados fuera de Supabase."
             href={googleFormLinks.censo}
             title="Formulario del censo"
           />

@@ -31,7 +31,7 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
         </p>
         <div className="mt-4 grid gap-2 font-mono text-xs font-bold text-cei-shadow">
           {opportunity.publishedAt ? <span>Publicado: {opportunity.publishedAt}</span> : null}
-          {opportunity.deadline ? <span>Limite: {opportunity.deadline}</span> : null}
+          {opportunity.deadline ? <span>Límite: {opportunity.deadline}</span> : null}
         </div>
       </div>
       <div className="border-t-2 border-cei-shadow bg-cei-window p-3 sm:p-4">

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Comision de Estudiantes de Informatica de la Universidad Nacional de Santiago del Estero";
+export const alt = "Comisión de Estudiantes de Informática de la Universidad Nacional de Santiago del Estero";
 export const size = {
   width: 1200,
   height: 630
@@ -67,7 +67,7 @@ export default function OpenGraphImage() {
                 marginBottom: 24
               }}
             >
-              Windows XP / Minecraft / informatica retro
+              Windows XP / Minecraft / informática retro
             </div>
             <div
               style={{
@@ -79,7 +79,7 @@ export default function OpenGraphImage() {
                 maxWidth: 880
               }}
             >
-              Comision de Estudiantes de Informatica
+              Comisión de Estudiantes de Informática
             </div>
             <div
               style={{
