@@ -5,13 +5,15 @@ export function Taskbar() {
   const taskbarLinks = [...contactLinks, repositoryLink];
 
   return (
-    <div className="border-t-2 border-white bg-gradient-to-r from-cei-blue via-blue-700 to-cei-shadow px-4 py-3 text-white shadow-[0_-4px_0_rgba(9,36,95,0.35)]">
-      <div className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-[auto_1fr_auto] lg:items-center">
-        <Link className="w-fit rounded-sm border-2 border-white bg-green-600 px-5 py-1.5 font-mono text-sm font-black shadow-pixel" href="/">
+    <div className="border-t-2 border-white bg-gradient-to-r from-cei-blue via-blue-700 to-cei-shadow px-3 py-2 text-white shadow-[0_-4px_0_rgba(9,36,95,0.35)] sm:px-4 sm:py-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3">
+        <Link className="w-fit shrink-0 rounded-sm border-2 border-white bg-green-600 px-4 py-1.5 font-mono text-xs font-black shadow-pixel sm:text-sm" href="/">
           CEI Start
         </Link>
-        <p className="hidden font-mono text-xs lg:block">CEI - comunidad informatica online</p>
-        <div className="grid grid-cols-2 gap-2 font-mono text-xs font-black sm:grid-cols-4 lg:flex lg:justify-end">
+        <p className="min-w-0 flex-1 truncate text-right font-mono text-[11px] text-white sm:text-left sm:text-xs">
+          CEI - comunidad informatica online
+        </p>
+        <div className="hidden gap-2 font-mono text-xs font-black lg:flex lg:justify-end">
           {taskbarLinks.map((link) => {
             const isExternal = link.href.startsWith("http");
 

@@ -13,8 +13,8 @@ export const metadata = createPageMetadata({
 
 export default function ContactoPage() {
   return (
-    <Section className="mx-auto flex w-full max-w-6xl flex-1">
-      <XPWindow className="w-full lg:min-h-[520px]" title="contacto">
+    <Section className="mx-auto my-auto w-full max-w-6xl">
+      <XPWindow title="contacto">
         <div className="space-y-8 lg:p-2">
           <div className="space-y-3">
             <p className="terminal-text text-sm font-bold uppercase">canales oficiales</p>
