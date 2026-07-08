@@ -11,12 +11,17 @@ export const metadata = createPageMetadata({
   path: "/contacto"
 });
 
+const contactPriority = ["Instagram", "Canal de WhatsApp", "Mail"];
+const orderedContactLinks = contactPriority
+  .map((label) => contactLinks.find((link) => link.label === label))
+  .filter((link): link is (typeof contactLinks)[number] => Boolean(link));
+
 export default function ContactoPage() {
   return (
     <Section className="mx-auto my-auto w-full max-w-6xl">
       <XPWindow title="contacto">
         <div className="space-y-8 lg:p-2">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div className="space-y-3">
             <div className="space-y-3">
               <p className="terminal-text text-sm font-bold uppercase">canales oficiales</p>
               <h1 className="font-mono text-4xl font-black text-cei-shadow">Contacto</h1>
@@ -24,30 +29,17 @@ export default function ContactoPage() {
                 Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comisión.
               </p>
             </div>
-            <div className="flex w-fit max-w-full rotate-1 items-center gap-3 rounded-sm border-2 border-cei-shadow bg-white px-3 py-2 shadow-pixel">
-              <Image
-                alt=""
-                aria-hidden="true"
-                className="h-16 w-auto object-contain"
-                height={74}
-                src="/stickers/contacto-click-smiley.png"
-                width={120}
-              />
-              <span className="rounded-sm border-2 border-cei-shadow bg-cei-alert px-2 py-1 text-center font-mono text-[10px] font-black uppercase leading-none text-cei-shadow shadow-[2px_2px_0_rgba(15,42,95,0.3)]">
-                click
-                <br />
-                aquí
-              </span>
-            </div>
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
-            {contactLinks.map((link) => {
+            {orderedContactLinks.map((link) => {
               const isExternal = link.href.startsWith("http");
+              const isInstagram = link.label === "Instagram";
+              const isWhatsApp = link.label === "Canal de WhatsApp";
 
               return (
                 <a
-                  className="group relative overflow-hidden rounded-sm border border-cei-shadow bg-white p-5 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-[#fff7c2]"
+                  className="group relative min-h-40 overflow-hidden rounded-sm border border-cei-shadow bg-white p-5 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-[#fff7c2]"
                   href={link.href}
                   key={link.label}
                   rel={isExternal ? "noopener noreferrer" : undefined}
@@ -63,7 +55,24 @@ export default function ContactoPage() {
                     {isExternal ? "externo" : "mail"}
                   </span>
                   <span className="mt-2 block font-mono text-xl font-black">{link.label}</span>
-                  <span className="mt-2 block text-sm leading-6 text-slate-700">{link.description}</span>
+                  <span className="mt-2 block max-w-[15rem] text-sm leading-6 text-slate-700">{link.description}</span>
+                  {isInstagram ? (
+                    <Image
+                      alt=""
+                      aria-hidden="true"
+                      className="pointer-events-none absolute bottom-2 left-4 h-14 w-auto object-contain opacity-95 transition group-hover:-translate-y-1 sm:h-16"
+                      height={74}
+                      src="/stickers/contacto-click-smiley.png"
+                      width={120}
+                    />
+                  ) : null}
+                  {isWhatsApp ? (
+                    <span className="absolute bottom-4 left-5 rotate-[-2deg] rounded-sm border-2 border-cei-shadow bg-cei-alert px-3 py-2 text-center font-mono text-[11px] font-black uppercase leading-none text-cei-shadow shadow-[2px_2px_0_rgba(15,42,95,0.3)]">
+                      click
+                      <br />
+                      aquí
+                    </span>
+                  ) : null}
                 </a>
               );
             })}
