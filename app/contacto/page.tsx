@@ -31,49 +31,52 @@ export default function ContactoPage() {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid items-start gap-5 md:grid-cols-3">
             {orderedContactLinks.map((link) => {
               const isExternal = link.href.startsWith("http");
               const isInstagram = link.label === "Instagram";
               const isWhatsApp = link.label === "Canal de WhatsApp";
 
               return (
-                <a
-                  className="group relative min-h-40 overflow-hidden rounded-sm border border-cei-shadow bg-white p-5 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-[#fff7c2]"
-                  href={link.href}
-                  key={link.label}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
-                  target={isExternal ? "_blank" : undefined}
-                >
-                  <span
-                    aria-hidden="true"
-                    className="absolute bottom-3 right-4 font-mono text-2xl font-black text-cei-shadow/25 transition group-hover:translate-x-1 group-hover:text-cei-shadow"
+                <div className={isWhatsApp ? "relative pt-4" : "relative"} key={link.label}>
+                  <a
+                    className="group relative block min-h-40 overflow-visible rounded-sm border border-cei-shadow bg-white p-5 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-[#fff7c2]"
+                    href={link.href}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                    target={isExternal ? "_blank" : undefined}
                   >
-                    &gt;&gt;
-                  </span>
-                  <span className="block font-mono text-xs font-black uppercase text-cei-shadow/75">
-                    {isExternal ? "externo" : "mail"}
-                  </span>
-                  <span className="mt-2 block font-mono text-xl font-black">{link.label}</span>
-                  <span className="mt-2 block max-w-[15rem] text-sm leading-6 text-slate-700">{link.description}</span>
+                    <span
+                      aria-hidden="true"
+                      className="absolute bottom-3 right-4 font-mono text-2xl font-black text-cei-shadow/25 transition group-hover:translate-x-1 group-hover:text-cei-shadow"
+                    >
+                      &gt;&gt;
+                    </span>
+                    <span className="block font-mono text-xs font-black uppercase text-cei-shadow/75">
+                      {isExternal ? "externo" : "mail"}
+                    </span>
+                    <span className="mt-2 block font-mono text-xl font-black">{link.label}</span>
+                    <span className="mt-2 block max-w-[15rem] text-sm leading-6 text-slate-700">
+                      {link.description}
+                    </span>
+                    {isWhatsApp ? (
+                      <span className="pointer-events-none absolute -top-4 right-4 rotate-[-2deg] rounded-sm border-2 border-cei-shadow bg-cei-alert px-3 py-2 text-center font-mono text-[11px] font-black uppercase leading-none text-cei-shadow shadow-[2px_2px_0_rgba(15,42,95,0.3)]">
+                        click
+                        <br />
+                        aquí
+                      </span>
+                    ) : null}
+                  </a>
                   {isInstagram ? (
                     <Image
                       alt=""
                       aria-hidden="true"
-                      className="pointer-events-none absolute bottom-2 left-4 h-14 w-auto object-contain opacity-95 transition group-hover:-translate-y-1 sm:h-16"
+                      className="pointer-events-none mt-2 h-16 w-auto object-contain opacity-95 sm:ml-4 sm:h-20"
                       height={74}
                       src="/stickers/contacto-click-smiley.png"
                       width={120}
                     />
                   ) : null}
-                  {isWhatsApp ? (
-                    <span className="absolute bottom-4 left-5 rotate-[-2deg] rounded-sm border-2 border-cei-shadow bg-cei-alert px-3 py-2 text-center font-mono text-[11px] font-black uppercase leading-none text-cei-shadow shadow-[2px_2px_0_rgba(15,42,95,0.3)]">
-                      click
-                      <br />
-                      aquí
-                    </span>
-                  ) : null}
-                </a>
+                </div>
               );
             })}
           </div>
