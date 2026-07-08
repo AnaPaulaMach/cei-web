@@ -65,7 +65,7 @@ insert into eventos (
     'Asamblea',
     'pasado',
     false,
-    '/eventos',
+    'https://www.instagram.com/p/DZF4IkMlAXI/?img_index=1',
     '/eventos/asamblea-primera-1.jpeg, /eventos/asamblea-primera-2.jpeg'
   );
 
@@ -92,7 +92,7 @@ insert into oportunidades (
   (
     'Becas y convocatorias',
     'Espacio para publicar becas, programas y oportunidades académicas.',
-    'Beca',
+    'Becas',
     'Convocatorias',
     '2026-07-06',
     null,
@@ -100,9 +100,9 @@ insert into oportunidades (
     'https://www.argentina.gob.ar/educacion/becas'
   ),
   (
-    'Pasantías y trabajos junior',
-    'Búsqueda de oportunidades laborales para estudiantes de informática.',
-    'Pasantía',
+    'Prácticas y trabajos junior',
+    'Búsqueda de prácticas, pasantías y oportunidades laborales para estudiantes de informática.',
+    'Prácticas',
     'Comunidad tech',
     '2026-07-05',
     null,
@@ -110,52 +110,12 @@ insert into oportunidades (
     'https://www.linkedin.com/jobs/'
   ),
   (
-    'Recursos para cursar',
-    'Apuntes, herramientas, guías y repositorios útiles para la carrera.',
-    'Recurso',
-    'CEI',
-    '2026-07-04',
-    null,
-    false,
-    'https://github.com/'
-  ),
-  (
     'Búsqueda laboral junior',
     'Espacio para compartir búsquedas de primer empleo, trainee y junior en tecnología.',
     'Trabajo',
     'Empresas y comunidad',
-    '2026-07-03',
+    '2026-07-04',
     null,
     false,
     'https://www.linkedin.com/jobs/search/?keywords=developer%20junior'
-  ),
-  (
-    'Convocatorias tech',
-    'Hackathones, competencias, llamadas a proyectos y actividades externas para participar.',
-    'Convocatoria',
-    'Comunidades tech',
-    '2026-07-02',
-    null,
-    false,
-    'https://devpost.com/hackathons'
-  ),
-  (
-    'Comunidades para aprender',
-    'Canales, servidores y grupos para hacer preguntas, compartir recursos y conocer pares.',
-    'Comunidad',
-    'CEI recomienda',
-    '2026-07-01',
-    null,
-    false,
-    'https://discord.com/'
-  ),
-  (
-    'Donación de apuntes y material',
-    'Avisos útiles de la comisión para circular material académico entre estudiantes.',
-    'Aviso',
-    'CEI',
-    '2026-06-30',
-    null,
-    false,
-    null
   );

@@ -26,14 +26,14 @@ No hace falta tocar código para cambiar fechas, títulos, links, descripciones 
 - `categoria`: Hackathon, Charla, Congreso, Difusión, Asamblea, Censo, Aviso.
 - `estado`: `proximo` o `pasado`.
 - `destacado`: `true` para que aparezca primero en el tablero.
-- `link`: ruta interna, como `/hackathon`, `/censo`, `/eventos`, o link externo.
+- `link`: ruta interna, como `/hackathon`, `/eventos`, o link externo. Para eventos ya realizados puede ser una publicación de Instagram; para eventos con inscripción puede ser Google Forms.
 - `imagen_url`: opcional. Puede ser una URL o varias URLs separadas por coma o salto de línea.
 
 ## Campos de oportunidades
 
 - `titulo`: nombre visible.
 - `descripcion`: resumen corto.
-- `categoria`: Curso, Beca, Pasantía, Trabajo, Convocatoria, Recurso, Comunidad, Aviso.
+- `categoria`: Curso, Trabajo, Prácticas o Becas.
 - `fuente`: organización o fuente.
 - `fecha_publicacion`: fecha de publicación.
 - `fecha_limite`: opcional.
@@ -64,7 +64,7 @@ Tabla eventos:
 Tabla oportunidades:
 - titulo
 - descripcion
-- categoria: Curso, Beca, Pasantía, Trabajo, Convocatoria, Recurso, Comunidad o Aviso
+- categoria: Curso, Trabajo, Prácticas o Becas
 - fuente
 - fecha_publicacion
 - fecha_limite

@@ -20,6 +20,21 @@ function parseImageUrls(value: string | null) {
   return urls.length > 0 ? urls : undefined;
 }
 
+function getEventCta(href: string, status: "proximo" | "pasado", isHackathon: boolean) {
+  const isGoogleForm = href.includes("forms.gle") || href.includes("docs.google.com/forms");
+  const isInstagram = href.includes("instagram.com");
+
+  if (isHackathon || isGoogleForm) {
+    return "Inscribirme";
+  }
+
+  if (isInstagram) {
+    return status === "pasado" ? "Ver publicación" : "Ver invitación";
+  }
+
+  return status === "pasado" ? "Ver resumen" : "Ver más";
+}
+
 function mapEvent(row: EventRow): EventItem {
   const category = row.categoria ?? "Aviso";
   const isHackathon = category.toLowerCase().includes("hack");
@@ -35,7 +50,7 @@ function mapEvent(row: EventRow): EventItem {
     place: row.lugar ?? "Lugar a confirmar",
     category,
     href,
-    cta: isHackathon ? "Inscribirme" : "Ver más",
+    cta: getEventCta(href, status, isHackathon),
     status,
     statusLabel: status === "pasado" ? "Pasado" : "Próximo",
     highlighted: Boolean(row.destacado),

@@ -62,8 +62,8 @@ export const mockEvents: EventItem[] = [
     sortDate: "2026-05-29T19:00:00-03:00",
     place: "Salón Azul - FCEyT",
     category: "Asamblea",
-    href: "/eventos",
-    cta: "Ver resumen",
+    href: "https://www.instagram.com/p/DZF4IkMlAXI/?img_index=1",
+    cta: "Ver publicación",
     status: "pasado",
     statusLabel: "Pasado",
     imageUrls: ["/eventos/asamblea-primera-1.jpeg", "/eventos/asamblea-primera-2.jpeg"]
