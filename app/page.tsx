@@ -40,12 +40,9 @@ export default async function HomePage() {
             Eventos, oportunidades y canales para estudiantes de informática de la Universidad Nacional de Santiago del
             Estero.
           </p>
-          <div className="mt-4 grid grid-cols-2 gap-3">
+          <div className="mt-4">
             <Button className="w-full px-3 text-xs" href="#tablero">
               Tablero
-            </Button>
-            <Button className="w-full px-3 text-xs" href="/contacto" variant="secondary">
-              Sumate
             </Button>
           </div>
         </div>
@@ -85,12 +82,9 @@ export default async function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
+            <div>
               <Button className="w-full sm:w-auto" href="#tablero">
                 Ver tablero
-              </Button>
-              <Button className="w-full sm:w-auto" href="/contacto" variant="secondary">
-                Sumate
               </Button>
             </div>
           </div>
@@ -151,7 +145,7 @@ export default async function HomePage() {
               Oportunidades y novedades útiles
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-white lg:text-base lg:leading-7">
-              Cursos, becas, pasantías, búsquedas laborales, convocatorias y recursos para estudiantes.
+              Cursos, trabajos, prácticas y becas para estudiantes de informática.
             </p>
           </div>
           <Button className="hidden lg:inline-flex" href="/oportunidades" variant="secondary">
@@ -202,7 +196,7 @@ export default async function HomePage() {
       <Section className="lg:hidden">
         <div className="rounded-sm border border-cei-shadow/70 bg-cei-window p-4 shadow-xp-window">
           <p className="terminal-text text-xs font-bold uppercase">participación</p>
-          <h2 className="mt-1 font-mono text-2xl font-black text-cei-shadow">Sumate a la comunidad</h2>
+          <h2 className="mt-1 font-mono text-2xl font-black text-cei-shadow">Participá en la comunidad</h2>
           <p className="mt-2 text-sm leading-6 text-slate-800">
             Somos una organización estudiantil sin fines de lucro de informática en la Universidad Nacional de Santiago
             del Estero.
