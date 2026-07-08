@@ -1,6 +1,6 @@
 import { XPWindow } from "@/components/cei-os/XPWindow";
 import { GoogleFormPanel } from "@/components/forms/GoogleFormPanel";
-import { Section } from "@/components/layout/Section";
+import { PageShell } from "@/components/layout/PageShell";
 import { googleFormLinks } from "@/data/form-links";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -13,7 +13,7 @@ export const metadata = createPageMetadata({
 
 export default function CensoPage() {
   return (
-    <Section className="mx-auto max-w-4xl">
+    <PageShell>
       <XPWindow title="censo/formulario">
         <div className="space-y-4">
           <p className="terminal-text text-sm font-bold uppercase">input required</p>
@@ -28,6 +28,6 @@ export default function CensoPage() {
           />
         </div>
       </XPWindow>
-    </Section>
+    </PageShell>
   );
 }

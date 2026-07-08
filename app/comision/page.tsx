@@ -1,4 +1,5 @@
 import { XPWindow } from "@/components/cei-os/XPWindow";
+import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { Card } from "@/components/ui/Card";
 import { actionAreas, commissionMembers } from "@/data/commission";
@@ -13,7 +14,7 @@ export const metadata = createPageMetadata({
 
 export default function ComisionPage() {
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
+    <PageShell>
       <Section>
         <XPWindow title="comisión">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -104,6 +105,6 @@ export default function ComisionPage() {
           </div>
         </Card>
       </Section>
-    </div>
+    </PageShell>
   );
 }

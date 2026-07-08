@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { XPWindow } from "@/components/cei-os/XPWindow";
-import { Section } from "@/components/layout/Section";
+import { PageShell } from "@/components/layout/PageShell";
 import { contactLinks } from "@/data/commission";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -18,7 +18,7 @@ const orderedContactLinks = contactPriority
 
 export default function ContactoPage() {
   return (
-    <Section className="mx-auto my-auto w-full max-w-6xl">
+    <PageShell className="my-auto">
       <XPWindow title="contacto">
         <div className="space-y-8 lg:p-2">
           <div className="space-y-3">
@@ -79,6 +79,6 @@ export default function ContactoPage() {
           </div>
         </div>
       </XPWindow>
-    </Section>
+    </PageShell>
   );
 }

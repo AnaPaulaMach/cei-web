@@ -2,6 +2,7 @@ import Image from "next/image";
 import { TerminalPanel } from "@/components/cei-os/TerminalPanel";
 import { XPWindow } from "@/components/cei-os/XPWindow";
 import { GoogleFormPanel } from "@/components/forms/GoogleFormPanel";
+import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -76,7 +77,7 @@ const sponsors = ["Sponsor 01", "Sponsor 02", "Sponsor 03", "Sponsor 04"];
 
 export default function HackathonPage() {
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-col gap-12">
+    <PageShell spacing="loose">
       <Section className="grid gap-6 lg:min-h-[calc(100vh-168px)] lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
         <XPWindow title="hackathon/event-mode.exe" className="window-pop">
           <div className="space-y-7">
@@ -299,6 +300,6 @@ export default function HackathonPage() {
           title="Inscripción al hackathon"
         />
       </Section>
-    </div>
+    </PageShell>
   );
 }

@@ -5,6 +5,7 @@ import { LinkHub } from "@/components/links/LinkHub";
 import { OpportunityCard } from "@/components/opportunities/OpportunityCard";
 import { Button } from "@/components/ui/Button";
 import { DataNotice } from "@/components/ui/DataNotice";
+import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { contactLinks } from "@/data/commission";
 import { getHomeEvents } from "@/lib/events";
@@ -26,7 +27,7 @@ export default async function HomePage() {
   const mobileOpportunities = featuredOpportunities.slice(0, 2);
 
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 md:gap-10">
+    <PageShell spacing="compact">
       <Section className="lg:hidden">
         <div className="rounded-sm border border-cei-shadow/70 bg-cei-window p-4 shadow-xp-window">
           <p className="mb-2 w-fit rounded-sm bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow shadow-[2px_2px_0_rgba(15,42,95,0.25)]">
@@ -234,6 +235,6 @@ export default async function HomePage() {
         </XPWindow>
         <LinkHub links={contactLinks} title="Conectate con CEI" />
       </Section>
-    </div>
+    </PageShell>
   );
 }

@@ -1,4 +1,5 @@
 import { XPWindow } from "@/components/cei-os/XPWindow";
+import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { OpportunityFolder } from "@/components/opportunities/OpportunityFolder";
 import { DataNotice } from "@/components/ui/DataNotice";
@@ -16,7 +17,7 @@ export default async function OportunidadesPage() {
   const opportunitiesResult = await getAllOpportunities();
 
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
+    <PageShell>
       <Section>
         <XPWindow title="desktop/oportunidades">
           <div className="space-y-3">
@@ -32,6 +33,6 @@ export default async function OportunidadesPage() {
       <Section>
         <OpportunityFolder opportunities={opportunitiesResult.items} />
       </Section>
-    </div>
+    </PageShell>
   );
 }

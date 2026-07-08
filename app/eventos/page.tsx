@@ -1,5 +1,5 @@
 import { EventBoard } from "@/components/events/EventBoard";
-import { Section } from "@/components/layout/Section";
+import { PageShell } from "@/components/layout/PageShell";
 import { DataNotice } from "@/components/ui/DataNotice";
 import { getAllEvents } from "@/lib/events";
 import { createPageMetadata } from "@/lib/seo";
@@ -17,7 +17,7 @@ export default async function EventosPage() {
   const pastEvents = eventsResult.items.filter((event) => event.status === "pasado");
 
   return (
-    <Section className="mx-auto max-w-7xl space-y-8">
+    <PageShell>
       <DataNotice message={eventsResult.error} />
       <EventBoard
         description="Actividades, avisos e inscripciones que vienen. La comisión puede cargarlos desde Supabase sin tocar código."
@@ -37,6 +37,6 @@ export default async function EventosPage() {
         title="Eventos pasados"
         windowTitle="eventos/pasados.log"
       />
-    </Section>
+    </PageShell>
   );
 }
