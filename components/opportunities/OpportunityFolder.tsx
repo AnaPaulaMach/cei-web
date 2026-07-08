@@ -7,17 +7,29 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import type { OpportunityItem } from "@/types/opportunities";
 
-const categories = [
-  "Todas",
-  "Curso",
-  "Beca",
-  "Pasantía",
-  "Trabajo",
-  "Convocatoria",
-  "Recurso",
-  "Comunidad",
-  "Aviso"
-];
+const categories = ["Todas", "Curso", "Trabajo", "Prácticas", "Becas"];
+
+function matchesCategory(opportunityCategory: string, activeCategory: string) {
+  if (activeCategory === "Todas") {
+    return true;
+  }
+
+  const normalizedCategory = opportunityCategory.toLowerCase();
+
+  if (activeCategory === "Prácticas") {
+    return (
+      normalizedCategory.includes("práctica") ||
+      normalizedCategory.includes("practica") ||
+      normalizedCategory.includes("pasant")
+    );
+  }
+
+  if (activeCategory === "Becas") {
+    return normalizedCategory.includes("beca");
+  }
+
+  return opportunityCategory === activeCategory;
+}
 
 type OpportunityFolderProps = {
   opportunities: OpportunityItem[];
@@ -30,7 +42,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
   const filteredOpportunities =
     activeCategory === "Todas"
       ? opportunities
-      : opportunities.filter((opportunity) => opportunity.category === activeCategory);
+      : opportunities.filter((opportunity) => matchesCategory(opportunity.category, activeCategory));
 
   return (
     <div className="space-y-6">
@@ -67,7 +79,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
             <p className="terminal-text text-sm font-bold uppercase">filter/categories</p>
             <h2 className="font-mono text-3xl font-black text-cei-shadow">Carpeta de oportunidades</h2>
             <p className="mt-2 max-w-2xl leading-7 text-slate-800">
-              Filtrá por tipo de archivo para encontrar cursos, becas, pasantías, trabajos, recursos y avisos.
+              Filtrá por tipo de archivo para encontrar cursos, trabajos, prácticas y becas.
             </p>
           </div>
           <div className="rounded-sm border-2 border-cei-shadow bg-white px-3 py-2 font-mono text-xs font-black text-cei-shadow shadow-pixel">

@@ -16,7 +16,7 @@ export const mockOpportunities: OpportunityItem[] = [
     id: "becas",
     title: "Becas y convocatorias",
     description: "Espacio para publicar becas, programas y oportunidades académicas.",
-    category: "Beca",
+    category: "Becas",
     source: "Convocatorias",
     href: "https://www.argentina.gob.ar/educacion/becas",
     isExternal: true,
@@ -24,23 +24,13 @@ export const mockOpportunities: OpportunityItem[] = [
   },
   {
     id: "pasantias",
-    title: "Pasantías y trabajos junior",
-    description: "Búsqueda de oportunidades laborales para estudiantes de informática.",
-    category: "Pasantía",
+    title: "Prácticas y trabajos junior",
+    description: "Búsqueda de prácticas, pasantías y oportunidades laborales para estudiantes de informática.",
+    category: "Prácticas",
     source: "Comunidad tech",
     href: "https://www.linkedin.com/jobs/",
     isExternal: true,
     deadline: "Según convocatoria"
-  },
-  {
-    id: "recursos",
-    title: "Recursos para cursar",
-    description: "Apuntes, herramientas, guías y repositorios útiles para la carrera.",
-    category: "Recurso",
-    source: "CEI",
-    href: "https://github.com/",
-    isExternal: true,
-    publishedAt: "En construcción"
   },
   {
     id: "trabajo-junior",
@@ -51,33 +41,5 @@ export const mockOpportunities: OpportunityItem[] = [
     href: "https://www.linkedin.com/jobs/search/?keywords=developer%20junior",
     isExternal: true,
     publishedAt: "Actualizable"
-  },
-  {
-    id: "convocatoria-hack",
-    title: "Convocatorias tech",
-    description: "Hackathones, competencias, llamadas a proyectos y actividades externas para participar.",
-    category: "Convocatoria",
-    source: "Comunidades tech",
-    href: "https://devpost.com/hackathons",
-    isExternal: true,
-    publishedAt: "Reciente"
-  },
-  {
-    id: "comunidad-discord",
-    title: "Comunidades para aprender",
-    description: "Canales, servidores y grupos para hacer preguntas, compartir recursos y conocer pares.",
-    category: "Comunidad",
-    source: "CEI recomienda",
-    href: "https://discord.com/",
-    isExternal: true,
-    publishedAt: "Abierto"
-  },
-  {
-    id: "aviso-material",
-    title: "Donación de apuntes y material",
-    description: "Avisos útiles de la comisión para circular material académico entre estudiantes.",
-    category: "Aviso",
-    source: "CEI",
-    publishedAt: "Permanente"
   }
 ];
