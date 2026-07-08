@@ -70,7 +70,7 @@ export default function ContactoPage() {
                     <Image
                       alt=""
                       aria-hidden="true"
-                      className="pointer-events-none ml-2 mt-3 hidden h-16 w-auto object-contain opacity-95 sm:h-20 lg:block"
+                      className="pointer-events-none ml-0 mt-4 hidden h-16 w-auto object-contain opacity-95 sm:h-20 lg:block"
                       height={74}
                       src="/stickers/contacto-click-smiley.png"
                       width={120}
