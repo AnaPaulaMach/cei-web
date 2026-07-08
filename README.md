@@ -53,4 +53,4 @@ Supabase se usa solo para tablas públicas de lectura:
 
 El SQL esta en `supabase/schema.sql`.
 
-Censo e inscripción al hackathon se enlazan con Google Forms. Los placeholders de esos enlaces están en `data/form-links.ts`.
+Los formularios con datos personales, como censo e inscripción al hackathon, se enlazan con Google Forms. Los placeholders de esos enlaces están en `data/form-links.ts`.

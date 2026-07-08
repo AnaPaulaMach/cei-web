@@ -2,7 +2,7 @@ import { XPWindow } from "@/components/cei-os/XPWindow";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { Card } from "@/components/ui/Card";
-import { actionAreas, commissionMembers } from "@/data/commission";
+import { actionAreas, careerLinks, commissionMembers, institutionalDocuments } from "@/data/commission";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -22,13 +22,16 @@ export default function ComisionPage() {
               <p className="terminal-text text-sm font-bold uppercase">about cei</p>
               <h1 className="font-mono text-4xl font-black text-cei-shadow">Quiénes somos</h1>
               <div className="flex flex-wrap gap-2">
-                {["Lic. en Sistemas", "Programador Universitario", "Prof. en Informática"].map((career) => (
-                  <span
-                    className="rounded-sm border-2 border-cei-shadow bg-white px-3 py-1 font-mono text-xs font-black text-cei-shadow shadow-pixel"
-                    key={career}
+                {careerLinks.map((career) => (
+                  <a
+                    className="rounded-sm border-2 border-cei-shadow bg-white px-3 py-1 font-mono text-xs font-black text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-cei-alert focus-visible:bg-cei-alert"
+                    href={career.href}
+                    key={career.href}
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    {career}
-                  </span>
+                    {career.label}
+                  </a>
                 ))}
               </div>
             </div>
@@ -40,6 +43,35 @@ export default function ComisionPage() {
             </div>
           </div>
         </XPWindow>
+      </Section>
+
+      <Section>
+        <Card className="bg-white">
+          <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="terminal-text text-sm font-bold uppercase">documentos</p>
+              <h2 className="font-mono text-3xl font-black text-cei-shadow">Documentación institucional</h2>
+            </div>
+            <p className="max-w-md text-sm leading-6 text-slate-700">
+              Enlaces útiles para consultar cómo se organiza la Comisión y el aval institucional de la facultad.
+            </p>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2">
+            {institutionalDocuments.map((document) => (
+              <a
+                className="block rounded-sm border-2 border-cei-shadow bg-cei-window p-4 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-[#fff7c2] focus-visible:bg-[#fff7c2]"
+                href={document.href}
+                key={document.href}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <p className="font-mono text-xs font-black uppercase text-cei-shadow">Abrir documento</p>
+                <h3 className="mt-2 font-mono text-lg font-black">{document.label}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-800">{document.description}</p>
+              </a>
+            ))}
+          </div>
+        </Card>
       </Section>
 
       <Section>

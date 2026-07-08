@@ -29,9 +29,9 @@ El sitio debe ayudar a estudiantes de informática a encontrar rápido lo que ne
 ## Voz sugerida
 
 - Sí: "Modo speedrun", "TL;DR", "patch notes", "canal de avisos", "sin vueltas".
-- Sí: "Ver lo urgente", "Sumate", "Recibir avisos", "Tengo una propuesta".
+- Sí: "Ver lo urgente", "Participá", "Recibir avisos", "Tengo una propuesta".
 - Evitar: chistes internos que solo entienda una parte del grupo.
-- Evitar: tono demasiado informal en páginas institucionales como Comisión, Censo y Contacto.
+- Evitar: tono demasiado informal en páginas institucionales como Comisión, Guía de trámites y Contacto.
 
 ## Mejoras aplicadas
 

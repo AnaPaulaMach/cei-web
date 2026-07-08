@@ -3,8 +3,36 @@ export const navLinks = [
   { label: "Eventos", href: "/eventos" },
   { label: "Oportunidades", href: "/oportunidades" },
   { label: "Hackathon", href: "/hackathon" },
-  { label: "Censo", href: "/censo" },
+  { label: "Trámites", href: "/guia-tramites" },
   { label: "Contacto", href: "/contacto" }
+];
+
+export const careerLinks = [
+  {
+    label: "Lic. en Sistemas",
+    href: "https://fce.unse.edu.ar/?q=licenciatura-en-sistemas-de-informacion"
+  },
+  {
+    label: "Programador Universitario",
+    href: "https://fce.unse.edu.ar/?q=programador-universitario-en-informatica"
+  },
+  {
+    label: "Prof. en Informática",
+    href: "https://fce.unse.edu.ar/?q=profesorado-en-informatica"
+  }
+];
+
+export const institutionalDocuments = [
+  {
+    label: "Estatuto de la Comisión",
+    href: "https://docs.google.com/document/d/1etYzGLrYu0NI_nuG9jQq8hNy2iwoyYzFuedK8fOKd28/edit?usp=sharing",
+    description: "Documento base de organización y funcionamiento."
+  },
+  {
+    label: "Aval institucional FCEyT",
+    href: "https://drive.google.com/drive/u/0/folders/1F06QKC_MjaA85vNuuKdHJqjVesmewrxs",
+    description: "Resolución de aval por parte de la Facultad de Ciencias Exactas y Tecnológicas."
+  }
 ];
 
 export const contactLinks = [

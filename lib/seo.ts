@@ -6,7 +6,7 @@ export const siteConfig = {
   name: "CEI UNSE",
   title: "CEI UNSE | Comisión de Estudiantes de Informática",
   description:
-    "Sitio oficial de la Comisión de Estudiantes de Informática de la Universidad Nacional de Santiago del Estero (UNSE): eventos, oportunidades, hackathon, censo y contacto.",
+    "Sitio oficial de la Comisión de Estudiantes de Informática de la Universidad Nacional de Santiago del Estero (UNSE): eventos, oportunidades, hackathon, guía de trámites y contacto.",
   url: siteUrl,
   ogImage: "/opengraph-image"
 };
