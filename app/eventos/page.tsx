@@ -20,7 +20,7 @@ export default async function EventosPage() {
     <PageShell>
       <DataNotice message={eventsResult.error} />
       <EventBoard
-        description="Actividades, avisos e inscripciones que vienen. La comisión puede cargarlos desde Supabase sin tocar código."
+        description="Actividades, avisos e inscripciones que vienen."
         emptyMessage="No hay eventos próximos cargados por ahora."
         events={upcomingEvents}
         highlightFirst={false}
@@ -29,7 +29,7 @@ export default async function EventosPage() {
         windowTitle="eventos/próximos.sys"
       />
       <EventBoard
-        description="Historial de asambleas, charlas, actividades y participaciones ya realizadas por la CEI."
+        description="Asambleas, charlas y actividades ya realizadas por la CEI."
         emptyMessage="Todavía no hay eventos pasados cargados."
         events={pastEvents}
         highlightFirst={false}

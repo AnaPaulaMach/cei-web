@@ -47,14 +47,11 @@ export default function ComisionPage() {
 
       <Section>
         <Card className="bg-white">
-          <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mb-5">
             <div>
               <p className="terminal-text text-sm font-bold uppercase">documentos</p>
               <h2 className="font-mono text-3xl font-black text-cei-shadow">Documentación institucional</h2>
             </div>
-            <p className="max-w-md text-sm leading-6 text-slate-700">
-              Enlaces útiles para consultar cómo se organiza la Comisión y el aval institucional de la facultad.
-            </p>
           </div>
           <div className="grid gap-3 md:grid-cols-2">
             {institutionalDocuments.map((document) => (
@@ -96,14 +93,11 @@ export default function ComisionPage() {
 
       <Section>
         <Card className="bg-cei-window">
-          <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mb-5">
             <div>
               <p className="terminal-text text-sm font-bold uppercase">áreas</p>
               <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué hacemos</h2>
             </div>
-            <p className="max-w-md text-sm leading-6 text-slate-700">
-              Ejes de trabajo de la comisión durante el año.
-            </p>
           </div>
           <div className="grid gap-3 md:grid-cols-2">
             {actionAreas.map((area) => (

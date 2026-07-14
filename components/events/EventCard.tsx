@@ -33,7 +33,6 @@ export function EventCard({ event }: EventCardProps) {
       ) : null}
       <div className="mb-3 flex flex-wrap items-center gap-2 sm:mb-4 sm:pr-16">
         <Badge>{event.category}</Badge>
-        {event.highlighted ? <Badge>Destacado</Badge> : null}
         {event.statusLabel ? <Badge>{event.statusLabel}</Badge> : null}
       </div>
       <h3
@@ -56,13 +55,10 @@ export function EventCard({ event }: EventCardProps) {
       <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-800 sm:mt-4 sm:text-base sm:leading-7">
         {event.description}
       </p>
-      <div className="mt-4 flex flex-wrap items-center gap-3 sm:mt-5">
+      <div className="mt-4 sm:mt-5">
         <Button href={event.href} variant={event.highlighted ? "primary" : "secondary"}>
           {event.cta}
         </Button>
-        <span className="hidden font-mono text-xs font-bold uppercase text-cei-shadow/80 sm:inline">
-          archivo: {event.id}.evt
-        </span>
       </div>
     </article>
   );

@@ -76,8 +76,8 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
       <XPWindow title="desktop/Oportunidades">
         <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="terminal-text text-sm font-bold uppercase">filter/categories</p>
-            <h2 className="font-mono text-3xl font-black text-cei-shadow">Carpeta de oportunidades</h2>
+            <p className="terminal-text text-sm font-bold uppercase">folder/oportunidades</p>
+            <h1 className="font-mono text-3xl font-black text-cei-shadow sm:text-4xl">Oportunidades</h1>
             <p className="mt-2 max-w-2xl leading-7 text-slate-800">
               Filtrá por tipo de archivo para encontrar cursos, trabajos, prácticas y becas.
             </p>

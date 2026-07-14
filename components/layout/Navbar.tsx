@@ -19,7 +19,7 @@ export function Navbar() {
           <span className="tracking-wide">CEI</span>
         </Link>
 
-        <details className="relative lg:hidden">
+        <details className="relative xl:hidden">
           <summary className="xp-button cursor-pointer list-none rounded-sm px-4 py-2 font-mono text-sm font-black text-cei-shadow">
             Menu
           </summary>
@@ -36,10 +36,10 @@ export function Navbar() {
           </div>
         </details>
 
-        <div className="hidden gap-2 lg:flex lg:items-center">
+        <div className="hidden gap-2 xl:flex xl:items-center">
           {navLinks.map((link) => (
             <Link
-              className="min-h-10 rounded-sm border border-[#07111f] bg-gradient-to-b from-[#dbeafe] via-[#9fb9d8] to-[#6f8db6] px-2.5 py-2 text-center text-xs font-black text-cei-shadow shadow-[2px_2px_0_rgba(7,17,31,0.45)] transition hover:-translate-y-0.5 hover:brightness-110 focus-visible:brightness-110 sm:text-sm lg:shrink-0 lg:px-3"
+              className="min-h-10 rounded-sm border border-[#07111f] bg-gradient-to-b from-[#dbeafe] via-[#9fb9d8] to-[#6f8db6] px-2.5 py-2 text-center text-xs font-black text-cei-shadow shadow-[2px_2px_0_rgba(7,17,31,0.45)] transition hover:-translate-y-0.5 hover:brightness-110 focus-visible:brightness-110 sm:text-sm xl:shrink-0 xl:px-3"
               href={link.href}
               key={link.href}
             >

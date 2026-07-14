@@ -73,8 +73,6 @@ const faqs = [
   }
 ];
 
-const sponsors = ["Sponsor 01", "Sponsor 02", "Sponsor 03", "Sponsor 04"];
-
 export default function HackathonPage() {
   return (
     <PageShell spacing="loose">
@@ -132,24 +130,6 @@ export default function HackathonPage() {
               "output: demo final"
             ]}
           />
-          <XPWindow title="evento/accesos">
-            <div className="grid gap-3 sm:grid-cols-2">
-              {[
-                ["Desafíos", "desafios"],
-                ["Cronograma", "cronograma"],
-                ["Sponsors", "sponsors"],
-                ["FAQ", "faq"]
-              ].map(([item, anchor]) => (
-                <a
-                  className="xp-button rounded-sm px-4 py-3 text-center font-mono text-sm font-black text-cei-shadow"
-                  href={`#${anchor}`}
-                  key={item}
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </XPWindow>
         </div>
       </Section>
 
@@ -181,7 +161,6 @@ export default function HackathonPage() {
 
       <Section id="desafios">
         <div className="mb-5">
-          <p className="terminal-text text-sm font-bold uppercase">tracks/editables</p>
           <h2 className="font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Ejes y desafíos</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
@@ -242,15 +221,10 @@ export default function HackathonPage() {
 
         <XPWindow title="premios.ini">
           <div className="space-y-4">
-            <p className="terminal-text text-sm font-bold uppercase">placeholder</p>
             <h2 className="font-mono text-3xl font-black text-cei-shadow">Premios</h2>
             <p className="leading-7 text-slate-800">
-              Se van a definir premios, menciones y reconocimientos. Por ahora dejamos este espacio preparado para
-              actualizarlo sin cambiar la estructura de la página.
+              Los premios, menciones y reconocimientos se publicarán cuando estén confirmados.
             </p>
-            <div className="rounded-sm border-2 border-dashed border-cei-shadow bg-white px-4 py-3 font-mono text-sm font-black text-cei-shadow">
-              premios = [definir]
-            </div>
           </div>
         </XPWindow>
       </Section>
@@ -259,7 +233,6 @@ export default function HackathonPage() {
         <XPWindow title="sponsors/grid">
           <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="terminal-text text-sm font-bold uppercase">partners</p>
               <h2 className="font-mono text-3xl font-black text-cei-shadow">Sponsors</h2>
               <p className="mt-2 max-w-2xl leading-7 text-slate-800">
                 Espacio reservado para instituciones, empresas y comunidades que quieran acompañar el evento.
@@ -269,19 +242,11 @@ export default function HackathonPage() {
               Quiero ser sponsor
             </Button>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {sponsors.map((sponsor) => (
-              <div className="grid min-h-32 place-items-center rounded-sm border-2 border-dashed border-cei-shadow bg-white p-4 text-center font-mono font-black text-cei-shadow shadow-pixel" key={sponsor}>
-                {sponsor}
-              </div>
-            ))}
-          </div>
         </XPWindow>
       </Section>
 
       <Section id="faq">
         <div className="mb-5">
-          <p className="terminal-text text-sm font-bold uppercase">help/faq</p>
           <h2 className="font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Preguntas frecuentes</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-2">

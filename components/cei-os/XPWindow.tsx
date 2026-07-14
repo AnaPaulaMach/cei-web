@@ -11,7 +11,7 @@ export function XPWindow({ title, children, className = "" }: XPWindowProps) {
     <div className={`flex flex-col overflow-hidden rounded-sm border border-cei-shadow/70 bg-cei-window shadow-xp-window ${className}`}>
       <div className="flex items-center justify-between border-b border-cei-shadow/70 bg-gradient-to-r from-cei-blue to-cei-sky px-3 py-2 text-white">
         <span className="truncate font-mono text-sm font-black">{title}</span>
-        <div aria-hidden="true" className="flex gap-1">
+        <div aria-hidden="true" className="hidden gap-1 sm:flex">
           <span className="grid h-5 w-5 place-items-center border border-white/70 bg-cei-window text-xs font-black text-cei-shadow">_</span>
           <span className="grid h-5 w-5 place-items-center border border-white/70 bg-cei-window text-xs font-black text-cei-shadow">[]</span>
           <span className="grid h-5 w-5 place-items-center border border-white/70 bg-red-500 text-xs font-black text-white">x</span>

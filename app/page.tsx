@@ -22,9 +22,9 @@ export default async function HomePage() {
     getHomeEvents(),
     getHomeOpportunities()
   ]);
-  const featuredOpportunities = opportunitiesResult.items;
-  const mobileEvents = eventsResult.items.slice(0, 2);
-  const mobileOpportunities = featuredOpportunities.slice(0, 2);
+  const featuredOpportunities = opportunitiesResult.items.slice(0, 2);
+  const mobileEvents = eventsResult.items.slice(0, 1);
+  const mobileOpportunities = featuredOpportunities;
 
   return (
     <PageShell spacing="compact">
@@ -40,11 +40,6 @@ export default async function HomePage() {
             Eventos, oportunidades y canales para estudiantes de informática de la Universidad Nacional de Santiago del
             Estero.
           </p>
-          <div className="mt-4">
-            <Button className="w-full px-3 text-xs" href="#tablero">
-              Tablero
-            </Button>
-          </div>
         </div>
       </Section>
 
@@ -62,14 +57,9 @@ export default async function HomePage() {
                   width={64}
                 />
               </div>
-              <div>
-                <p className="terminal-text text-xs font-bold uppercase tracking-[0.14em] sm:text-sm sm:tracking-[0.18em]">
-                  booting student community...
-                </p>
-                <p className="mt-2 w-fit max-w-full rounded-sm bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow shadow-[2px_2px_0_rgba(15,42,95,0.25)] sm:px-3 sm:text-xs">
-                  Universidad Nacional de Santiago del Estero
-                </p>
-              </div>
+              <p className="w-fit max-w-full rounded-sm bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow shadow-[2px_2px_0_rgba(15,42,95,0.25)] sm:px-3 sm:text-xs">
+                Universidad Nacional de Santiago del Estero
+              </p>
             </div>
 
             <div className="space-y-4">
@@ -95,14 +85,9 @@ export default async function HomePage() {
         <div className="space-y-4 lg:hidden">
           <DataNotice message={eventsResult.error} />
           <div className="rounded-sm border border-cei-shadow/70 bg-cei-window p-4 shadow-xp-window">
-            <div className="mb-3 flex items-center justify-between gap-3">
-              <div>
-                <p className="terminal-text text-xs font-bold uppercase">tablero</p>
-                <h2 className="font-mono text-2xl font-black text-cei-shadow">Destacados</h2>
-              </div>
-              <span className="rounded-sm border border-cei-shadow bg-white px-2 py-1 font-mono text-[10px] font-black text-cei-shadow">
-                {eventsResult.items.length}
-              </span>
+            <div className="mb-3">
+              <p className="terminal-text text-xs font-bold uppercase">tablero</p>
+              <h2 className="font-mono text-2xl font-black text-cei-shadow">Próximo evento</h2>
             </div>
             {mobileEvents.length > 0 ? (
               <div className="grid gap-3">
@@ -142,7 +127,7 @@ export default async function HomePage() {
           <div>
             <p className="terminal-text text-xs font-bold uppercase sm:text-sm">folder/oportunidades</p>
             <h2 className="font-mono text-2xl font-black text-white drop-shadow lg:text-3xl xl:text-4xl">
-              Oportunidades y novedades útiles
+              Oportunidades útiles
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-white lg:text-base lg:leading-7">
               Cursos, trabajos, prácticas y becas para estudiantes de informática.
@@ -193,40 +178,7 @@ export default async function HomePage() {
         )}
       </Section>
 
-      <Section className="lg:hidden">
-        <div className="rounded-sm border border-cei-shadow/70 bg-cei-window p-4 shadow-xp-window">
-          <p className="terminal-text text-xs font-bold uppercase">participación</p>
-          <h2 className="mt-1 font-mono text-2xl font-black text-cei-shadow">Participá en la comunidad</h2>
-          <p className="mt-2 text-sm leading-6 text-slate-800">
-            Somos una organización estudiantil sin fines de lucro de informática en la Universidad Nacional de Santiago
-            del Estero.
-          </p>
-          <div className="mt-4 grid grid-cols-2 gap-3">
-            <Button className="w-full px-3 text-xs" href="/comision">
-              Comisión
-            </Button>
-            <Button className="w-full px-3 text-xs" href="/contacto" variant="secondary">
-              Contacto
-            </Button>
-          </div>
-        </div>
-      </Section>
-
-      <Section className="hidden gap-6 lg:grid lg:grid-cols-[1fr_0.9fr] lg:items-stretch">
-        <XPWindow title="quienes-somos.txt" className="h-full">
-          <div className="flex h-full flex-col justify-between gap-6">
-            <div className="space-y-4">
-              <p className="terminal-text text-sm font-bold uppercase">mission.loaded</p>
-              <h2 className="font-mono text-2xl font-black text-cei-shadow sm:text-3xl">Quiénes somos</h2>
-              <p className="leading-7 text-slate-800">
-                Somos una organización estudiantil sin fines de lucro que representa a las carreras de informática de
-                la Universidad Nacional de Santiago del Estero, acompaña a estudiantes y da visibilidad a sus
-                actividades dentro y fuera de la facultad.
-              </p>
-            </div>
-            <Button href="/comision">Conocer la comisión</Button>
-          </div>
-        </XPWindow>
+      <Section>
         <LinkHub links={contactLinks} title="Conectate con CEI" />
       </Section>
     </PageShell>

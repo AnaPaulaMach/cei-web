@@ -18,7 +18,6 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
           </span>
           <div className="flex flex-wrap gap-2">
             <Badge>{opportunity.category}</Badge>
-            {isExternal ? <Badge>Externo</Badge> : null}
           </div>
         </div>
         {opportunity.highlighted ? <Badge>Nuevo</Badge> : null}
@@ -36,14 +35,9 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
       </div>
       <div className="border-t-2 border-cei-shadow bg-cei-window p-3 sm:p-4">
         {opportunity.href ? (
-          <div className="flex flex-wrap items-center gap-3">
-            <Button href={opportunity.href} variant="secondary">
-              Abrir enlace
-            </Button>
-            {isExternal ? (
-              <span className="font-mono text-xs font-black uppercase text-cei-shadow">sale del sitio</span>
-            ) : null}
-          </div>
+          <Button href={opportunity.href} variant="secondary">
+            {isExternal ? "Abrir enlace externo" : "Abrir enlace"}
+          </Button>
         ) : (
           <span className="inline-flex rounded-sm border-2 border-dashed border-cei-shadow bg-white px-3 py-2 font-mono text-xs font-black uppercase text-cei-shadow">
             Link pendiente
