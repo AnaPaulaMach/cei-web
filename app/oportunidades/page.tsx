@@ -19,9 +19,8 @@ export default async function OportunidadesPage() {
   return (
     <PageShell>
       <Section>
-        <XPWindow title="desktop/oportunidades">
+        <XPWindow title="oportunidades">
           <div className="space-y-3">
-            <p className="terminal-text text-sm font-bold uppercase">folder opened</p>
             <h1 className="font-mono text-4xl font-black text-cei-shadow">Oportunidades</h1>
             <p className="max-w-3xl leading-7 text-slate-800">
               Cursos, trabajos, prácticas y becas útiles para estudiantes de informática.

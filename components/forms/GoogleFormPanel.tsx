@@ -6,13 +6,12 @@ type GoogleFormPanelProps = {
 
 export function GoogleFormPanel({ title, description, href }: GoogleFormPanelProps) {
   return (
-    <div className="rounded-sm border-2 border-cei-shadow bg-white p-5 shadow-pixel">
+    <div className="rounded-sm bg-white p-5 sm:p-6">
       <div className="mb-4 flex flex-wrap items-center gap-3">
-        <span className="grid h-12 w-12 place-items-center border-2 border-cei-shadow bg-cei-alert font-mono text-xs font-black text-cei-shadow shadow-pixel">
+        <span className="grid h-11 w-11 place-items-center rounded-sm bg-cei-alert font-mono text-xs font-black text-cei-shadow">
           FORM
         </span>
         <div>
-          <p className="terminal-text text-sm font-bold uppercase">google.forms.link</p>
           <h2 className="font-mono text-2xl font-black text-cei-shadow">{title}</h2>
         </div>
       </div>
@@ -28,7 +27,7 @@ export function GoogleFormPanel({ title, description, href }: GoogleFormPanelPro
             Abrir Google Forms
           </a>
         ) : (
-          <span className="inline-flex rounded-sm border-2 border-dashed border-cei-shadow bg-cei-window px-4 py-2 font-mono text-sm font-black text-cei-shadow">
+          <span className="inline-flex rounded-sm bg-cei-window px-4 py-2 font-mono text-sm font-black text-cei-shadow">
             Link de Google Forms pendiente
           </span>
         )}
