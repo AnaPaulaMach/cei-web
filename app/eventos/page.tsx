@@ -26,7 +26,6 @@ export default async function EventosPage() {
         highlightFirst={false}
         statusLabel="próximos"
         title="Próximos eventos"
-        windowTitle="eventos/próximos.sys"
       />
       <EventBoard
         description="Historial de asambleas, charlas, actividades y participaciones ya realizadas por la CEI."
@@ -35,7 +34,6 @@ export default async function EventosPage() {
         highlightFirst={false}
         statusLabel="pasados"
         title="Eventos pasados"
-        windowTitle="eventos/pasados.log"
       />
     </PageShell>
   );

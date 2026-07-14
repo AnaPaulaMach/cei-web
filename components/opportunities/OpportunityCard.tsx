@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import type { OpportunityItem } from "@/types/opportunities";
 
@@ -10,42 +9,31 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
   const isExternal = Boolean(opportunity.href?.startsWith("http") || opportunity.isExternal);
 
   return (
-    <article className="group flex flex-col rounded-sm border-2 border-cei-shadow bg-white shadow-pixel transition hover:-translate-y-1 md:min-h-72">
-      <div className="flex items-center justify-between border-b-2 border-cei-shadow bg-cei-window px-3 py-3 sm:px-4">
-        <div className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center border-2 border-cei-shadow bg-cei-alert font-mono text-[11px] font-black text-cei-shadow shadow-pixel sm:h-10 sm:w-10 sm:text-xs">
-            {opportunity.category.slice(0, 3).toUpperCase()}
-          </span>
-          <div className="flex flex-wrap gap-2">
-            <Badge>{opportunity.category}</Badge>
-            {isExternal ? <Badge>Externo</Badge> : null}
-          </div>
-        </div>
-        {opportunity.highlighted ? <Badge>Nuevo</Badge> : null}
-      </div>
+    <article className="flex flex-col rounded-sm border border-cei-shadow/30 bg-white shadow-sm md:min-h-64">
       <div className="flex flex-1 flex-col p-4 sm:p-5">
+        <div className="mb-2 flex items-center justify-between gap-3">
+          <p className="font-mono text-xs font-black uppercase text-cei-shadow">{opportunity.category}</p>
+          {opportunity.highlighted ? (
+            <span className="rounded-sm bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow">
+              Nuevo
+            </span>
+          ) : null}
+        </div>
         <h3 className="font-mono text-lg font-black leading-tight text-cei-shadow sm:text-xl">{opportunity.title}</h3>
         <p className="mt-2 text-sm font-bold text-slate-700">{opportunity.source}</p>
         <p className="mt-3 flex-1 text-sm leading-6 text-slate-800 sm:text-base sm:leading-7">
           {opportunity.description}
         </p>
-        <div className="mt-4 grid gap-2 font-mono text-xs font-bold text-cei-shadow">
+        <div className="mt-4 grid gap-1 font-mono text-xs font-bold text-cei-shadow/80">
           {opportunity.publishedAt ? <span>Publicado: {opportunity.publishedAt}</span> : null}
           {opportunity.deadline ? <span>Límite: {opportunity.deadline}</span> : null}
         </div>
-      </div>
-      <div className="border-t-2 border-cei-shadow bg-cei-window p-3 sm:p-4">
         {opportunity.href ? (
-          <div className="flex flex-wrap items-center gap-3">
-            <Button href={opportunity.href} variant="secondary">
-              Abrir enlace
-            </Button>
-            {isExternal ? (
-              <span className="font-mono text-xs font-black uppercase text-cei-shadow">sale del sitio</span>
-            ) : null}
-          </div>
+          <Button className="mt-4 w-fit" href={opportunity.href} variant="secondary">
+            {isExternal ? "Abrir enlace externo" : "Abrir enlace"}
+          </Button>
         ) : (
-          <span className="inline-flex rounded-sm border-2 border-dashed border-cei-shadow bg-white px-3 py-2 font-mono text-xs font-black uppercase text-cei-shadow">
+          <span className="mt-4 inline-flex w-fit rounded-sm bg-cei-window px-3 py-2 font-mono text-xs font-black uppercase text-cei-shadow">
             Link pendiente
           </span>
         )}
