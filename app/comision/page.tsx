@@ -19,11 +19,12 @@ export default function ComisionPage() {
         <XPWindow title="comisión">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className="space-y-4">
+              <p className="terminal-text text-sm font-bold uppercase">about cei</p>
               <h1 className="font-mono text-4xl font-black text-cei-shadow">Quiénes somos</h1>
               <div className="flex flex-wrap gap-2">
                 {careerLinks.map((career) => (
                   <a
-                    className="rounded-sm border border-cei-shadow/35 bg-white px-3 py-1.5 font-mono text-xs font-black text-cei-shadow transition hover:bg-cei-alert focus-visible:bg-cei-alert"
+                    className="rounded-sm border-2 border-cei-shadow bg-white px-3 py-1 font-mono text-xs font-black text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-cei-alert focus-visible:bg-cei-alert"
                     href={career.href}
                     key={career.href}
                     rel="noopener noreferrer"
@@ -48,6 +49,7 @@ export default function ComisionPage() {
         <Card className="bg-white">
           <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
+              <p className="terminal-text text-sm font-bold uppercase">documentos</p>
               <h2 className="font-mono text-3xl font-black text-cei-shadow">Documentación institucional</h2>
             </div>
             <p className="max-w-md text-sm leading-6 text-slate-700">
@@ -57,7 +59,7 @@ export default function ComisionPage() {
           <div className="grid gap-3 md:grid-cols-2">
             {institutionalDocuments.map((document) => (
               <a
-                className="block rounded-sm border border-cei-shadow/20 bg-cei-window p-4 text-cei-shadow transition hover:bg-[#fff7c2] focus-visible:bg-[#fff7c2]"
+                className="block rounded-sm border-2 border-cei-shadow bg-cei-window p-4 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-[#fff7c2] focus-visible:bg-[#fff7c2]"
                 href={document.href}
                 key={document.href}
                 rel="noopener noreferrer"
@@ -96,6 +98,7 @@ export default function ComisionPage() {
         <Card className="bg-cei-window">
           <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
+              <p className="terminal-text text-sm font-bold uppercase">áreas</p>
               <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué hacemos</h2>
             </div>
             <p className="max-w-md text-sm leading-6 text-slate-700">
@@ -104,8 +107,8 @@ export default function ComisionPage() {
           </div>
           <div className="grid gap-3 md:grid-cols-2">
             {actionAreas.map((area) => (
-              <div className="flex gap-3 rounded-sm border border-cei-shadow/15 bg-white p-4" key={area.title}>
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-cei-alert font-mono text-xs font-black text-cei-shadow">
+              <div className="flex gap-3 rounded-sm border-2 border-cei-shadow bg-white p-4 shadow-pixel" key={area.title}>
+                <span className="grid h-10 w-10 shrink-0 place-items-center border-2 border-cei-shadow bg-cei-alert font-mono text-xs font-black text-cei-shadow">
                   {area.shortcut}
                 </span>
                 <div>
@@ -121,6 +124,7 @@ export default function ComisionPage() {
       <Section>
         <Card className="bg-white">
           <div className="mb-5">
+            <p className="terminal-text text-sm font-bold uppercase">directiva</p>
             <h2 className="font-mono text-3xl font-black text-cei-shadow">Comisión directiva 2026</h2>
           </div>
           <div className="divide-y-2 divide-cei-shadow/20 border-y-2 border-cei-shadow/20">

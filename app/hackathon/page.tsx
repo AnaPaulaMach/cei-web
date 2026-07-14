@@ -1,7 +1,10 @@
+import Image from "next/image";
+import { TerminalPanel } from "@/components/cei-os/TerminalPanel";
 import { XPWindow } from "@/components/cei-os/XPWindow";
 import { GoogleFormPanel } from "@/components/forms/GoogleFormPanel";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
+import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { googleFormLinks } from "@/data/form-links";
 import { createPageMetadata } from "@/lib/seo";
@@ -74,24 +77,42 @@ const sponsors = ["Sponsor 01", "Sponsor 02", "Sponsor 03", "Sponsor 04"];
 
 export default function HackathonPage() {
   return (
-    <PageShell>
-      <Section>
+    <PageShell spacing="loose">
+      <Section className="grid gap-6 lg:min-h-[calc(100vh-168px)] lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
         <XPWindow title="hackathon/event-mode.exe" className="window-pop">
-          <div className="space-y-6">
-            <p className="w-fit rounded-sm bg-cei-alert px-3 py-1 font-mono text-xs font-black uppercase text-cei-shadow">
-              12 y 13 de septiembre de 2026
-            </p>
+          <div className="space-y-7">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+              <div className="grid h-20 w-20 shrink-0 place-items-center rounded-sm border-2 border-cei-shadow bg-[#07111f] shadow-pixel">
+                <Image
+                  alt="Logo CEI"
+                  className="h-16 w-16 object-contain"
+                  height={64}
+                  priority
+                  src="/logo/logo_sin_fondo.png"
+                  width={64}
+                />
+              </div>
+              <div>
+                <p className="terminal-text text-sm font-bold uppercase tracking-[0.18em]">
+                  programmer day event mode
+                </p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <Badge>12-13 septiembre 2026</Badge>
+                  <Badge>FCEyT - Universidad Nacional de Santiago del Estero</Badge>
+                </div>
+              </div>
+            </div>
+
             <div className="space-y-4">
               <h1 className="max-w-4xl font-mono text-4xl font-black leading-tight text-cei-shadow md:text-6xl">
                 Hackathon del Día del Programador
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-slate-800">
-                Un fin de semana para formar equipos, resolver desafíos, aprender con mentores y presentar prototipos.
-              </p>
-              <p className="font-mono text-sm font-bold text-cei-shadow">
-                Facultad de Ciencias Exactas y Tecnologías · Universidad Nacional de Santiago del Estero
+                Un fin de semana para formar equipos, resolver desafíos, aprender con mentores y presentar prototipos
+                creados por estudiantes de informática.
               </p>
             </div>
+
             <div className="flex flex-wrap gap-3">
               <Button href="#inscripcion">Inscribirme</Button>
               <Button href="#cronograma" variant="secondary">
@@ -100,123 +121,181 @@ export default function HackathonPage() {
             </div>
           </div>
         </XPWindow>
+
+        <div className="grid gap-4">
+          <TerminalPanel
+            lines={[
+              "event: hackathon_día_programador",
+              "date: sábado 12 + domingo 13",
+              "place: Facultad de Ciencias Exactas y Tecnologías",
+              "status: preparando desafíos",
+              "output: demo final"
+            ]}
+          />
+          <XPWindow title="evento/accesos">
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                ["Desafíos", "desafios"],
+                ["Cronograma", "cronograma"],
+                ["Sponsors", "sponsors"],
+                ["FAQ", "faq"]
+              ].map(([item, anchor]) => (
+                <a
+                  className="xp-button rounded-sm px-4 py-3 text-center font-mono text-sm font-black text-cei-shadow"
+                  href={`#${anchor}`}
+                  key={item}
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+          </XPWindow>
+        </div>
       </Section>
 
-      <Section>
-        <div className="rounded-sm bg-cei-window/95 p-5 sm:p-6">
-          <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué es y por qué participar</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-slate-800">
-            Es una experiencia intensiva para convertir ideas en prototipos. También vas a organizarte, comunicar y
-            aprender a presentar una solución.
-          </p>
-          <div className="mt-5 grid divide-y divide-cei-shadow/15 rounded-sm bg-white md:grid-cols-3 md:divide-x md:divide-y-0">
-            {["Conocer gente de la carrera", "Practicar con problemas reales", "Sumar un proyecto al portfolio"].map(
-              (item, index) => (
-                <div className="p-4" key={item}>
-                  <p className="font-mono text-sm font-black text-cei-shadow">0{index + 1}</p>
-                  <p className="mt-2 font-bold leading-6 text-slate-800">{item}</p>
-                </div>
-              )
-            )}
+      <Section className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+        <XPWindow title="que-es.txt" className="h-full">
+          <div className="space-y-4">
+            <p className="terminal-text text-sm font-bold uppercase">about/hackathon</p>
+            <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué es y por qué participar</h2>
+            <p className="leading-7 text-slate-800">
+              Es una experiencia intensiva para convertir ideas en prototipos. No se trata solo de programar: también
+              hay que pensar problemas, organizarse, comunicar y aprender a presentar una solución.
+            </p>
           </div>
+        </XPWindow>
+
+        <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
+          {[
+            ["01", "Conocer gente de la carrera"],
+            ["02", "Practicar con problemas reales"],
+            ["03", "Sumar un proyecto al portfolio"]
+          ].map(([number, text]) => (
+            <div className="rounded-sm border-2 border-cei-shadow bg-white p-4 shadow-pixel" key={number}>
+              <p className="font-mono text-3xl font-black text-cei-shadow">{number}</p>
+              <p className="mt-2 font-bold leading-6 text-slate-800">{text}</p>
+            </div>
+          ))}
         </div>
       </Section>
 
       <Section id="desafios">
-        <h2 className="mb-4 font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Ejes y desafíos</h2>
+        <div className="mb-5">
+          <p className="terminal-text text-sm font-bold uppercase">tracks/editables</p>
+          <h2 className="font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Ejes y desafíos</h2>
+        </div>
         <div className="grid gap-4 md:grid-cols-3">
           {challengeTracks.map((track) => (
-            <article className="rounded-sm bg-white p-5" key={track.title}>
-              <span className="rounded-sm bg-cei-alert px-2 py-1 font-mono text-xs font-black text-cei-shadow">
-                {track.tag}
-              </span>
-              <h3 className="mt-4 font-mono text-2xl font-black text-cei-shadow">{track.title}</h3>
-              <p className="mt-3 leading-7 text-slate-800">{track.description}</p>
-            </article>
+            <XPWindow key={track.title} title={`${track.tag}.challenge`}>
+              <div className="space-y-4">
+                <span className="grid h-12 w-12 place-items-center border-2 border-cei-shadow bg-cei-alert font-mono text-xs font-black text-cei-shadow shadow-pixel">
+                  {track.tag}
+                </span>
+                <h3 className="font-mono text-2xl font-black text-cei-shadow">{track.title}</h3>
+                <p className="leading-7 text-slate-800">{track.description}</p>
+              </div>
+            </XPWindow>
           ))}
         </div>
       </Section>
 
       <Section id="cronograma">
-        <div className="rounded-sm bg-cei-window/95 p-5 sm:p-6">
-          <h2 className="font-mono text-3xl font-black text-cei-shadow">Cronograma del fin de semana</h2>
-          <div className="mt-5 grid gap-4 lg:grid-cols-2">
+        <XPWindow title="cronograma/weekend.exe">
+          <div className="mb-6">
+            <p className="terminal-text text-sm font-bold uppercase">timeline</p>
+            <h2 className="font-mono text-3xl font-black text-cei-shadow">Cronograma del fin de semana</h2>
+          </div>
+          <div className="grid gap-4 lg:grid-cols-2">
             {schedule.map((day) => (
-              <div className="rounded-sm bg-white p-5" key={day.day}>
+              <div className="rounded-sm border-2 border-cei-shadow bg-white p-5 shadow-pixel" key={day.day}>
                 <h3 className="font-mono text-2xl font-black text-cei-shadow">{day.day}</h3>
                 <ol className="mt-4 space-y-3">
                   {day.items.map((item, index) => (
                     <li className="flex gap-3" key={item}>
-                      <span className="font-mono text-xs font-black text-cei-shadow">0{index + 1}</span>
-                      <span className="font-bold text-slate-800">{item}</span>
+                      <span className="grid h-7 w-7 shrink-0 place-items-center border-2 border-cei-shadow bg-cei-window font-mono text-xs font-black text-cei-shadow">
+                        {index + 1}
+                      </span>
+                      <span className="font-bold leading-7 text-slate-800">{item}</span>
                     </li>
                   ))}
                 </ol>
               </div>
             ))}
           </div>
-        </div>
+        </XPWindow>
       </Section>
 
-      <Section className="grid gap-4 lg:grid-cols-[1fr_0.9fr]">
-        <div className="rounded-sm bg-white p-5 sm:p-6">
-          <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué vas a aprender</h2>
-          <ul className="mt-4 divide-y divide-cei-shadow/15">
-            {learningItems.map((item) => (
-              <li className="py-3 font-bold text-slate-800" key={item}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <Section className="grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-start">
+        <XPWindow title="aprendizajes.log">
+          <div className="space-y-4">
+            <p className="terminal-text text-sm font-bold uppercase">skills unlocked</p>
+            <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué vas a aprender</h2>
+            <ul className="grid gap-3">
+              {learningItems.map((item) => (
+                <li className="rounded-sm border-2 border-cei-shadow bg-white px-4 py-3 font-bold text-slate-800 shadow-pixel" key={item}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </XPWindow>
 
-        <div className="rounded-sm bg-[#fff7c2] p-5 sm:p-6">
-          <h2 className="font-mono text-3xl font-black text-cei-shadow">Premios</h2>
-          <p className="mt-3 leading-7 text-slate-800">
-            Se van a definir premios, menciones y reconocimientos. Este espacio se actualizará cuando estén confirmados.
-          </p>
-          <p className="mt-4 font-mono text-sm font-black text-cei-shadow">Premios por definir</p>
-        </div>
+        <XPWindow title="premios.ini">
+          <div className="space-y-4">
+            <p className="terminal-text text-sm font-bold uppercase">placeholder</p>
+            <h2 className="font-mono text-3xl font-black text-cei-shadow">Premios</h2>
+            <p className="leading-7 text-slate-800">
+              Se van a definir premios, menciones y reconocimientos. Por ahora dejamos este espacio preparado para
+              actualizarlo sin cambiar la estructura de la página.
+            </p>
+            <div className="rounded-sm border-2 border-dashed border-cei-shadow bg-white px-4 py-3 font-mono text-sm font-black text-cei-shadow">
+              premios = [definir]
+            </div>
+          </div>
+        </XPWindow>
       </Section>
 
       <Section id="sponsors">
-        <div className="rounded-sm bg-cei-window/95 p-5 sm:p-6">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <XPWindow title="sponsors/grid">
+          <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
+              <p className="terminal-text text-sm font-bold uppercase">partners</p>
               <h2 className="font-mono text-3xl font-black text-cei-shadow">Sponsors</h2>
               <p className="mt-2 max-w-2xl leading-7 text-slate-800">
-                Instituciones, empresas y comunidades que quieran acompañar el evento.
+                Espacio reservado para instituciones, empresas y comunidades que quieran acompañar el evento.
               </p>
             </div>
             <Button href="mailto:comisionlsiafines@gmail.com?subject=Quiero%20ser%20sponsor%20del%20hackathon">
               Quiero ser sponsor
             </Button>
           </div>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {sponsors.map((sponsor) => (
-              <div className="grid min-h-28 place-items-center rounded-sm border border-dashed border-cei-shadow/35 bg-white p-4 text-center font-mono font-black text-cei-shadow" key={sponsor}>
+              <div className="grid min-h-32 place-items-center rounded-sm border-2 border-dashed border-cei-shadow bg-white p-4 text-center font-mono font-black text-cei-shadow shadow-pixel" key={sponsor}>
                 {sponsor}
               </div>
             ))}
           </div>
-        </div>
+        </XPWindow>
       </Section>
 
       <Section id="faq">
-        <h2 className="mb-4 font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Preguntas frecuentes</h2>
-        <div className="grid gap-3 md:grid-cols-2">
+        <div className="mb-5">
+          <p className="terminal-text text-sm font-bold uppercase">help/faq</p>
+          <h2 className="font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Preguntas frecuentes</h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((faq) => (
-            <details className="rounded-sm bg-white p-4 text-cei-shadow" key={faq.question}>
-              <summary className="cursor-pointer font-mono font-black">{faq.question}</summary>
-              <p className="mt-3 leading-7 text-slate-800">{faq.answer}</p>
-            </details>
+            <XPWindow key={faq.question} title={faq.question}>
+              <p className="leading-7 text-slate-800">{faq.answer}</p>
+            </XPWindow>
           ))}
         </div>
       </Section>
 
       <Section id="inscripcion">
         <GoogleFormPanel
-          description="La inscripción se hará con Google Forms. Cuando esté disponible, vas a encontrar el enlace en este espacio."
+          description="La inscripción se hará con Google Forms para no guardar datos personales del hackathon en Supabase. Cuando tengas el formulario, pegamos el enlace acá."
           href={googleFormLinks.hackathon}
           title="Inscripción al hackathon"
         />

@@ -20,9 +20,10 @@ export default function ContactoPage() {
   return (
     <PageShell className="my-auto">
       <XPWindow title="contacto">
-        <div className="space-y-7 lg:p-2">
+        <div className="space-y-8 lg:p-2">
           <div className="space-y-3">
             <div className="space-y-3">
+              <p className="terminal-text text-sm font-bold uppercase">canales oficiales</p>
               <h1 className="font-mono text-4xl font-black text-cei-shadow">Contacto</h1>
               <p className="max-w-2xl leading-7 text-slate-800">
                 Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comisión.
@@ -39,7 +40,7 @@ export default function ContactoPage() {
               return (
                 <div className="relative" key={link.label}>
                   <a
-                    className={`group relative block min-h-36 overflow-hidden rounded-sm border border-cei-shadow/25 bg-white p-5 text-cei-shadow transition hover:bg-[#fff7c2] ${
+                    className={`group relative block min-h-40 overflow-hidden rounded-sm border border-cei-shadow bg-white p-5 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-[#fff7c2] ${
                       isWhatsApp ? "pt-6" : ""
                     }`}
                     href={link.href}

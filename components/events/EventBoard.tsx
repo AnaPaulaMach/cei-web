@@ -1,3 +1,4 @@
+import { XPWindow } from "@/components/cei-os/XPWindow";
 import { EventCard } from "@/components/events/EventCard";
 import type { EventItem } from "@/types/events";
 
@@ -8,6 +9,7 @@ type EventBoardProps = {
   highlightFirst?: boolean;
   statusLabel?: string;
   title?: string;
+  windowTitle?: string;
 };
 
 export function EventBoard({
@@ -16,23 +18,25 @@ export function EventBoard({
   events,
   highlightFirst = true,
   statusLabel = "avisos activos",
-  title = "Tablero de destacados"
+  title = "Tablero de destacados",
+  windowTitle = "tablero/destacados.sys"
 }: EventBoardProps) {
   const orderedEvents = highlightFirst
     ? [...events].sort((a, b) => Number(Boolean(b.highlighted)) - Number(Boolean(a.highlighted)))
     : events;
 
   return (
-    <div className="rounded-sm bg-cei-window/95 p-4 sm:p-6">
-      <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+    <XPWindow title={windowTitle}>
+      <div className="mb-4 flex flex-col gap-3 sm:mb-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
+          <p className="terminal-text text-xs font-bold uppercase sm:text-sm">events.sys</p>
           <h2 className="font-mono text-2xl font-black text-cei-shadow sm:text-3xl md:text-4xl">{title}</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-800 sm:text-base sm:leading-7">
             {description}
           </p>
         </div>
-        <div className="inline-flex w-fit items-center gap-2 font-mono text-xs font-black text-cei-shadow">
-          <span className="h-2 w-2 rounded-full bg-cei-terminal" />
+        <div className="inline-flex w-fit items-center gap-2 rounded-sm border-2 border-cei-shadow bg-white px-3 py-2 font-mono text-[11px] font-black text-cei-shadow shadow-pixel sm:text-xs">
+          <span className="h-3 w-3 animate-pulse rounded-full bg-cei-terminal" />
           {events.length} {statusLabel}
         </div>
       </div>
@@ -44,10 +48,10 @@ export function EventBoard({
           ))}
         </div>
       ) : (
-        <div className="rounded-sm bg-white p-6 text-center font-mono font-bold text-cei-shadow">
+        <div className="rounded-sm border-2 border-dashed border-cei-shadow bg-white p-6 text-center font-mono font-bold text-cei-shadow">
           {emptyMessage}
         </div>
       )}
-    </div>
+    </XPWindow>
   );
 }

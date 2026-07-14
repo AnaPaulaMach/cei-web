@@ -49,7 +49,8 @@ export default function GuiaTramitesPage() {
         <XPWindow title="guia/tramites">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
-              <h1 className="font-mono text-4xl font-black leading-tight text-cei-shadow">
+              <p className="terminal-text text-sm font-bold uppercase">manual rápido</p>
+              <h1 className="mt-2 font-mono text-4xl font-black leading-tight text-cei-shadow">
                 Guía de trámites
               </h1>
             </div>
@@ -71,7 +72,7 @@ export default function GuiaTramitesPage() {
           {procedureGroups.map((group) => (
             <Card className="bg-white" key={group.shortName}>
               <div className="mb-4 flex items-start gap-3">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-sm bg-cei-alert font-mono text-sm font-black text-cei-shadow">
+                <span className="grid h-12 w-12 shrink-0 place-items-center border-2 border-cei-shadow bg-cei-alert font-mono text-sm font-black text-cei-shadow shadow-pixel">
                   {group.shortName}
                 </span>
                 <div>
