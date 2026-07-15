@@ -31,26 +31,30 @@ export default async function HomePage() {
           showControls={false}
           title="Comisión de Estudiantes de Informática"
         >
-          <div className="relative min-h-[270px] overflow-hidden sm:min-h-[310px] lg:min-h-[350px]">
-            <Image
-              alt="Estudiantes de informática reunidos en una actividad de la Comisión"
-              className="object-cover object-center"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 1152px"
-              src="/eventos/asamblea-primera-2.jpeg"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,17,31,0.92)_0%,rgba(7,17,31,0.74)_52%,rgba(7,17,31,0.18)_100%)]" />
-            <div className="relative flex min-h-[270px] max-w-3xl flex-col justify-end p-5 text-white sm:min-h-[310px] sm:p-8 lg:min-h-[350px] lg:p-10">
-              <p className="w-fit bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow sm:text-xs">
-                CEI · Universidad Nacional de Santiago del Estero
-              </p>
-              <h1 className="mt-4 text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
-                Comisión de Estudiantes de Informática
-              </h1>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/95 sm:text-lg sm:leading-7">
-                Representamos a estudiantes de informática y acercamos actividades, oportunidades e información útil.
-              </p>
+          <div className="relative overflow-hidden border-l-8 border-cei-alert bg-[#0c2f64] text-white">
+            <div className="grid min-h-[250px] items-end gap-6 p-5 sm:min-h-[270px] sm:grid-cols-[1fr_auto] sm:p-8 lg:p-10">
+              <div className="max-w-3xl">
+                <p className="w-fit bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow sm:text-xs">
+                  CEI · Universidad Nacional de Santiago del Estero
+                </p>
+                <h1 className="mt-4 text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
+                  Comisión de Estudiantes de Informática
+                </h1>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-white/95 sm:text-lg sm:leading-7">
+                  Representamos a estudiantes de informática y acercamos actividades, oportunidades e información útil.
+                </p>
+              </div>
+
+              <div className="hidden h-28 w-28 place-items-center border border-white/60 bg-white shadow-[5px_5px_0_rgba(7,17,31,0.55)] sm:grid lg:h-32 lg:w-32">
+                <Image
+                  alt=""
+                  className="h-24 w-24 object-contain lg:h-28 lg:w-28"
+                  height={112}
+                  priority
+                  src="/logo/logo_sin_fondo.png"
+                  width={112}
+                />
+              </div>
             </div>
           </div>
 
