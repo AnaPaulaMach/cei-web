@@ -66,7 +66,9 @@ export default async function HomePage() {
 
           <div className="grid gap-7 lg:grid-cols-[1.35fr_0.65fr]">
             <section>
-              <p className="font-mono text-xs font-black uppercase text-cei-blue">Próximo evento</p>
+              <p className="font-mono text-xs font-black uppercase text-cei-blue">
+                {nextEvent?.highlighted ? "Evento destacado" : "Próximo evento"}
+              </p>
               {nextEvent ? (
                 <article className="mt-3 border-l-4 border-cei-alert pl-4 sm:pl-5">
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-bold text-slate-600">

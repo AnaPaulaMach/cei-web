@@ -28,7 +28,11 @@ function getEventCta(href: string, status: "proximo" | "pasado", isHackathon: bo
     return "Completar censo";
   }
 
-  if (isHackathon || isGoogleForm) {
+  if (isHackathon) {
+    return "Conocer propuesta";
+  }
+
+  if (isGoogleForm) {
     return "Inscribirme";
   }
 
