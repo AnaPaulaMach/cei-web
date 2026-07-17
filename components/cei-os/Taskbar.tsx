@@ -5,7 +5,7 @@ export function Taskbar() {
   const taskbarLinks = [...contactLinks, repositoryLink];
 
   return (
-    <footer className="border-t border-[#215ca8] bg-[#071a36] px-4 py-3 text-white shadow-[0_-3px_12px_rgba(3,9,20,0.4)]">
+    <footer className="hidden border-t border-[#215ca8] bg-[#071a36] px-4 py-3 text-white shadow-[0_-3px_12px_rgba(3,9,20,0.4)] md:block">
       <div className="mx-auto flex max-w-7xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
         <Link
           className="hidden min-h-11 shrink-0 items-center rounded-sm border border-white/70 bg-[#18794e] px-4 font-mono text-sm font-black shadow-[inset_1px_1px_0_rgba(255,255,255,0.4)] sm:inline-flex"
@@ -13,10 +13,6 @@ export function Taskbar() {
         >
           CEI Start
         </Link>
-        <Link className="font-mono text-sm font-black sm:hidden" href="/">
-          CEI
-        </Link>
-
         <nav aria-label="Canales oficiales" className="flex flex-wrap gap-x-4 font-mono text-xs font-black sm:justify-end">
           {taskbarLinks.map((link) => {
             const isExternal = link.href.startsWith("http");

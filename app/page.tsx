@@ -4,7 +4,6 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
 import { DataNotice } from "@/components/ui/DataNotice";
-import { contactLinks } from "@/data/commission";
 import { getHomeEvents } from "@/lib/events";
 import { getHomeOpportunities } from "@/lib/opportunities";
 import { createPageMetadata } from "@/lib/seo";
@@ -53,9 +52,10 @@ export default async function HomePage() {
 
       <Section
         aria-labelledby="actualidad-title"
-        className="overflow-hidden rounded-sm border border-[#36577c] bg-[#e7ecf2] shadow-[0_8px_22px_rgba(3,9,20,0.28)]"
+        className="overflow-hidden rounded-sm border border-[#2f5278] bg-[#edf2f7] shadow-[0_8px_22px_rgba(3,9,20,0.24)]"
       >
-        <div className="border-b border-cei-shadow/20 bg-[#d7dee8] px-5 py-3 sm:px-6">
+        <div className="flex items-center gap-2 border-b border-cei-shadow/20 bg-[#dbe4ef] px-5 py-3 sm:px-6">
+          <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-cei-terminal shadow-[0_0_0_3px_rgba(38,150,95,0.12)]" />
           <h2 className="font-mono text-xs font-black uppercase text-cei-shadow" id="actualidad-title">
             Ahora en la CEI
           </h2>
@@ -85,8 +85,11 @@ export default async function HomePage() {
                     <Button className="px-4 text-xs" href={nextEvent.href}>
                       {nextEvent.cta}
                     </Button>
-                    <Link className="text-sm font-bold text-cei-blue underline-offset-4 hover:underline" href="/eventos">
-                      Ver eventos
+                    <Link
+                      className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-cei-blue underline-offset-4 hover:underline"
+                      href="/eventos"
+                    >
+                      Ver eventos <span aria-hidden="true">&gt;</span>
                     </Link>
                   </div>
                 </article>
@@ -98,8 +101,11 @@ export default async function HomePage() {
             <section className="border-t border-cei-shadow/20 pt-6 lg:border-l lg:border-t-0 lg:pl-7 lg:pt-0">
               <div className="flex items-center justify-between gap-3">
                 <h3 className="text-lg font-black text-cei-shadow">Oportunidades</h3>
-                <Link className="text-xs font-bold text-cei-blue underline-offset-4 hover:underline" href="/oportunidades">
-                  Ver todas
+                <Link
+                  className="inline-flex min-h-11 items-center gap-1 text-xs font-bold text-cei-blue underline-offset-4 hover:underline"
+                  href="/oportunidades"
+                >
+                  Ver todas <span aria-hidden="true">&gt;</span>
                 </Link>
               </div>
               {featuredOpportunity ? (
@@ -126,26 +132,6 @@ export default async function HomePage() {
             </section>
           </div>
 
-          <div className="mt-6 flex flex-col gap-2 border-t border-cei-shadow/20 pt-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm font-bold text-cei-shadow">Canales oficiales</p>
-            <div className="flex flex-wrap gap-x-5">
-              {contactLinks.map((link) => {
-                const isExternal = link.href.startsWith("http");
-
-                return (
-                  <a
-                    className="inline-flex min-h-11 items-center text-sm font-bold text-cei-blue underline-offset-4 hover:underline"
-                    href={link.href}
-                    key={link.label}
-                    rel={isExternal ? "noopener noreferrer" : undefined}
-                    target={isExternal ? "_blank" : undefined}
-                  >
-                    {link.label === "Canal de WhatsApp" ? "WhatsApp" : link.label}
-                  </a>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </Section>
 
@@ -159,7 +145,7 @@ export default async function HomePage() {
         <nav aria-label="Secciones útiles" className="mt-4 grid border-y border-white/20 md:grid-cols-3">
           {quickLinks.map((link) => (
             <Link
-              className="group flex min-h-16 items-center justify-between gap-3 border-b border-white/20 px-2 py-3 font-bold transition hover:bg-white/5 md:border-b-0 md:border-r md:px-4 md:last:border-r-0"
+              className="group flex min-h-16 items-center justify-between gap-3 border-b border-white/20 px-2 py-3 font-bold transition hover:bg-white/[0.07] focus-visible:bg-white/[0.07] md:border-b-0 md:border-r md:px-4 md:last:border-r-0"
               href={link.href}
               key={link.href}
             >
