@@ -24,7 +24,7 @@ export default function ContactoPage() {
           <div className="space-y-3">
             <div className="space-y-3">
               <p className="terminal-text text-sm font-bold uppercase">canales oficiales</p>
-              <h1 className="font-mono text-4xl font-black text-cei-shadow">Contacto</h1>
+              <h1 className="text-4xl font-black text-cei-shadow">Contacto</h1>
               <p className="max-w-2xl leading-7 text-slate-800">
                 Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comisión.
               </p>
@@ -56,7 +56,7 @@ export default function ContactoPage() {
                     <span className="block font-mono text-xs font-black uppercase text-cei-shadow/75">
                       {isExternal ? "externo" : "mail"}
                     </span>
-                    <span className="mt-2 block font-mono text-xl font-black">{link.label}</span>
+                    <span className="mt-2 block text-xl font-black">{link.label}</span>
                     <span className="mt-2 block max-w-[15rem] text-sm leading-6 text-slate-700">{link.description}</span>
                     {isWhatsApp ? (
                       <span className="pointer-events-none absolute right-4 top-3 rotate-[-2deg] rounded-sm border-2 border-cei-shadow bg-cei-alert px-3 py-2 text-center font-mono text-[11px] font-black uppercase leading-none text-cei-shadow shadow-[2px_2px_0_rgba(15,42,95,0.3)]">

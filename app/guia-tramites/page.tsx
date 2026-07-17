@@ -50,7 +50,7 @@ export default function GuiaTramitesPage() {
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <p className="terminal-text text-sm font-bold uppercase">manual rápido</p>
-              <h1 className="mt-2 font-mono text-4xl font-black leading-tight text-cei-shadow">
+              <h1 className="mt-2 text-4xl font-black leading-tight text-cei-shadow">
                 Guía de trámites
               </h1>
             </div>
@@ -77,7 +77,7 @@ export default function GuiaTramitesPage() {
                 </span>
                 <div>
                   <p className="font-mono text-xs font-black uppercase text-cei-shadow">carrera</p>
-                  <h2 className="mt-1 font-mono text-xl font-black leading-tight text-cei-shadow">{group.career}</h2>
+                  <h2 className="mt-1 text-xl font-black leading-tight text-cei-shadow">{group.career}</h2>
                 </div>
               </div>
               <ul className="space-y-3 text-sm leading-6 text-slate-800">

@@ -55,7 +55,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
                 <Badge>{featured.category}</Badge>
                 {featured.isExternal || featured.href?.startsWith("http") ? <Badge>Externo</Badge> : null}
               </div>
-              <h2 className="font-mono text-3xl font-black text-cei-shadow">{featured.title}</h2>
+              <h2 className="text-3xl font-black text-cei-shadow">{featured.title}</h2>
               <p className="max-w-3xl leading-7 text-slate-800">{featured.description}</p>
               <p className="font-mono text-sm font-bold text-cei-shadow">
                 Fuente: {featured.source}
@@ -77,7 +77,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
         <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="terminal-text text-sm font-bold uppercase">folder/oportunidades</p>
-            <h1 className="font-mono text-3xl font-black text-cei-shadow sm:text-4xl">Oportunidades</h1>
+            <h1 className="text-3xl font-black text-cei-shadow sm:text-4xl">Oportunidades</h1>
             <p className="mt-2 max-w-2xl leading-7 text-slate-800">
               Filtrá por tipo de archivo para encontrar cursos, trabajos, prácticas y becas.
             </p>

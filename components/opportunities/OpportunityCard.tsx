@@ -23,7 +23,7 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
         {opportunity.highlighted ? <Badge>Nuevo</Badge> : null}
       </div>
       <div className="flex flex-1 flex-col p-4 sm:p-5">
-        <h3 className="font-mono text-lg font-black leading-tight text-cei-shadow sm:text-xl">{opportunity.title}</h3>
+        <h3 className="text-lg font-black leading-tight text-cei-shadow sm:text-xl">{opportunity.title}</h3>
         <p className="mt-2 text-sm font-bold text-slate-700">{opportunity.source}</p>
         <p className="mt-3 flex-1 text-sm leading-6 text-slate-800 sm:text-base sm:leading-7">
           {opportunity.description}

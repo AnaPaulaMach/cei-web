@@ -36,7 +36,7 @@ export function EventCard({ event }: EventCardProps) {
         {event.statusLabel ? <Badge>{event.statusLabel}</Badge> : null}
       </div>
       <h3
-        className={`font-mono font-black leading-tight text-cei-shadow ${
+        className={`font-black leading-tight text-cei-shadow ${
           event.highlighted ? "text-2xl sm:text-3xl md:text-4xl" : "text-xl sm:text-2xl"
         }`}
       >

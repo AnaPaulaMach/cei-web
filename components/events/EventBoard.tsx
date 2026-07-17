@@ -30,7 +30,7 @@ export function EventBoard({
       <div className="mb-4 flex flex-col gap-3 sm:mb-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <p className="terminal-text text-xs font-bold uppercase sm:text-sm">events.sys</p>
-          <h2 className="font-mono text-2xl font-black text-cei-shadow sm:text-3xl md:text-4xl">{title}</h2>
+          <h2 className="text-2xl font-black text-cei-shadow sm:text-3xl md:text-4xl">{title}</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-800 sm:text-base sm:leading-7">
             {description}
           </p>

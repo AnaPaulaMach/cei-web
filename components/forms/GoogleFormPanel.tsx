@@ -13,7 +13,7 @@ export function GoogleFormPanel({ title, description, href }: GoogleFormPanelPro
         </span>
         <div>
           <p className="terminal-text text-sm font-bold uppercase">google.forms.link</p>
-          <h2 className="font-mono text-2xl font-black text-cei-shadow">{title}</h2>
+          <h2 className="text-2xl font-black text-cei-shadow">{title}</h2>
         </div>
       </div>
       <p className="leading-7 text-slate-800">{description}</p>

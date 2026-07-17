@@ -20,7 +20,7 @@ export function QuickActionPanel({ actions, title, subtitle }: QuickActionPanelP
       <div className="mb-4 flex items-end justify-between gap-3">
         <div>
           <p className="terminal-text text-xs font-bold uppercase">quick access</p>
-          <h2 className="font-mono text-2xl font-black text-cei-shadow">{title}</h2>
+          <h2 className="text-2xl font-black text-cei-shadow">{title}</h2>
         </div>
         {subtitle ? <p className="max-w-44 text-right text-xs leading-5 text-slate-700">{subtitle}</p> : null}
       </div>

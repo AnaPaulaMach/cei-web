@@ -20,7 +20,7 @@ export default function ComisionPage() {
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className="space-y-4">
               <p className="terminal-text text-sm font-bold uppercase">about cei</p>
-              <h1 className="font-mono text-4xl font-black text-cei-shadow">Quiénes somos</h1>
+              <h1 className="text-4xl font-black text-cei-shadow">Quiénes somos</h1>
               <div className="flex flex-wrap gap-2">
                 {careerLinks.map((career) => (
                   <a
@@ -50,7 +50,7 @@ export default function ComisionPage() {
           <div className="mb-5">
             <div>
               <p className="terminal-text text-sm font-bold uppercase">documentos</p>
-              <h2 className="font-mono text-3xl font-black text-cei-shadow">Documentación institucional</h2>
+              <h2 className="text-3xl font-black text-cei-shadow">Documentación institucional</h2>
             </div>
           </div>
           <div className="grid gap-3 md:grid-cols-2">
@@ -96,7 +96,7 @@ export default function ComisionPage() {
           <div className="mb-5">
             <div>
               <p className="terminal-text text-sm font-bold uppercase">áreas</p>
-              <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué hacemos</h2>
+              <h2 className="text-3xl font-black text-cei-shadow">Qué hacemos</h2>
             </div>
           </div>
           <div className="grid gap-3 md:grid-cols-2">
@@ -119,7 +119,7 @@ export default function ComisionPage() {
         <Card className="bg-white">
           <div className="mb-5">
             <p className="terminal-text text-sm font-bold uppercase">directiva</p>
-            <h2 className="font-mono text-3xl font-black text-cei-shadow">Comisión directiva 2026</h2>
+            <h2 className="text-3xl font-black text-cei-shadow">Comisión directiva 2026</h2>
           </div>
           <div className="divide-y-2 divide-cei-shadow/20 border-y-2 border-cei-shadow/20">
             {commissionMembers.map((member) => (

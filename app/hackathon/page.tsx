@@ -102,7 +102,7 @@ export default function HackathonPage() {
             </div>
 
             <div className="space-y-4">
-              <h1 className="max-w-4xl font-mono text-4xl font-black leading-tight text-cei-shadow md:text-6xl">
+              <h1 className="max-w-4xl text-4xl font-black leading-tight text-cei-shadow md:text-6xl">
                 Hackathon del Día del Programador
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-slate-800">
@@ -137,7 +137,7 @@ export default function HackathonPage() {
         <XPWindow title="que-es.txt" className="h-full">
           <div className="space-y-4">
             <p className="terminal-text text-sm font-bold uppercase">about/hackathon</p>
-            <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué es y por qué participar</h2>
+            <h2 className="text-3xl font-black text-cei-shadow">Qué es y por qué participar</h2>
             <p className="leading-7 text-slate-800">
               Es una experiencia intensiva para convertir ideas en prototipos. No se trata solo de programar: también
               hay que pensar problemas, organizarse, comunicar y aprender a presentar una solución.
@@ -161,7 +161,7 @@ export default function HackathonPage() {
 
       <Section id="desafios">
         <div className="mb-5">
-          <h2 className="font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Ejes y desafíos</h2>
+          <h2 className="text-3xl font-black text-white drop-shadow md:text-4xl">Ejes y desafíos</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {challengeTracks.map((track) => (
@@ -170,7 +170,7 @@ export default function HackathonPage() {
                 <span className="grid h-12 w-12 place-items-center border-2 border-cei-shadow bg-cei-alert font-mono text-xs font-black text-cei-shadow shadow-pixel">
                   {track.tag}
                 </span>
-                <h3 className="font-mono text-2xl font-black text-cei-shadow">{track.title}</h3>
+                <h3 className="text-2xl font-black text-cei-shadow">{track.title}</h3>
                 <p className="leading-7 text-slate-800">{track.description}</p>
               </div>
             </XPWindow>
@@ -182,12 +182,12 @@ export default function HackathonPage() {
         <XPWindow title="cronograma/weekend.exe">
           <div className="mb-6">
             <p className="terminal-text text-sm font-bold uppercase">timeline</p>
-            <h2 className="font-mono text-3xl font-black text-cei-shadow">Cronograma del fin de semana</h2>
+            <h2 className="text-3xl font-black text-cei-shadow">Cronograma del fin de semana</h2>
           </div>
           <div className="grid gap-4 lg:grid-cols-2">
             {schedule.map((day) => (
               <div className="rounded-sm border-2 border-cei-shadow bg-white p-5 shadow-pixel" key={day.day}>
-                <h3 className="font-mono text-2xl font-black text-cei-shadow">{day.day}</h3>
+                <h3 className="text-2xl font-black text-cei-shadow">{day.day}</h3>
                 <ol className="mt-4 space-y-3">
                   {day.items.map((item, index) => (
                     <li className="flex gap-3" key={item}>
@@ -208,7 +208,7 @@ export default function HackathonPage() {
         <XPWindow title="aprendizajes.log">
           <div className="space-y-4">
             <p className="terminal-text text-sm font-bold uppercase">skills unlocked</p>
-            <h2 className="font-mono text-3xl font-black text-cei-shadow">Qué vas a aprender</h2>
+            <h2 className="text-3xl font-black text-cei-shadow">Qué vas a aprender</h2>
             <ul className="grid gap-3">
               {learningItems.map((item) => (
                 <li className="rounded-sm border-2 border-cei-shadow bg-white px-4 py-3 font-bold text-slate-800 shadow-pixel" key={item}>
@@ -221,7 +221,7 @@ export default function HackathonPage() {
 
         <XPWindow title="premios.ini">
           <div className="space-y-4">
-            <h2 className="font-mono text-3xl font-black text-cei-shadow">Premios</h2>
+            <h2 className="text-3xl font-black text-cei-shadow">Premios</h2>
             <p className="leading-7 text-slate-800">
               Los premios, menciones y reconocimientos se publicarán cuando estén confirmados.
             </p>
@@ -233,7 +233,7 @@ export default function HackathonPage() {
         <XPWindow title="sponsors/grid">
           <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <h2 className="font-mono text-3xl font-black text-cei-shadow">Sponsors</h2>
+              <h2 className="text-3xl font-black text-cei-shadow">Sponsors</h2>
               <p className="mt-2 max-w-2xl leading-7 text-slate-800">
                 Espacio reservado para instituciones, empresas y comunidades que quieran acompañar el evento.
               </p>
@@ -247,7 +247,7 @@ export default function HackathonPage() {
 
       <Section id="faq">
         <div className="mb-5">
-          <h2 className="font-mono text-3xl font-black text-white drop-shadow md:text-4xl">Preguntas frecuentes</h2>
+          <h2 className="text-3xl font-black text-white drop-shadow md:text-4xl">Preguntas frecuentes</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((faq) => (
