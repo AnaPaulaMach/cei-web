@@ -13,4 +13,6 @@ Para cargar contenido inicial de ejemplo, correr `seed-public-content.sql` despu
 
 Para actualizar eventos y oportunidades después de la carga inicial, ver `docs/actualizar-contenido-supabase.md`.
 
+Para retirar las oportunidades de prueba y cargar la beca Santander de julio de 2026, correr `replace-opportunities-julio-2026.sql` en el editor SQL.
+
 Si la asamblea ya estaba cargada antes de agregar imágenes, correr `update-asamblea-images.sql` para asociarle las fotos de prueba.

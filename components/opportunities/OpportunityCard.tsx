@@ -6,6 +6,18 @@ type OpportunityCardProps = {
   opportunity: OpportunityItem;
 };
 
+function getLinkLabel(href: string, isExternal: boolean) {
+  if (href.includes("/application/new/")) {
+    return "Solicitar beca";
+  }
+
+  if (href.includes("/program/search")) {
+    return "Buscar oportunidades";
+  }
+
+  return isExternal ? "Abrir enlace externo" : "Abrir enlace";
+}
+
 export function OpportunityCard({ opportunity }: OpportunityCardProps) {
   const isExternal = Boolean(opportunity.href?.startsWith("http") || opportunity.isExternal);
 
@@ -34,10 +46,19 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
         </div>
       </div>
       <div className="border-t border-cei-shadow/35 bg-cei-window p-3 sm:p-4">
-        {opportunity.href ? (
-          <Button href={opportunity.href} variant="secondary">
-            {isExternal ? "Abrir enlace externo" : "Abrir enlace"}
-          </Button>
+        {opportunity.href || opportunity.detailsHref ? (
+          <div className="flex flex-wrap gap-2">
+            {opportunity.detailsHref ? (
+              <Button href={opportunity.detailsHref} variant="secondary">
+                Ver información
+              </Button>
+            ) : null}
+            {opportunity.href ? (
+              <Button href={opportunity.href} variant={opportunity.detailsHref ? "primary" : "secondary"}>
+                {getLinkLabel(opportunity.href, isExternal)}
+              </Button>
+            ) : null}
+          </div>
         ) : (
           <span className="inline-flex rounded-sm border border-dashed border-cei-shadow bg-white px-3 py-2 font-mono text-xs font-black uppercase text-cei-shadow">
             Link pendiente

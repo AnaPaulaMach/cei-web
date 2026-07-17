@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { XPWindow } from "@/components/cei-os/XPWindow";
 import { OpportunityCard } from "@/components/opportunities/OpportunityCard";
@@ -86,6 +87,19 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
           No hay oportunidades cargadas en esta categoría por ahora.
         </div>
       )}
+
+      <div className="mt-7 flex flex-col gap-3 border-t border-cei-shadow/25 pt-5 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h3 className="font-black text-cei-shadow">¿Conocés una oportunidad útil?</h3>
+          <p className="mt-1 text-sm text-slate-700">Contanos y la compartimos con otros estudiantes.</p>
+        </div>
+        <Link
+          className="xp-button inline-flex min-h-11 items-center justify-center rounded-sm px-4 font-mono text-xs font-black text-cei-shadow"
+          href="/contacto"
+        >
+          Contactanos
+        </Link>
+      </div>
     </XPWindow>
   );
 }

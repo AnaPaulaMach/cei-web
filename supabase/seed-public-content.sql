@@ -70,6 +70,7 @@ insert into eventos (
   );
 
 insert into oportunidades (
+  id,
   titulo,
   descripcion,
   categoria,
@@ -80,42 +81,25 @@ insert into oportunidades (
   link
 ) values
   (
-    'Ruta web para portfolio',
-    'Recursos para practicar HTML, CSS, JavaScript y publicar proyectos propios.',
-    'Curso',
-    'CEI recomienda',
-    '2026-07-07',
-    null,
+    'a4fd405f-f969-4b18-8ca4-7dd006ed6f68',
+    'Beca Santander Alumnos de Grado Argentina 2026',
+    'Ayuda económica de ARS 400.000 en un único pago. Para estudiantes de la UNSE que hayan aprobado el primer año, tengan promedio mínimo 6 y al menos dos materias aprobadas en 2025. La documentación se presenta en el Área Becas de la UNSE hasta el 5 de agosto.',
+    'Beca',
+    'Banco Santander Argentina · UNSE',
+    '2026-05-28',
+    '2026-07-30',
     true,
-    'https://developer.mozilla.org/es/'
+    'https://app.santanderopenacademy.com/es/application/new/6a05d15c4370f135665e34fa'
   ),
   (
-    'Becas y convocatorias',
-    'Espacio para publicar becas, programas y oportunidades académicas.',
-    'Becas',
-    'Convocatorias',
-    '2026-07-06',
+    '4f2fe17a-f9b8-46bc-bfce-1836d90997b8',
+    'Buscador de oportunidades Santander Open Academy',
+    'Explorá convocatorias abiertas y próximas de becas, cursos y programas para estudiantes.',
+    'Beca',
+    'Santander Open Academy',
+    '2026-07-17',
     null,
     false,
-    'https://www.argentina.gob.ar/educacion/becas'
-  ),
-  (
-    'Prácticas y trabajos junior',
-    'Búsqueda de prácticas, pasantías y oportunidades laborales para estudiantes de informática.',
-    'Prácticas',
-    'Comunidad tech',
-    '2026-07-05',
-    null,
-    false,
-    'https://www.linkedin.com/jobs/'
-  ),
-  (
-    'Búsqueda laboral junior',
-    'Espacio para compartir búsquedas de primer empleo, trainee y junior en tecnología.',
-    'Trabajo',
-    'Empresas y comunidad',
-    '2026-07-04',
-    null,
-    false,
-    'https://www.linkedin.com/jobs/search/?keywords=developer%20junior'
-  );
+    'https://app.santanderopenacademy.com/es/program/search?status=SOON&status=OPEN'
+  )
+on conflict (id) do nothing;

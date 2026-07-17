@@ -1,5 +1,5 @@
 export type ContentResult<T> = {
   items: T[];
   error?: string;
-  source: "mock" | "supabase";
+  source: "fallback" | "mock" | "supabase";
 };

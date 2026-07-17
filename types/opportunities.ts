@@ -5,8 +5,10 @@ export type OpportunityItem = {
   category: string;
   source: string;
   href?: string;
+  detailsHref?: string;
   isExternal?: boolean;
   publishedAt?: string;
   deadline?: string;
+  deadlineIso?: string;
   highlighted?: boolean;
 };
