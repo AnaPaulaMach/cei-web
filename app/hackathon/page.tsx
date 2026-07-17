@@ -12,7 +12,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "Hackathon",
   description:
-    "Hackathon del Día del Programador organizado por la CEI de la Universidad Nacional de Santiago del Estero el 12 y 13 de septiembre de 2026.",
+    "Hackathon del Día del Programador organizado por la CEI de la Universidad Nacional de Santiago del Estero. Será un fin de semana de septiembre de 2026, con fecha a definir.",
   path: "/hackathon"
 });
 
@@ -36,11 +36,11 @@ const challengeTracks = [
 
 const schedule = [
   {
-    day: "Sábado 12/09",
+    day: "Sábado · fecha a definir",
     items: ["Acreditación y apertura", "Presentación de desafíos", "Armado de equipos", "Talleres y hacking"]
   },
   {
-    day: "Domingo 13/09",
+    day: "Domingo · fecha a definir",
     items: ["Mentorías", "Cierre de prototipos", "Demos finales", "Premiación"]
   }
 ];
@@ -95,7 +95,7 @@ export default function HackathonPage() {
                   programmer day event mode
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2">
-                  <Badge>12-13 septiembre 2026</Badge>
+                  <Badge>Un fin de semana de septiembre · fecha a definir</Badge>
                   <Badge>FCEyT - Universidad Nacional de Santiago del Estero</Badge>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export default function HackathonPage() {
           <TerminalPanel
             lines={[
               "event: hackathon_día_programador",
-              "date: sábado 12 + domingo 13",
+              "date: fin de semana de septiembre · a definir",
               "place: Facultad de Ciencias Exactas y Tecnologías",
               "status: preparando desafíos",
               "output: demo final"
@@ -231,16 +231,18 @@ export default function HackathonPage() {
 
       <Section id="sponsors">
         <XPWindow title="sponsors/grid">
-          <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <div>
+          <div className="mb-6 text-center">
+            <div className="mx-auto max-w-2xl">
               <h2 className="text-3xl font-black text-cei-shadow">Sponsors</h2>
               <p className="mt-2 max-w-2xl leading-7 text-slate-800">
                 Espacio reservado para instituciones, empresas y comunidades que quieran acompañar el evento.
               </p>
             </div>
-            <Button href="mailto:comisionlsiafines@gmail.com?subject=Quiero%20ser%20sponsor%20del%20hackathon">
-              Quiero ser sponsor
-            </Button>
+            <div className="mt-5 flex justify-center">
+              <Button href="mailto:comisionlsiafines@gmail.com?subject=Quiero%20ser%20sponsor%20del%20hackathon">
+                Quiero ser sponsor
+              </Button>
+            </div>
           </div>
         </XPWindow>
       </Section>
