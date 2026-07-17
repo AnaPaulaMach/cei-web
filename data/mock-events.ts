@@ -23,7 +23,7 @@ export const mockEvents: EventItem[] = [
     sortDate: "2026-08-15T18:00:00-03:00",
     place: "Universidad Nacional de Santiago del Estero",
     category: "Charla",
-    href: "/eventos",
+    href: "/novedades?seccion=agenda",
     cta: "Ver más",
     status: "proximo",
     statusLabel: "Agenda en preparacion"
@@ -49,7 +49,7 @@ export const mockEvents: EventItem[] = [
     sortDate: "2026-10-01T09:00:00-03:00",
     place: "FCEyT - Universidad Nacional de Santiago del Estero",
     category: "Difusión",
-    href: "/eventos",
+    href: "/novedades?seccion=agenda",
     cta: "Ver aviso",
     status: "proximo",
     statusLabel: "Aviso importante"

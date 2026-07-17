@@ -2,7 +2,7 @@ import Link from "next/link";
 import { contactLinks, repositoryLink } from "@/data/commission";
 
 export function Taskbar() {
-  const taskbarLinks = [...contactLinks, repositoryLink];
+  const taskbarLinks = [{ label: "Quiénes somos", href: "/comision" }, ...contactLinks, repositoryLink];
 
   return (
     <footer className="hidden border-t border-[#215ca8] bg-[#071a36] px-4 py-3 text-white shadow-[0_-3px_12px_rgba(3,9,20,0.4)] md:block">

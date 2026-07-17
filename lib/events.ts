@@ -39,7 +39,10 @@ function mapEvent(row: EventRow): EventItem {
   const category = row.categoria ?? "Aviso";
   const isHackathon = category.toLowerCase().includes("hack");
   const status = row.estado === "pasado" ? "pasado" : "proximo";
-  const href = isHackathon ? "/hackathon" : (row.link ?? "/eventos");
+  const storedHref = row.link?.trim();
+  const normalizedHref =
+    storedHref === "/eventos" || storedHref === "/oportunidades" ? "/novedades?seccion=agenda" : storedHref;
+  const href = isHackathon ? "/hackathon" : (normalizedHref ?? "/novedades?seccion=agenda");
 
   return {
     id: row.id,

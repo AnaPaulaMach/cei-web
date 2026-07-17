@@ -15,7 +15,7 @@ export const metadata = createPageMetadata({
 
 const quickLinks = [
   { label: "Guía de trámites", href: "/guia-tramites" },
-  { label: "La Comisión", href: "/comision" },
+  { label: "Quiénes somos", href: "/comision" },
   { label: "Contacto", href: "/contacto" }
 ];
 
@@ -87,9 +87,9 @@ export default async function HomePage() {
                     </Button>
                     <Link
                       className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-cei-blue underline-offset-4 hover:underline"
-                      href="/eventos"
+                      href="/novedades?seccion=agenda"
                     >
-                      Ver eventos <span aria-hidden="true">&gt;</span>
+                      Ver agenda <span aria-hidden="true">&gt;</span>
                     </Link>
                   </div>
                 </article>
@@ -103,7 +103,7 @@ export default async function HomePage() {
                 <h3 className="text-lg font-black text-cei-shadow">Oportunidades</h3>
                 <Link
                   className="inline-flex min-h-11 items-center gap-1 text-xs font-bold text-cei-blue underline-offset-4 hover:underline"
-                  href="/oportunidades"
+                  href="/novedades?seccion=oportunidades"
                 >
                   Ver todas <span aria-hidden="true">&gt;</span>
                 </Link>
@@ -111,7 +111,7 @@ export default async function HomePage() {
               {featuredOpportunity ? (
                 <a
                   className="group mt-3 flex min-h-14 items-center gap-3 border-y border-cei-shadow/15 py-3 text-cei-shadow"
-                  href={featuredOpportunity.href || "/oportunidades"}
+                  href={featuredOpportunity.href || "/novedades?seccion=oportunidades"}
                   rel={featuredOpportunity.href?.startsWith("http") ? "noreferrer" : undefined}
                   target={featuredOpportunity.href?.startsWith("http") ? "_blank" : undefined}
                 >

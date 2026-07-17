@@ -6,7 +6,7 @@ export function MobileNav() {
     <details className="group lg:hidden">
       <summary
         aria-label="Menú principal"
-        className="flex min-h-11 cursor-pointer list-none items-center gap-2 rounded-md border border-white/15 bg-white/[0.06] px-3 text-sm font-bold text-white transition hover:bg-white/10"
+        className="flex min-h-11 cursor-pointer list-none items-center gap-2 rounded-sm border border-white/15 bg-white/[0.04] px-3 text-sm font-bold text-white transition hover:bg-white/[0.07]"
       >
         <span className="group-open:hidden">Menú</span>
         <span aria-hidden="true" className="grid gap-1 group-open:hidden">
@@ -22,7 +22,7 @@ export function MobileNav() {
 
       <nav
         aria-label="Navegación móvil"
-        className="fixed inset-x-4 top-[72px] z-[120] grid overflow-hidden rounded-md border border-white/15 bg-[#081d3c] p-2 shadow-[0_16px_38px_rgba(3,9,20,0.72)]"
+        className="fixed inset-x-4 top-[72px] z-[120] grid overflow-hidden rounded-sm border border-white/15 bg-[#071f44] p-2 shadow-[0_16px_38px_rgba(3,9,20,0.72)]"
       >
         {navLinks.map((link) => (
           <Link
