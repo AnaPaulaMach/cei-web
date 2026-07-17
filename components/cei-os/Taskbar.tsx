@@ -5,9 +5,9 @@ export function Taskbar() {
   const taskbarLinks = [...contactLinks, repositoryLink];
 
   return (
-    <div className="border-t-2 border-white bg-gradient-to-r from-cei-blue via-blue-700 to-cei-shadow px-3 py-2 text-white shadow-[0_-4px_0_rgba(9,36,95,0.35)] sm:px-4 sm:py-3">
+    <div className="border-t-2 border-white/80 bg-gradient-to-r from-cei-blue via-[#102f68] to-cei-shadow px-3 py-2 text-white shadow-[0_-4px_0_rgba(3,9,20,0.5)] sm:px-4 sm:py-3">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3">
-        <Link className="w-fit shrink-0 rounded-sm border-2 border-white bg-green-600 px-4 py-1.5 font-mono text-xs font-black shadow-pixel sm:text-sm" href="/">
+        <Link className="w-fit shrink-0 rounded-sm border-2 border-white/90 bg-[#18794e] px-4 py-1.5 font-mono text-xs font-black shadow-pixel sm:text-sm" href="/">
           CEI Start
         </Link>
         <p className="min-w-0 flex-1 truncate text-right font-mono text-[11px] text-white sm:text-left sm:text-xs">

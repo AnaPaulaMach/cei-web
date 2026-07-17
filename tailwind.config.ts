@@ -9,16 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "cei-blue": "#1d4ed8",
-        "cei-sky": "#2563eb",
-        "cei-terminal": "#22c55e",
-        "cei-window": "#e5e7eb",
-        "cei-shadow": "#0f2a5f",
-        "cei-alert": "#fde047"
+        "cei-blue": "#173f8f",
+        "cei-sky": "#215ca8",
+        "cei-terminal": "#26965f",
+        "cei-window": "#c9d0da",
+        "cei-shadow": "#091d3f",
+        "cei-alert": "#ddb93f"
       },
       boxShadow: {
-        "xp-window": "inset 1px 1px 0 #ffffff, inset -1px -1px 0 #8aa0bd, 5px 6px 0 rgba(7, 17, 31, 0.26)",
-        "pixel": "3px 3px 0 rgba(15, 42, 95, 0.7)"
+        "xp-window": "inset 1px 1px 0 #eef2f7, inset -1px -1px 0 #74869e, 5px 6px 0 rgba(3, 9, 20, 0.38)",
+        "pixel": "3px 3px 0 rgba(5, 15, 34, 0.72)"
       },
       fontFamily: {
         sans: ["Inter", "Arial", "Helvetica", "sans-serif"],

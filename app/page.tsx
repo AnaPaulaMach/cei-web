@@ -59,7 +59,7 @@ export default async function HomePage() {
           showControls={false}
           title="Comisión de Estudiantes de Informática"
         >
-          <div className="relative overflow-hidden border-l-8 border-cei-alert bg-[#0c2f64] text-white">
+          <div className="relative overflow-hidden border-l-8 border-cei-alert bg-[#071f44] text-white">
             <div className="grid min-h-[230px] items-end gap-6 p-5 sm:min-h-[240px] sm:grid-cols-[1fr_auto] sm:p-6 lg:p-7">
               <div className="max-w-3xl">
                 <p className="w-fit bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow sm:text-xs">

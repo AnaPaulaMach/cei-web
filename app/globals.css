@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --cei-blue: #1d4ed8;
-  --cei-sky: #2563eb;
-  --cei-terminal: #22c55e;
-  --cei-window: #e5e7eb;
-  --cei-shadow: #0f2a5f;
-  --cei-alert: #fde047;
-  --cei-ink: #07111f;
+  --cei-blue: #173f8f;
+  --cei-sky: #215ca8;
+  --cei-terminal: #26965f;
+  --cei-window: #c9d0da;
+  --cei-shadow: #091d3f;
+  --cei-alert: #ddb93f;
+  --cei-ink: #050b16;
 }
 
 * {
@@ -25,11 +25,7 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at 78% 8%, rgba(34, 197, 94, 0.16), transparent 24%),
-    radial-gradient(circle at 16% 22%, rgba(253, 224, 71, 0.12), transparent 25%),
-    linear-gradient(135deg, rgba(15, 42, 95, 0.9), rgba(29, 78, 216, 0.36)),
-    linear-gradient(180deg, #102a43 0%, #0f2a5f 48%, #07111f 100%);
+  background: linear-gradient(180deg, #0a1b31 0%, #0a2140 52%, #050b16 100%);
   color: var(--cei-ink);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -78,8 +74,8 @@ textarea {
 
 .desktop-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.075) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.075) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
@@ -89,20 +85,20 @@ textarea {
 }
 
 .xp-button {
-  border: 1px solid #0f2a5f;
-  background: linear-gradient(180deg, #ffffff 0%, #dbeafe 50%, #93aeca 100%);
-  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #6b8fbf, 2px 2px 0 rgba(7, 17, 31, 0.28);
+  border: 1px solid #091d3f;
+  background: linear-gradient(180deg, #d8dee7 0%, #a7b5c6 50%, #71869f 100%);
+  box-shadow: inset 1px 1px 0 #f4f7fa, inset -1px -1px 0 #536b87, 2px 2px 0 rgba(3, 9, 20, 0.42);
   min-height: 44px;
 }
 
 .xp-button:hover {
   transform: translate(-1px, -1px);
-  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #6b8fbf, 3px 3px 0 rgba(7, 17, 31, 0.3);
+  box-shadow: inset 1px 1px 0 #f4f7fa, inset -1px -1px 0 #536b87, 3px 3px 0 rgba(3, 9, 20, 0.46);
 }
 
 .xp-button:active {
   transform: translate(1px, 1px);
-  box-shadow: inset 2px 2px 0 rgba(107, 143, 191, 0.85);
+  box-shadow: inset 2px 2px 0 rgba(70, 91, 118, 0.88);
 }
 
 .terminal-text {
