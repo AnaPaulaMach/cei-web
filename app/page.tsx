@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { XPWindow } from "@/components/cei-os/XPWindow";
 import { Button } from "@/components/ui/Button";
 import { DataNotice } from "@/components/ui/DataNotice";
@@ -13,6 +14,33 @@ export const metadata = createPageMetadata({
   description:
     "Sitio oficial de la Comisión de Estudiantes de Informática de la Universidad Nacional de Santiago del Estero."
 });
+
+const homeRoutes = [
+  {
+    number: "01",
+    title: "Eventos",
+    description: "Próximas actividades y encuentros realizados.",
+    href: "/eventos"
+  },
+  {
+    number: "02",
+    title: "Oportunidades",
+    description: "Cursos, trabajos, prácticas y becas.",
+    href: "/oportunidades"
+  },
+  {
+    number: "03",
+    title: "Guía de trámites",
+    description: "Información útil organizada por carrera.",
+    href: "/guia-tramites"
+  },
+  {
+    number: "04",
+    title: "La Comisión",
+    description: "Quiénes somos, qué hacemos y documentos.",
+    href: "/comision"
+  }
+];
 
 export default async function HomePage() {
   const [eventsResult, opportunitiesResult] = await Promise.all([
@@ -32,7 +60,7 @@ export default async function HomePage() {
           title="Comisión de Estudiantes de Informática"
         >
           <div className="relative overflow-hidden border-l-8 border-cei-alert bg-[#0c2f64] text-white">
-            <div className="grid min-h-[250px] items-end gap-6 p-5 sm:min-h-[270px] sm:grid-cols-[1fr_auto] sm:p-8 lg:p-10">
+            <div className="grid min-h-[230px] items-end gap-6 p-5 sm:min-h-[240px] sm:grid-cols-[1fr_auto] sm:p-6 lg:p-7">
               <div className="max-w-3xl">
                 <p className="w-fit bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow sm:text-xs">
                   CEI · Universidad Nacional de Santiago del Estero
@@ -58,11 +86,11 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="p-5 sm:p-7 lg:p-8">
+          <div className="p-4 sm:p-6">
             <DataNotice message={eventsResult.error} />
             <DataNotice message={opportunitiesResult.error} />
 
-            <div className="grid gap-7 lg:grid-cols-[1.35fr_0.65fr] lg:gap-10">
+            <div className="grid gap-7 lg:grid-cols-[1.35fr_0.65fr] lg:gap-7">
               <section>
                 <p className="font-mono text-xs font-black uppercase text-cei-blue">Próximo evento</p>
                 {nextEvent ? (
@@ -125,7 +153,7 @@ export default async function HomePage() {
               </section>
             </div>
 
-            <div className="mt-7 flex flex-col gap-3 border-t border-cei-shadow/20 pt-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-5 flex flex-col gap-3 border-t border-cei-shadow/20 pt-4 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm font-bold text-cei-shadow">Canales oficiales</p>
               <div className="flex flex-wrap gap-x-5 gap-y-2">
                 {contactLinks.map((link) => {
@@ -147,6 +175,58 @@ export default async function HomePage() {
             </div>
           </div>
         </XPWindow>
+
+        <a
+          className="mx-auto mt-3 flex w-fit items-center gap-2 font-mono text-xs font-black uppercase text-white/80 transition hover:text-white"
+          href="#explorar"
+        >
+          Seguir recorriendo <span aria-hidden="true">↓</span>
+        </a>
+      </Section>
+
+      <Section className="scroll-mt-6 pb-2 pt-3 sm:pt-6" id="explorar">
+        <div className="text-white">
+          <p className="font-mono text-xs font-black uppercase text-cei-alert">Accesos directos</p>
+          <h2 className="mt-2 text-3xl font-black sm:text-4xl">Explorá la CEI</h2>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
+            Encontrá rápido lo que necesitás y seguí recorriendo el sitio.
+          </p>
+
+          <nav aria-label="Secciones principales" className="mt-6 grid border-y border-white/20 md:grid-cols-2">
+            {homeRoutes.map((route) => (
+              <Link
+                className="group flex min-h-24 items-center gap-4 border-b border-white/20 px-1 py-5 transition hover:bg-white/5 md:odd:border-r md:[&:nth-last-child(-n+2)]:border-b-0"
+                href={route.href}
+                key={route.href}
+              >
+                <span className="font-mono text-xs font-black text-cei-alert">{route.number}</span>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-xl font-black">{route.title}</span>
+                  <span className="mt-1 block text-sm leading-5 text-white/70">{route.description}</span>
+                </span>
+                <span aria-hidden="true" className="font-mono text-xl font-black transition group-hover:translate-x-1">
+                  &gt;
+                </span>
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </Section>
+
+      <Section className="pb-8 pt-2 sm:pb-12">
+        <div className="grid gap-5 border-l-4 border-cei-alert pl-5 text-white sm:grid-cols-[1fr_auto] sm:items-end sm:pl-7">
+          <div>
+            <p className="font-mono text-xs font-black uppercase text-cei-alert">Tres carreras, una comunidad</p>
+            <h2 className="mt-2 text-2xl font-black sm:text-3xl">Una comisión hecha por estudiantes</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
+              Representamos a quienes estudian Licenciatura en Sistemas, Programador Universitario en Informática y
+              Profesorado en Informática.
+            </p>
+          </div>
+          <Link className="font-bold text-white underline decoration-cei-alert decoration-2 underline-offset-4" href="/comision">
+            Conocé la Comisión
+          </Link>
+        </div>
       </Section>
     </PageShell>
   );
