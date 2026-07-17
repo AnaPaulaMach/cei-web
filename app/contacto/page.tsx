@@ -19,74 +19,46 @@ const orderedContactLinks = contactPriority
 export default function ContactoPage() {
   return (
     <PageShell className="my-auto">
-      <XPWindow title="contacto">
-        <div className="space-y-8 lg:p-2">
-          <div className="space-y-3">
-            <div className="space-y-3">
-              <p className="terminal-text text-sm font-bold uppercase">canales oficiales</p>
-              <h1 className="text-4xl font-black text-cei-shadow">Contacto</h1>
-              <p className="max-w-2xl leading-7 text-slate-800">
-                Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comisión.
-              </p>
-            </div>
+      <XPWindow title="Contacto">
+        <div className="space-y-6 lg:p-2">
+          <div>
+            <h1 className="text-4xl font-black text-cei-shadow">Contacto</h1>
+            <p className="mt-3 max-w-2xl leading-7 text-slate-800">
+              Para consultas, propuestas o actividades, escribinos por los canales oficiales de la Comisión.
+            </p>
           </div>
 
-          <div className="grid items-start gap-4 lg:grid-cols-3">
+          <div className="grid gap-4 lg:grid-cols-3">
             {orderedContactLinks.map((link) => {
               const isExternal = link.href.startsWith("http");
-              const isInstagram = link.label === "Instagram";
-              const isWhatsApp = link.label === "Canal de WhatsApp";
 
               return (
-                <div className="relative" key={link.label}>
-                  <a
-                    className={`group relative block min-h-40 overflow-hidden rounded-sm border border-cei-shadow bg-white p-5 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-[#fff7c2] ${
-                      isWhatsApp ? "pt-6" : ""
-                    }`}
-                    href={link.href}
-                    rel={isExternal ? "noopener noreferrer" : undefined}
-                    target={isExternal ? "_blank" : undefined}
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="absolute bottom-3 right-4 font-mono text-2xl font-black text-cei-shadow/25 transition group-hover:translate-x-1 group-hover:text-cei-shadow"
-                    >
-                      &gt;&gt;
-                    </span>
-                    <span className="block font-mono text-xs font-black uppercase text-cei-shadow/75">
-                      {isExternal ? "externo" : "mail"}
-                    </span>
-                    <span className="mt-2 block text-xl font-black">{link.label}</span>
-                    <span className="mt-2 block max-w-[15rem] text-sm leading-6 text-slate-700">{link.description}</span>
-                    {isWhatsApp ? (
-                      <span className="pointer-events-none absolute right-4 top-3 rotate-[-2deg] rounded-sm border-2 border-cei-shadow bg-cei-alert px-3 py-2 text-center font-mono text-[11px] font-black uppercase leading-none text-cei-shadow shadow-[2px_2px_0_rgba(15,42,95,0.3)]">
-                        click
-                        <br />
-                        aquí
-                      </span>
-                    ) : null}
-                  </a>
-                  {isInstagram ? (
-                    <Image
-                      alt=""
-                      aria-hidden="true"
-                      className="pointer-events-none ml-0 mt-4 hidden h-16 w-auto object-contain opacity-95 sm:h-20 lg:block"
-                      height={74}
-                      src="/stickers/contacto-click-smiley.png"
-                      width={120}
-                    />
-                  ) : null}
-                </div>
+                <a
+                  className="group flex min-h-36 flex-col justify-between rounded-sm border border-cei-shadow/60 bg-[#f7f9fc] p-5 text-cei-shadow shadow-[0_5px_14px_rgba(3,9,20,0.16)] transition hover:-translate-y-0.5 hover:bg-white"
+                  href={link.href}
+                  key={link.label}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  target={isExternal ? "_blank" : undefined}
+                >
+                  <span>
+                    <span className="block text-xl font-black">{link.label}</span>
+                    <span className="mt-2 block text-sm leading-6 text-slate-700">{link.description}</span>
+                  </span>
+                  <span aria-hidden="true" className="mt-4 self-end font-mono text-lg font-black text-cei-blue transition group-hover:translate-x-1">
+                    &gt;
+                  </span>
+                </a>
               );
             })}
           </div>
+
           <Image
             alt=""
             aria-hidden="true"
-            className="pointer-events-none ml-4 h-16 w-auto object-contain opacity-95 sm:h-20 lg:hidden"
-            height={74}
+            className="pointer-events-none h-12 w-auto object-contain opacity-90"
+            height={48}
             src="/stickers/contacto-click-smiley.png"
-            width={120}
+            width={78}
           />
         </div>
       </XPWindow>

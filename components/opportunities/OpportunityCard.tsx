@@ -10,10 +10,10 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
   const isExternal = Boolean(opportunity.href?.startsWith("http") || opportunity.isExternal);
 
   return (
-    <article className="group flex flex-col rounded-sm border-2 border-cei-shadow bg-white shadow-pixel transition hover:-translate-y-1 md:min-h-72">
-      <div className="flex items-center justify-between border-b-2 border-cei-shadow bg-cei-window px-3 py-3 sm:px-4">
+    <article className="group flex flex-col rounded-sm border border-cei-shadow/60 bg-white shadow-[0_6px_16px_rgba(3,9,20,0.18)] transition hover:-translate-y-0.5 md:min-h-72">
+      <div className="flex items-center justify-between border-b border-cei-shadow/35 bg-cei-window px-3 py-3 sm:px-4">
         <div className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center border-2 border-cei-shadow bg-cei-alert font-mono text-[11px] font-black text-cei-shadow shadow-pixel sm:h-10 sm:w-10 sm:text-xs">
+          <span className="grid h-9 w-9 place-items-center border border-cei-shadow/60 bg-cei-alert font-mono text-[11px] font-black text-cei-shadow sm:h-10 sm:w-10 sm:text-xs">
             {opportunity.category.slice(0, 3).toUpperCase()}
           </span>
           <div className="flex flex-wrap gap-2">
@@ -33,13 +33,13 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
           {opportunity.deadline ? <span>Límite: {opportunity.deadline}</span> : null}
         </div>
       </div>
-      <div className="border-t-2 border-cei-shadow bg-cei-window p-3 sm:p-4">
+      <div className="border-t border-cei-shadow/35 bg-cei-window p-3 sm:p-4">
         {opportunity.href ? (
           <Button href={opportunity.href} variant="secondary">
             {isExternal ? "Abrir enlace externo" : "Abrir enlace"}
           </Button>
         ) : (
-          <span className="inline-flex rounded-sm border-2 border-dashed border-cei-shadow bg-white px-3 py-2 font-mono text-xs font-black uppercase text-cei-shadow">
+          <span className="inline-flex rounded-sm border border-dashed border-cei-shadow bg-white px-3 py-2 font-mono text-xs font-black uppercase text-cei-shadow">
             Link pendiente
           </span>
         )}

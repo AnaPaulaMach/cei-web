@@ -35,7 +35,7 @@ export function EventBoard({
             {description}
           </p>
         </div>
-        <div className="inline-flex w-fit items-center gap-2 rounded-sm border-2 border-cei-shadow bg-white px-3 py-2 font-mono text-[11px] font-black text-cei-shadow shadow-pixel sm:text-xs">
+        <div className="inline-flex min-h-11 w-fit items-center gap-2 rounded-sm border border-cei-shadow/50 bg-white/80 px-3 font-mono text-[11px] font-black text-cei-shadow sm:text-xs">
           <span className="h-3 w-3 animate-pulse rounded-full bg-cei-terminal" />
           {events.length} {statusLabel}
         </div>
@@ -48,7 +48,7 @@ export function EventBoard({
           ))}
         </div>
       ) : (
-        <div className="rounded-sm border-2 border-dashed border-cei-shadow bg-white p-6 text-center font-mono font-bold text-cei-shadow">
+        <div className="rounded-sm border border-dashed border-cei-shadow bg-white p-6 text-center font-mono font-bold text-cei-shadow">
           {emptyMessage}
         </div>
       )}

@@ -11,7 +11,7 @@ export function EventCard({ event }: EventCardProps) {
 
   return (
     <article
-      className={`group relative overflow-hidden rounded-sm border-2 border-cei-shadow p-4 shadow-pixel transition hover:-translate-y-1 sm:p-5 ${
+      className={`group relative overflow-hidden rounded-sm border border-cei-shadow/60 p-4 shadow-[0_6px_16px_rgba(3,9,20,0.18)] transition hover:-translate-y-0.5 sm:p-5 ${
         event.highlighted ? "bg-[#fff7c2] md:col-span-2" : "bg-cei-window"
       }`}
     >
@@ -23,7 +23,7 @@ export function EventCard({ event }: EventCardProps) {
           {imageUrls.map((url, index) => (
             <div
               aria-label={`Imagen ${index + 1} de ${event.title}`}
-              className="h-40 rounded-sm border-2 border-cei-shadow bg-cover bg-center shadow-[2px_2px_0_rgba(15,42,95,0.2)] sm:h-48"
+              className="h-40 rounded-sm border border-cei-shadow/60 bg-cover bg-center sm:h-48"
               key={url}
               role="img"
               style={{ backgroundImage: `url(${JSON.stringify(url)})` }}
@@ -43,11 +43,11 @@ export function EventCard({ event }: EventCardProps) {
         {event.title}
       </h3>
       <dl className="mt-3 grid gap-2 text-sm text-slate-800 sm:mt-4 sm:grid-cols-2">
-        <div className="rounded-sm border border-cei-shadow bg-white px-3 py-2">
+        <div className="rounded-sm border border-cei-shadow/35 bg-white/80 px-3 py-2">
           <dt className="font-mono text-xs font-black uppercase text-cei-shadow">Fecha</dt>
           <dd className="font-bold">{event.date}</dd>
         </div>
-        <div className="rounded-sm border border-cei-shadow bg-white px-3 py-2">
+        <div className="rounded-sm border border-cei-shadow/35 bg-white/80 px-3 py-2">
           <dt className="font-mono text-xs font-black uppercase text-cei-shadow">Lugar</dt>
           <dd className="font-bold">{event.place}</dd>
         </div>

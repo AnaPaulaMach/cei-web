@@ -65,7 +65,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
             {featured.href ? (
               <Button href={featured.href}>Abrir destacada</Button>
             ) : (
-              <span className="rounded-sm border-2 border-dashed border-cei-shadow bg-white px-4 py-2 font-mono text-sm font-black text-cei-shadow">
+              <span className="rounded-sm border border-dashed border-cei-shadow bg-white px-4 py-2 font-mono text-sm font-black text-cei-shadow">
                 Link pendiente
               </span>
             )}
@@ -82,7 +82,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
               Filtrá por tipo de archivo para encontrar cursos, trabajos, prácticas y becas.
             </p>
           </div>
-          <div className="rounded-sm border-2 border-cei-shadow bg-white px-3 py-2 font-mono text-xs font-black text-cei-shadow shadow-pixel">
+          <div className="rounded-sm border border-cei-shadow/50 bg-white/80 px-3 py-2 font-mono text-xs font-black text-cei-shadow">
             {filteredOpportunities.length} elementos
           </div>
         </div>
@@ -93,7 +93,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
 
             return (
               <button
-                className={`shrink-0 rounded-sm border-2 border-cei-shadow px-3 py-2 font-mono text-xs font-black uppercase shadow-pixel transition ${
+                className={`min-h-11 shrink-0 rounded-sm border border-cei-shadow/60 px-3 font-mono text-xs font-black uppercase transition ${
                   isActive ? "bg-cei-alert text-cei-shadow" : "bg-white text-cei-shadow hover:bg-cei-window"
                 }`}
                 key={category}
@@ -113,7 +113,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
             ))}
           </div>
         ) : (
-          <div className="rounded-sm border-2 border-dashed border-cei-shadow bg-white p-6 text-center font-mono font-bold text-cei-shadow">
+          <div className="rounded-sm border border-dashed border-cei-shadow bg-white p-6 text-center font-mono font-bold text-cei-shadow">
             No hay oportunidades cargadas en esta categoría por ahora.
           </div>
         )}

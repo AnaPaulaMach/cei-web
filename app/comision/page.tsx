@@ -24,7 +24,7 @@ export default function ComisionPage() {
               <div className="flex flex-wrap gap-2">
                 {careerLinks.map((career) => (
                   <a
-                    className="rounded-sm border-2 border-cei-shadow bg-white px-3 py-1 font-mono text-xs font-black text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-cei-alert focus-visible:bg-cei-alert"
+                    className="inline-flex min-h-11 items-center rounded-sm border border-cei-shadow/60 bg-white px-3 font-mono text-xs font-black text-cei-shadow transition hover:bg-cei-alert focus-visible:bg-cei-alert"
                     href={career.href}
                     key={career.href}
                     rel="noopener noreferrer"
@@ -46,7 +46,7 @@ export default function ComisionPage() {
       </Section>
 
       <Section>
-        <Card className="bg-white">
+        <Card className="bg-[#eef2f7]">
           <div className="mb-5">
             <div>
               <p className="terminal-text text-sm font-bold uppercase">documentos</p>
@@ -56,7 +56,7 @@ export default function ComisionPage() {
           <div className="grid gap-3 md:grid-cols-2">
             {institutionalDocuments.map((document) => (
               <a
-                className="block rounded-sm border-2 border-cei-shadow bg-cei-window p-4 text-cei-shadow shadow-pixel transition hover:-translate-y-0.5 hover:bg-[#fff7c2] focus-visible:bg-[#fff7c2]"
+                className="block rounded-sm border border-cei-shadow/55 bg-white p-4 text-cei-shadow shadow-[0_4px_12px_rgba(3,9,20,0.14)] transition hover:-translate-y-0.5 hover:bg-[#fff7c2] focus-visible:bg-[#fff7c2]"
                 href={document.href}
                 key={document.href}
                 rel="noopener noreferrer"
@@ -72,7 +72,7 @@ export default function ComisionPage() {
       </Section>
 
       <Section>
-        <Card className="space-y-6 bg-white">
+        <Card className="space-y-6 bg-[#eef2f7]">
           <div className="grid gap-5 md:grid-cols-2">
             <div>
               <p className="font-mono text-xs font-black uppercase text-cei-shadow">misión</p>
@@ -92,7 +92,7 @@ export default function ComisionPage() {
       </Section>
 
       <Section>
-        <Card className="bg-cei-window">
+        <Card className="bg-[#eef2f7]">
           <div className="mb-5">
             <div>
               <p className="terminal-text text-sm font-bold uppercase">áreas</p>
@@ -101,8 +101,8 @@ export default function ComisionPage() {
           </div>
           <div className="grid gap-3 md:grid-cols-2">
             {actionAreas.map((area) => (
-              <div className="flex gap-3 rounded-sm border-2 border-cei-shadow bg-white p-4 shadow-pixel" key={area.title}>
-                <span className="grid h-10 w-10 shrink-0 place-items-center border-2 border-cei-shadow bg-cei-alert font-mono text-xs font-black text-cei-shadow">
+              <div className="flex gap-3 rounded-sm border border-cei-shadow/45 bg-white p-4" key={area.title}>
+                <span className="grid h-10 w-10 shrink-0 place-items-center border border-cei-shadow/60 bg-cei-alert font-mono text-xs font-black text-cei-shadow">
                   {area.shortcut}
                 </span>
                 <div>
@@ -116,12 +116,12 @@ export default function ComisionPage() {
       </Section>
 
       <Section>
-        <Card className="bg-white">
+        <Card className="bg-[#eef2f7]">
           <div className="mb-5">
             <p className="terminal-text text-sm font-bold uppercase">directiva</p>
             <h2 className="text-3xl font-black text-cei-shadow">Comisión directiva 2026</h2>
           </div>
-          <div className="divide-y-2 divide-cei-shadow/20 border-y-2 border-cei-shadow/20">
+          <div className="divide-y divide-cei-shadow/20 border-y border-cei-shadow/20">
             {commissionMembers.map((member) => (
               <div className="grid gap-1 py-3 sm:grid-cols-[220px_1fr] sm:items-center" key={member.name}>
                 <p className="font-mono text-xs font-black uppercase text-cei-shadow">{member.role}</p>
