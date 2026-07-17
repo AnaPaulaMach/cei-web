@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --cei-blue: #2458a6;
-  --cei-sky: #3477c5;
-  --cei-terminal: #2f9d68;
-  --cei-window: #d9dee6;
-  --cei-shadow: #122033;
-  --cei-alert: #d9b93e;
-  --cei-ink: #0b111a;
+  --cei-blue: #2d5688;
+  --cei-sky: #4677a8;
+  --cei-terminal: #3b966b;
+  --cei-window: #d8dbe1;
+  --cei-shadow: #172131;
+  --cei-alert: #d8b84a;
+  --cei-ink: #10151d;
 }
 
 * {
@@ -25,7 +25,7 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #111720 0%, #151d28 52%, #090e15 100%);
+  background: linear-gradient(180deg, #151b24 0%, #1a2330 52%, #10151d 100%);
   color: var(--cei-ink);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -74,13 +74,13 @@ textarea {
 
 .desktop-grid {
   background-image:
-    linear-gradient(rgba(120, 157, 198, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120, 157, 198, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(137, 158, 184, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(137, 158, 184, 0.025) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
 .pixel-border {
-  border: 1px solid #0d1219;
+  border: 1px solid #10161f;
   box-shadow: 3px 3px 0 rgba(15, 42, 95, 0.7);
 }
 

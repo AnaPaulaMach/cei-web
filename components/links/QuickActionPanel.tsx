@@ -31,7 +31,7 @@ export function QuickActionPanel({ actions, title, subtitle }: QuickActionPanelP
             "group flex min-h-32 flex-col justify-between rounded-sm border-2 border-cei-shadow bg-white p-3 text-cei-shadow shadow-pixel transition hover:-translate-y-1 hover:bg-cei-window focus-visible:outline-cei-alert";
           const content = (
             <>
-              <span className="grid h-11 w-11 place-items-center border-2 border-cei-shadow bg-[#0d1219] font-mono text-xs font-black text-cei-terminal shadow-pixel transition group-hover:bg-cei-shadow">
+              <span className="grid h-11 w-11 place-items-center border-2 border-cei-shadow bg-[#10161f] font-mono text-xs font-black text-cei-terminal shadow-pixel transition group-hover:bg-cei-shadow">
                 {action.shortcut}
               </span>
               <span>

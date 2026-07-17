@@ -80,7 +80,7 @@ export default function HackathonPage() {
         <XPWindow title="hackathon/event-mode.exe" className="window-pop">
           <div className="space-y-7">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
-              <div className="grid h-20 w-20 shrink-0 place-items-center rounded-sm border-2 border-cei-shadow bg-[#0d1219] shadow-pixel">
+              <div className="grid h-20 w-20 shrink-0 place-items-center rounded-sm border-2 border-cei-shadow bg-[#10161f] shadow-pixel">
                 <Image
                   alt="Logo CEI"
                   className="h-16 w-16 object-contain"
