@@ -184,11 +184,14 @@ export default async function HomePage() {
         </a>
       </Section>
 
-      <Section className="scroll-mt-6 pb-2 pt-3 sm:pt-6" id="explorar">
+      <Section
+        className="scroll-mt-6 border-y border-white/15 bg-[#071a36] px-5 py-8 sm:px-7 sm:py-10"
+        id="explorar"
+      >
         <div className="text-white">
           <p className="font-mono text-xs font-black uppercase text-cei-alert">Accesos directos</p>
           <h2 className="mt-2 text-3xl font-black sm:text-4xl">Explorá la CEI</h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-white/85 sm:text-base">
             Encontrá rápido lo que necesitás y seguí recorriendo el sitio.
           </p>
 
@@ -202,7 +205,7 @@ export default async function HomePage() {
                 <span className="font-mono text-xs font-black text-cei-alert">{route.number}</span>
                 <span className="min-w-0 flex-1">
                   <span className="block text-xl font-black">{route.title}</span>
-                  <span className="mt-1 block text-sm leading-5 text-white/70">{route.description}</span>
+                  <span className="mt-1 block text-sm leading-5 text-white/80">{route.description}</span>
                 </span>
                 <span aria-hidden="true" className="font-mono text-xl font-black transition group-hover:translate-x-1">
                   &gt;
@@ -210,22 +213,23 @@ export default async function HomePage() {
               </Link>
             ))}
           </nav>
-        </div>
-      </Section>
 
-      <Section className="pb-8 pt-2 sm:pb-12">
-        <div className="grid gap-5 border-l-4 border-cei-alert pl-5 text-white sm:grid-cols-[1fr_auto] sm:items-end sm:pl-7">
-          <div>
-            <p className="font-mono text-xs font-black uppercase text-cei-alert">Tres carreras, una comunidad</p>
-            <h2 className="mt-2 text-2xl font-black sm:text-3xl">Una comisión hecha por estudiantes</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
-              Representamos a quienes estudian Licenciatura en Sistemas, Programador Universitario en Informática y
-              Profesorado en Informática.
-            </p>
+          <div className="mt-10 grid gap-5 border-t border-white/20 pt-8 sm:grid-cols-[1fr_auto] sm:items-end">
+            <div className="border-l-4 border-cei-alert pl-5 sm:pl-7">
+              <p className="font-mono text-xs font-black uppercase text-cei-alert">Tres carreras, una comunidad</p>
+              <h2 className="mt-2 text-2xl font-black sm:text-3xl">Una comisión hecha por estudiantes</h2>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-white/85 sm:text-base">
+                Representamos a quienes estudian Licenciatura en Sistemas, Programador Universitario en Informática y
+                Profesorado en Informática.
+              </p>
+            </div>
+            <Link
+              className="font-bold text-white underline decoration-cei-alert decoration-2 underline-offset-4"
+              href="/comision"
+            >
+              Conocé la Comisión
+            </Link>
           </div>
-          <Link className="font-bold text-white underline decoration-cei-alert decoration-2 underline-offset-4" href="/comision">
-            Conocé la Comisión
-          </Link>
         </div>
       </Section>
     </PageShell>
