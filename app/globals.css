@@ -51,7 +51,7 @@ textarea {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
-  padding: 28px 16px 32px;
+  padding: 20px 14px 28px;
 }
 
 .skip-link {
@@ -74,9 +74,9 @@ textarea {
 
 .desktop-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
-  background-size: 32px 32px;
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 .pixel-border {
@@ -164,6 +164,7 @@ textarea {
 @media (min-width: 768px) {
   .site-main {
     padding-inline: 32px;
+    padding-top: 24px;
   }
 }
 
