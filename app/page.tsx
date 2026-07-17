@@ -14,7 +14,6 @@ export const metadata = createPageMetadata({
 });
 
 const quickLinks = [
-  { label: "Guía de trámites", href: "/guia-tramites" },
   { label: "Quiénes somos", href: "/comision" },
   { label: "Contacto", href: "/contacto" }
 ];
@@ -142,7 +141,7 @@ export default async function HomePage() {
         <h2 className="text-2xl font-black" id="accesos-title">
           Accesos rápidos
         </h2>
-        <nav aria-label="Secciones útiles" className="mt-4 grid border-y border-white/20 md:grid-cols-3">
+        <nav aria-label="Secciones útiles" className="mt-4 grid border-y border-white/20 md:grid-cols-2">
           {quickLinks.map((link) => (
             <Link
               className="group flex min-h-16 items-center justify-between gap-3 border-b border-white/20 px-2 py-3 font-bold transition hover:bg-white/[0.07] focus-visible:bg-white/[0.07] md:border-b-0 md:border-r md:px-4 md:last:border-r-0"
