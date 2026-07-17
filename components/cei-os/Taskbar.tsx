@@ -5,7 +5,7 @@ export function Taskbar() {
   const taskbarLinks = [{ label: "Quiénes somos", href: "/comision" }, ...contactLinks, repositoryLink];
 
   return (
-    <footer className="hidden border-t border-[#215ca8] bg-[#071a36] px-4 py-3 text-white shadow-[0_-3px_12px_rgba(3,9,20,0.4)] md:block">
+    <footer className="hidden border-t border-[#315d8e] bg-[#0d1722] px-4 py-3 text-white shadow-[0_-3px_12px_rgba(3,9,20,0.4)] md:block">
       <div className="mx-auto flex max-w-7xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
         <Link
           className="hidden min-h-11 shrink-0 items-center rounded-sm border border-white/70 bg-[#18794e] px-4 font-mono text-sm font-black shadow-[inset_1px_1px_0_rgba(255,255,255,0.4)] sm:inline-flex"

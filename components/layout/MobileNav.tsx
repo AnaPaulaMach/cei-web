@@ -22,7 +22,7 @@ export function MobileNav() {
 
       <nav
         aria-label="Navegación móvil"
-        className="fixed inset-x-4 top-[72px] z-[120] grid overflow-hidden rounded-sm border border-white/15 bg-[#071f44] p-2 shadow-[0_16px_38px_rgba(3,9,20,0.72)]"
+        className="fixed inset-x-4 top-[72px] z-[120] grid overflow-hidden rounded-sm border border-white/15 bg-[#101923] p-2 shadow-[0_16px_38px_rgba(3,9,20,0.72)]"
       >
         {navLinks.map((link) => (
           <Link

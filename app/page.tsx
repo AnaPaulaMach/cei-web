@@ -36,7 +36,7 @@ export default async function HomePage() {
           showControls={false}
           title="CEI - Inicio"
         >
-          <div className="border-l-[6px] border-cei-alert bg-[#071f44] px-5 py-8 text-white sm:px-8 sm:py-10 lg:px-10 lg:py-12">
+          <div className="border-l-[6px] border-cei-alert bg-[#10253e] px-5 py-8 text-white sm:px-8 sm:py-10 lg:px-10 lg:py-12">
             <p className="w-fit bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow sm:text-xs">
               Universidad Nacional de Santiago del Estero
             </p>
@@ -137,7 +137,7 @@ export default async function HomePage() {
 
       <Section
         aria-labelledby="accesos-title"
-        className="border-y border-white/15 bg-[#071a36] px-5 py-6 text-white sm:px-7"
+        className="border-y border-white/15 bg-[#111a27] px-5 py-6 text-white sm:px-7"
       >
         <h2 className="text-2xl font-black" id="accesos-title">
           Accesos rápidos

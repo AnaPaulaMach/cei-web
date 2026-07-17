@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "cei-blue": "#173f8f",
-        "cei-sky": "#215ca8",
-        "cei-terminal": "#26965f",
-        "cei-window": "#c9d0da",
-        "cei-shadow": "#091d3f",
-        "cei-alert": "#ddb93f"
+        "cei-blue": "#2458a6",
+        "cei-sky": "#3477c5",
+        "cei-terminal": "#2f9d68",
+        "cei-window": "#d9dee6",
+        "cei-shadow": "#122033",
+        "cei-alert": "#d9b93e"
       },
       boxShadow: {
         "xp-window": "inset 1px 1px 0 #eef2f7, inset -1px -1px 0 #74869e, 0 7px 18px rgba(3, 9, 20, 0.3)",
