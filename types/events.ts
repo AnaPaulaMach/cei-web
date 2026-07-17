@@ -3,6 +3,7 @@ export type EventItem = {
   title: string;
   description: string;
   date: string;
+  dateTitle?: string;
   sortDate?: string;
   place: string;
   category: string;

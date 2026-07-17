@@ -19,10 +19,10 @@ export default function CensoPage() {
           <p className="terminal-text text-sm font-bold uppercase">input required</p>
           <h1 className="text-4xl font-black text-cei-shadow">Censo estudiantil</h1>
           <p className="leading-7 text-slate-800">
-            Este formulario servirá para relevar necesidades de estudiantes de las tres carreras.
+            El censo ya está disponible para relevar necesidades de estudiantes de las tres carreras.
           </p>
           <GoogleFormPanel
-            description="El censo se responderá desde Google Forms. Así el sitio solo enlaza al formulario y los datos personales quedan administrados fuera de Supabase."
+            description="Completalo desde Google Forms. Las respuestas quedan administradas allí y no se guardan en la base pública del sitio."
             href={googleFormLinks.censo}
             title="Formulario del censo"
           />

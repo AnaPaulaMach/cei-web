@@ -20,9 +20,13 @@ function parseImageUrls(value: string | null) {
   return urls.length > 0 ? urls : undefined;
 }
 
-function getEventCta(href: string, status: "proximo" | "pasado", isHackathon: boolean) {
+function getEventCta(href: string, status: "proximo" | "pasado", isHackathon: boolean, category: string) {
   const isGoogleForm = href.includes("forms.gle") || href.includes("docs.google.com/forms");
   const isInstagram = href.includes("instagram.com");
+
+  if (category.toLowerCase().includes("censo") && isGoogleForm) {
+    return "Completar censo";
+  }
 
   if (isHackathon || isGoogleForm) {
     return "Inscribirme";
@@ -35,6 +39,52 @@ function getEventCta(href: string, status: "proximo" | "pasado", isHackathon: bo
   return status === "pasado" ? "Ver resumen" : "Ver más";
 }
 
+function getEventDate(row: EventRow, category: string) {
+  const normalizedTitle = row.titulo.toLowerCase();
+
+  if (normalizedTitle === "unse abre sus puertas") {
+    return {
+      date: "27 y 28 de agosto de 2026 · de 8:30 a 18",
+      dateTitle: "Fecha"
+    };
+  }
+
+  if (row.fecha_evento) {
+    return {
+      date: formatDateLabel(row.fecha_evento),
+      dateTitle: "Fecha"
+    };
+  }
+
+  const normalizedCategory = category.toLowerCase();
+
+  if (normalizedCategory.includes("censo")) {
+    return {
+      date: "Disponible ahora",
+      dateTitle: "Disponibilidad"
+    };
+  }
+
+  if (normalizedCategory.includes("hack")) {
+    return {
+      date: "Un fin de semana de septiembre · fecha a definir",
+      dateTitle: "Fecha"
+    };
+  }
+
+  if (normalizedTitle.includes("portfolio")) {
+    return {
+      date: "Semana del Programador · septiembre, día a definir",
+      dateTitle: "Fecha"
+    };
+  }
+
+  return {
+    date: "Fecha a definir",
+    dateTitle: "Fecha"
+  };
+}
+
 function mapEvent(row: EventRow): EventItem {
   const category = row.categoria ?? "Aviso";
   const isHackathon = category.toLowerCase().includes("hack");
@@ -43,19 +93,32 @@ function mapEvent(row: EventRow): EventItem {
   const normalizedHref =
     storedHref === "/eventos" || storedHref === "/oportunidades" ? "/novedades?seccion=agenda" : storedHref;
   const href = isHackathon ? "/hackathon" : (normalizedHref ?? "/novedades?seccion=agenda");
+  const eventDate = getEventDate(row, category);
+  const isAvailableCensus = category.toLowerCase().includes("censo") && href.includes("docs.google.com/forms");
+  const isUnseOpenHouse = row.titulo.toLowerCase() === "unse abre sus puertas";
 
   return {
     id: row.id,
     title: row.titulo,
     description: row.descripcion ?? "Aviso publicado por la CEI.",
-    date: formatDateLabel(row.fecha_evento),
+    date: eventDate.date,
+    dateTitle: eventDate.dateTitle,
     sortDate: row.fecha_evento ?? undefined,
     place: row.lugar ?? "Lugar a confirmar",
     category,
     href,
-    cta: getEventCta(href, status, isHackathon),
+    cta: getEventCta(href, status, isHackathon, category),
     status,
-    statusLabel: status === "pasado" ? "Pasado" : "Próximo",
+    statusLabel:
+      status === "pasado"
+        ? "Pasado"
+        : isAvailableCensus
+          ? "Disponible ahora"
+          : isUnseOpenHouse
+            ? "Participa la CEI"
+            : row.fecha_evento
+              ? "Próximo"
+              : "Fecha a definir",
     highlighted: Boolean(row.destacado),
     imageUrls: parseImageUrls(row.imagen_url)
   };

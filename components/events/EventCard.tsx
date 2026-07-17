@@ -44,7 +44,7 @@ export function EventCard({ event }: EventCardProps) {
       </h3>
       <dl className="mt-3 grid gap-2 text-sm text-slate-800 sm:mt-4 sm:grid-cols-2">
         <div className="rounded-sm border border-cei-shadow/35 bg-white/80 px-3 py-2">
-          <dt className="font-mono text-xs font-black uppercase text-cei-shadow">Fecha</dt>
+          <dt className="font-mono text-xs font-black uppercase text-cei-shadow">{event.dateTitle ?? "Fecha"}</dt>
           <dd className="font-bold">{event.date}</dd>
         </div>
         <div className="rounded-sm border border-cei-shadow/35 bg-white/80 px-3 py-2">

@@ -15,8 +15,8 @@ insert into eventos (
 ) values
   (
     'Hackathon del Día del Programador',
-    'Fin de semana de desafíos, equipos, charlas, mentorías y presentaciones para crear proyectos útiles.',
-    '2026-09-12 09:00:00-03',
+    'Será un fin de semana de septiembre con desafíos, equipos, charlas, mentorías y presentaciones. Fecha a definir.',
+    null,
     'FCEyT - Universidad Nacional de Santiago del Estero',
     'Hackathon',
     'proximo',
@@ -26,35 +26,35 @@ insert into eventos (
   ),
   (
     'Charla: cómo armar tu portfolio',
-    'Encuentro para preparar proyectos, CV técnico, GitHub y presencia online para primeras oportunidades.',
-    '2026-08-15 18:00:00-03',
+    'Encuentro para preparar proyectos, CV técnico, GitHub y presencia online. Será en septiembre, durante la Semana del Programador.',
+    null,
     'Universidad Nacional de Santiago del Estero',
     'Charla',
     'proximo',
     false,
-    '/eventos',
+    '/novedades?seccion=agenda',
     null
   ),
   (
     'Censo estudiantil anual',
-    'Relevamiento de necesidades, intereses y recursos de estudiantes.',
-    '2026-08-01 09:00:00-03',
+    'El censo ya está disponible para relevar necesidades, intereses y recursos de estudiantes.',
+    null,
     'Online',
     'Censo',
     'proximo',
     false,
-    '/censo',
+    'https://docs.google.com/forms/d/e/1FAIpQLSdiZiuks38eTvlE1GwizUwPHhDE6IAuir5gJh8vD_EUBgnaQw/viewform?usp=sharing&ouid=109197906899692431538',
     null
   ),
   (
     'UNSE abre sus puertas',
-    'Difusión de las carreras de informática y actividades para acercar la facultad a nuevos estudiantes.',
-    '2026-10-01 09:00:00-03',
+    'La actividad es organizada por la UNSE y se realizará el 27 y 28 de agosto, de 8:30 a 18. La CEI participará en acciones para difundir las carreras de informática.',
+    '2026-08-27 08:30:00-03',
     'FCEyT - Universidad Nacional de Santiago del Estero',
     'Difusión',
     'proximo',
     false,
-    '/eventos',
+    '/novedades?seccion=agenda',
     null
   ),
   (
