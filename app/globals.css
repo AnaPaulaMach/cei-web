@@ -85,20 +85,20 @@ textarea {
 }
 
 .xp-button {
-  border: 1px solid #091d3f;
-  background: linear-gradient(180deg, #d8dee7 0%, #a7b5c6 50%, #71869f 100%);
-  box-shadow: inset 1px 1px 0 #f4f7fa, inset -1px -1px 0 #536b87, 2px 2px 0 rgba(3, 9, 20, 0.42);
+  border: 1px solid #4d6380;
+  background: linear-gradient(180deg, #d8dee7 0%, #b8c3d0 58%, #93a4b8 100%);
+  box-shadow: inset 1px 1px 0 #f4f7fa, inset -1px -1px 0 #71849d, 0 2px 4px rgba(3, 9, 20, 0.26);
   min-height: 44px;
 }
 
 .xp-button:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: inset 1px 1px 0 #f4f7fa, inset -1px -1px 0 #536b87, 3px 3px 0 rgba(3, 9, 20, 0.46);
+  filter: brightness(1.06);
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #71849d, 0 3px 7px rgba(3, 9, 20, 0.3);
 }
 
 .xp-button:active {
-  transform: translate(1px, 1px);
-  box-shadow: inset 2px 2px 0 rgba(70, 91, 118, 0.88);
+  filter: brightness(0.96);
+  box-shadow: inset 2px 2px 0 rgba(70, 91, 118, 0.7);
 }
 
 .terminal-text {

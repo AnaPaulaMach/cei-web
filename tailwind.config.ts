@@ -17,8 +17,8 @@ const config: Config = {
         "cei-alert": "#ddb93f"
       },
       boxShadow: {
-        "xp-window": "inset 1px 1px 0 #eef2f7, inset -1px -1px 0 #74869e, 5px 6px 0 rgba(3, 9, 20, 0.38)",
-        "pixel": "3px 3px 0 rgba(5, 15, 34, 0.72)"
+        "xp-window": "inset 1px 1px 0 #eef2f7, inset -1px -1px 0 #74869e, 0 7px 18px rgba(3, 9, 20, 0.3)",
+        "pixel": "2px 2px 0 rgba(5, 15, 34, 0.58)"
       },
       fontFamily: {
         sans: ["Inter", "Arial", "Helvetica", "sans-serif"],
