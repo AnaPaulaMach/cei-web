@@ -57,6 +57,30 @@ const learningItems = [
   "Sumar una experiencia concreta al portfolio"
 ];
 
+const sponsorReasons = [
+  {
+    title: "Ayudás a mantener la participación gratuita",
+    description:
+      "Tu aporte ayuda a cubrir alimentación, materiales, premios y recursos técnicos sin trasladar esos costos a los estudiantes."
+  },
+  {
+    title: "Compartís experiencia real",
+    description:
+      "Una mentoría, un taller o una devolución puede orientar a alguien que recién empieza y acercarle cosas que no siempre se ven en clase."
+  },
+  {
+    title: "Conocés lo que hacemos",
+    description:
+      "Podés ver a estudiantes de las tres carreras organizarse, probar ideas y construir proyectos durante todo el fin de semana."
+  }
+];
+
+const sponsorshipOptions = [
+  "Ayudar con comida, premios, materiales o recursos técnicos.",
+  "Sumar mentores, talleristas o personas que den devoluciones.",
+  "Dar difusión al evento o acercar un desafío para trabajar."
+];
+
 const faqs = [
   {
     question: "¿Quiénes pueden participar?",
@@ -261,54 +285,54 @@ export default function HackathonPage() {
             Para empresas, instituciones y comunidades
           </p>
           <h2 className="mt-2 text-3xl font-black text-cei-shadow sm:text-4xl">
-            ¿Por qué patrocinar este Hackathon?
+            ¿Por qué ser sponsor?
           </h2>
-          <p className="mt-4 max-w-4xl leading-7 text-slate-700">
-            Esta sección está dirigida a organizaciones interesadas en apoyar el evento. Un sponsor aporta recursos,
-            servicios, premios o conocimiento y recibe una presencia acordada junto a la CEI.
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-700 sm:text-lg">
+            El Hackathon será una actividad gratuita para estudiantes de informática de la UNSE. El apoyo de sponsors
+            nos permite cubrir necesidades concretas del evento y sumar mejores recursos para quienes participen.
           </p>
 
-          <div className="mt-7 grid gap-7 lg:grid-cols-2 lg:gap-10">
-            <div className="border-t-4 border-cei-alert bg-white/70 p-5">
-              <p className="font-mono text-xs font-black uppercase text-cei-blue">Qué obtiene la organización</p>
-              <ul className="mt-4 divide-y divide-cei-shadow/15">
-                {[
-                  "Vínculo directo con estudiantes de las tres carreras de informática de la UNSE.",
-                  "Presencia de marca en las piezas y espacios que se acuerden para el evento.",
-                  "Participación cercana mediante mentorías, desafíos, talleres o devoluciones."
-                ].map((item, index) => (
-                  <li className="flex gap-3 py-3 text-sm font-bold leading-6 text-slate-700" key={item}>
-                    <span className="font-mono text-cei-blue">0{index + 1}</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="mt-7 grid border-y border-cei-shadow/20 md:grid-cols-3">
+            {sponsorReasons.map((reason, index) => (
+              <article
+                className="border-b border-cei-shadow/20 py-5 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+                key={reason.title}
+              >
+                <span className="font-mono text-xs font-black text-cei-blue">0{index + 1}</span>
+                <h3 className="mt-2 text-xl font-black text-cei-shadow">{reason.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-700">{reason.description}</p>
+              </article>
+            ))}
+          </div>
 
-            <div className="border-t-4 border-cei-blue bg-white/70 p-5">
-              <p className="font-mono text-xs font-black uppercase text-cei-blue">Cómo puede acompañar</p>
-              <ul className="mt-4 divide-y divide-cei-shadow/15">
-                {[
-                  "Aportes para premios, alimentación, materiales o recursos técnicos.",
-                  "Mentores, talleristas o referentes que compartan experiencia profesional.",
-                  "Difusión, servicios o desafíos vinculados con necesidades reales."
-                ].map((item, index) => (
-                  <li className="flex gap-3 py-3 text-sm font-bold leading-6 text-slate-700" key={item}>
-                    <span className="font-mono text-cei-blue">0{index + 1}</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+          <div className="mt-7 grid gap-6 bg-white/70 p-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:p-6">
+            <div>
+              <p className="font-mono text-xs font-black uppercase text-cei-blue">Sin paquetes cerrados</p>
+              <h3 className="mt-2 text-2xl font-black text-cei-shadow">Hay muchas formas de dar una mano</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Vemos qué necesita el evento y qué puede aportar cada organización. La presencia y los agradecimientos
+                se acuerdan con claridad desde el principio.
+              </p>
             </div>
+            <ul className="divide-y divide-cei-shadow/15 border-y border-cei-shadow/15">
+              {sponsorshipOptions.map((option) => (
+                <li className="flex gap-3 py-3 text-sm font-bold leading-6 text-slate-700" key={option}>
+                  <span aria-hidden="true" className="font-mono text-cei-terminal">+</span>
+                  {option}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="mt-7 flex flex-col gap-4 border-t border-cei-shadow/20 pt-6 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <h3 className="text-lg font-black text-cei-shadow">Armamos una propuesta según cada organización</h3>
-              <p className="mt-1 text-sm text-slate-600">Los aportes y la presencia se acuerdan antes del evento.</p>
+            <div className="max-w-xl">
+              <h3 className="text-lg font-black text-cei-shadow">¿Querés sumarte como sponsor?</h3>
+              <p className="mt-1 text-sm leading-6 text-slate-600">
+                Contactanos para conocer las formas de acompañar el evento.
+              </p>
             </div>
-            <Button href="mailto:comisionlsiafines@gmail.com?subject=Solicitud%20de%20propuesta%20para%20sponsor%20del%20hackathon">
-              Pedir propuesta de patrocinio
+            <Button href="mailto:comisionlsiafines@gmail.com?subject=Quiero%20acompañar%20el%20Hackathon%20CEI">
+              Contactar a la CEI
             </Button>
           </div>
         </XPWindow>
