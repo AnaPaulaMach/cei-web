@@ -17,6 +17,7 @@ const eventFacts = [
   ["Fecha", "Un fin de semana de septiembre de 2026"],
   ["Lugar", "FCEyT · Universidad Nacional de Santiago del Estero"],
   ["Participación", "Gratuita"],
+  ["Comunidad", "Estudiantes de las tres carreras de informática"],
   ["Equipos", "3 o 4 personas"]
 ];
 
@@ -115,12 +116,10 @@ export default function HackathonPage() {
                 {registrationIsOpen ? (
                   <Button href={googleFormLinks.hackathon}>Inscribirme</Button>
                 ) : (
-                  <span className="inline-flex min-h-11 items-center border border-cei-alert/70 bg-cei-alert/10 px-4 font-mono text-xs font-black uppercase text-cei-alert">
-                    Inscripciones próximamente
-                  </span>
+                  <Button href="#participantes">Quiero participar</Button>
                 )}
-                <Button href="#propuesta" variant="secondary">
-                  Conocer la propuesta
+                <Button href="#sponsors" variant="secondary">
+                  Quiero ser sponsor
                 </Button>
               </div>
             </div>
@@ -143,10 +142,10 @@ export default function HackathonPage() {
           className="grid border-y border-white/15 bg-[#151e2a] text-white sm:grid-cols-4"
         >
           {[
-            ["Propuesta", "#propuesta"],
+            ["Participantes", "#participantes"],
             ["Formato", "#formato"],
-            ["Preguntas", "#preguntas"],
-            ["Sponsors", "#sponsors"]
+            ["Sponsors", "#sponsors"],
+            ["Preguntas", "#preguntas"]
           ].map(([label, href]) => (
             <a
               className="flex min-h-12 items-center justify-between border-b border-white/15 px-4 text-sm font-bold transition hover:bg-white/[0.07] sm:border-b-0 sm:border-r sm:last:border-r-0"
@@ -162,20 +161,20 @@ export default function HackathonPage() {
         </nav>
       </Section>
 
-      <Section id="propuesta">
+      <Section id="participantes">
         <XPWindow contentClassName="p-5 sm:p-7 lg:p-8" showControls={false} title="propuesta.md">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
             <div>
-              <p className="font-mono text-xs font-black uppercase text-cei-terminal">Qué es</p>
-              <h2 className="mt-2 text-3xl font-black text-cei-shadow sm:text-4xl">Crear, aprender y compartir</h2>
+              <p className="font-mono text-xs font-black uppercase text-cei-terminal">Para participantes</p>
+              <h2 className="mt-2 text-3xl font-black text-cei-shadow sm:text-4xl">Aprender haciendo</h2>
               <p className="mt-4 leading-7 text-slate-800">
-                Una experiencia intensiva para transformar una idea en un prototipo. No se trata solo de programar:
-                también hay que entender un problema, organizar tareas y comunicar una solución.
+                Vas a transformar una idea en un prototipo junto a otras personas. No se trata solo de programar:
+                también hay que entender un problema, repartir tareas y comunicar una solución.
               </p>
             </div>
 
             <div>
-              <p className="font-mono text-xs font-black uppercase text-cei-terminal">Qué te llevás</p>
+              <p className="font-mono text-xs font-black uppercase text-cei-terminal">Por qué sumarte</p>
               <ul className="mt-3 divide-y divide-cei-shadow/20 border-y border-cei-shadow/20">
                 {learningItems.map((item, index) => (
                   <li className="flex gap-4 py-3 text-sm font-bold text-slate-800 sm:text-base" key={item}>
@@ -241,18 +240,49 @@ export default function HackathonPage() {
       </Section>
 
       <Section id="sponsors">
-        <div className="border-y border-white/15 bg-[#151e2a] px-5 py-7 text-center text-white sm:px-8">
-          <p className="font-mono text-xs font-black uppercase text-cei-alert">Alianzas</p>
-          <h2 className="mt-2 text-3xl font-black">¿Querés acompañar el evento?</h2>
-          <p className="mx-auto mt-2 max-w-2xl leading-7 text-white/75">
-            Buscamos instituciones, empresas y comunidades que quieran aportar mentorías, premios o recursos.
-          </p>
-          <div className="mt-5 flex justify-center">
-            <Button href="mailto:comisionlsiafines@gmail.com?subject=Quiero%20ser%20sponsor%20del%20hackathon">
-              Quiero ser sponsor
-            </Button>
+        <XPWindow contentClassName="p-0" showControls={false} title="sponsors/alianzas">
+          <div className="bg-[#151e2a] px-5 py-8 text-white sm:px-8 lg:px-10 lg:py-10">
+            <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
+              <div>
+                <p className="font-mono text-xs font-black uppercase text-cei-alert">Para organizaciones</p>
+                <h2 className="mt-2 text-3xl font-black sm:text-4xl">Acompañá al talento informático local</h2>
+                <p className="mt-4 leading-7 text-white/75">
+                  El Hackathon abre un vínculo directo con estudiantes de las tres carreras de informática de la
+                  Universidad Nacional de Santiago del Estero, en una experiencia centrada en crear y aprender.
+                </p>
+              </div>
+
+              <div className="grid border-y border-white/15 sm:grid-cols-3">
+                {[
+                  ["Comunidad", "Acercamiento genuino a estudiantes, docentes y futuros profesionales."],
+                  ["Presencia", "Visibilidad en la comunicación y los materiales acordados para el evento."],
+                  ["Participación", "Posibilidad de aportar mentorías, desafíos, talleres o devoluciones."]
+                ].map(([title, description]) => (
+                  <article
+                    className="border-b border-white/15 py-5 sm:border-b-0 sm:border-r sm:px-5 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0"
+                    key={title}
+                  >
+                    <h3 className="font-mono text-sm font-black uppercase text-cei-alert">{title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-white/75">{description}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-6 border-t border-white/15 pt-7 lg:grid-cols-[1fr_auto] lg:items-end">
+              <div>
+                <h3 className="text-xl font-black">Formas de acompañar</h3>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-white/70">
+                  Premios, mentorías, talleres, recursos técnicos, alimentación o difusión. Armamos una propuesta
+                  acorde a cada organización y dejamos por escrito los compromisos de ambas partes.
+                </p>
+              </div>
+              <Button href="mailto:comisionlsiafines@gmail.com?subject=Quiero%20ser%20sponsor%20del%20hackathon">
+                Solicitar propuesta
+              </Button>
+            </div>
           </div>
-        </div>
+        </XPWindow>
       </Section>
 
       <Section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]" id="preguntas">
@@ -273,8 +303,8 @@ export default function HackathonPage() {
           </div>
         </XPWindow>
 
-        <XPWindow contentClassName="p-5 sm:p-7" showControls={false} title="inscripcion.status">
-          <p className="font-mono text-xs font-black uppercase text-cei-terminal">Estado</p>
+        <XPWindow contentClassName="p-5 sm:p-7" showControls={false} title="participantes.status">
+          <p className="font-mono text-xs font-black uppercase text-cei-terminal">Para participantes</p>
           <h2 className="mt-2 text-3xl font-black text-cei-shadow">
             {registrationIsOpen ? "Inscripción abierta" : "Inscripción próximamente"}
           </h2>
