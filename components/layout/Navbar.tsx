@@ -20,7 +20,7 @@ export function Navbar() {
           </span>
           <span className="grid leading-none">
             <span className="text-sm font-black">CEI</span>
-            <span className="mt-1 font-mono text-[10px] font-bold text-white/55">UNSE</span>
+            <span className="mt-1 text-xs font-semibold text-white/65">UNSE</span>
           </span>
         </Link>
 

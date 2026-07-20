@@ -42,7 +42,7 @@ export default function ContactoPage() {
                 >
                   <span>
                     <span className="block text-xl font-black">{link.label}</span>
-                    <span className="mt-2 block text-sm leading-6 text-slate-700">{link.description}</span>
+                    <span className="ui-small-copy mt-2 block text-slate-700">{link.description}</span>
                   </span>
                   <span aria-hidden="true" className="mt-4 self-end font-mono text-lg font-black text-cei-blue transition group-hover:translate-x-1">
                     &gt;

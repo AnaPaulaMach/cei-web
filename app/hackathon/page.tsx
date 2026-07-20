@@ -123,8 +123,8 @@ export default function HackathonPage() {
                   />
                 </div>
                 <div>
-                  <p className="font-mono text-xs font-black uppercase text-cei-alert">Evento CEI · Edición 2026</p>
-                  <p className="mt-1 text-sm font-bold text-white/70">Fecha exacta e inscripciones por confirmar</p>
+                  <p className="ui-kicker text-cei-alert">Evento CEI · Edición 2026</p>
+                  <p className="mt-1 text-base font-semibold leading-6 text-white/75">Fecha exacta e inscripciones por confirmar</p>
                 </div>
               </div>
 
@@ -151,8 +151,8 @@ export default function HackathonPage() {
             <dl className="grid border-t border-white/15 lg:border-l lg:border-t-0">
               {eventFacts.map(([label, value]) => (
                 <div className="border-b border-white/15 px-5 py-4 last:border-b-0 sm:px-6" key={label}>
-                  <dt className="font-mono text-[11px] font-black uppercase text-cei-alert">{label}</dt>
-                  <dd className="mt-1 text-sm font-bold leading-6 text-white/90">{value}</dd>
+                  <dt className="ui-meta-label text-cei-alert">{label}</dt>
+                  <dd className="ui-meta-value mt-1 text-white/90">{value}</dd>
                 </div>
               ))}
             </dl>
@@ -165,7 +165,7 @@ export default function HackathonPage() {
           aria-label="Información según perfil"
           className="border-y border-white/15 bg-[#151e2a] text-white"
         >
-          <p className="border-b border-white/15 px-5 py-3 font-mono text-xs font-black uppercase text-cei-alert sm:px-6">
+          <p className="ui-kicker border-b border-white/15 px-5 py-3 text-cei-alert sm:px-6">
             Elegí la información que buscás
           </p>
           <div className="grid md:grid-cols-2">
@@ -174,9 +174,9 @@ export default function HackathonPage() {
               href="#participantes"
             >
               <span>
-                <span className="block font-mono text-[11px] font-black uppercase text-white/55">Estudiantes</span>
+                <span className="ui-meta-label block text-white/65">Estudiantes</span>
                 <span className="mt-1 block text-lg font-black">Quiero participar</span>
-                <span className="mt-1 block text-sm text-white/65">Experiencia, formato e inscripción.</span>
+                <span className="ui-small-copy mt-1 block text-white/70">Experiencia, formato e inscripción.</span>
               </span>
               <span aria-hidden="true" className="font-mono text-xl text-cei-alert transition group-hover:translate-x-1">
                 &gt;
@@ -187,11 +187,11 @@ export default function HackathonPage() {
               href="#sponsors"
             >
               <span>
-                <span className="block font-mono text-[11px] font-black uppercase text-white/55">
+                <span className="ui-meta-label block text-white/65">
                   Empresas, instituciones y comunidades
                 </span>
                 <span className="mt-1 block text-lg font-black">Quiero patrocinar el evento</span>
-                <span className="mt-1 block text-sm text-white/65">Beneficios, aportes y contacto.</span>
+                <span className="ui-small-copy mt-1 block text-white/70">Beneficios, aportes y contacto.</span>
               </span>
               <span aria-hidden="true" className="font-mono text-xl text-cei-alert transition group-hover:translate-x-1">
                 &gt;
@@ -205,7 +205,7 @@ export default function HackathonPage() {
         <XPWindow contentClassName="p-5 sm:p-7 lg:p-8" showControls={false} title="propuesta.md">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
             <div>
-              <p className="font-mono text-xs font-black uppercase text-cei-terminal">Para participantes</p>
+              <p className="ui-kicker text-cei-terminal">Para participantes</p>
               <h2 className="mt-2 text-3xl font-black text-cei-shadow sm:text-4xl">Aprender haciendo</h2>
               <p className="mt-4 leading-7 text-slate-800">
                 Vas a transformar una idea en un prototipo junto a otras personas. No se trata solo de programar:
@@ -214,10 +214,10 @@ export default function HackathonPage() {
             </div>
 
             <div>
-              <p className="font-mono text-xs font-black uppercase text-cei-terminal">Por qué sumarte</p>
+              <p className="ui-kicker text-cei-terminal">Por qué sumarte</p>
               <ul className="mt-3 divide-y divide-cei-shadow/20 border-y border-cei-shadow/20">
                 {learningItems.map((item, index) => (
-                  <li className="flex gap-4 py-3 text-sm font-bold text-slate-800 sm:text-base" key={item}>
+                  <li className="flex gap-4 py-3 text-base font-semibold leading-6 text-slate-800" key={item}>
                     <span className="font-mono text-cei-blue">0{index + 1}</span>
                     {item}
                   </li>
@@ -229,10 +229,10 @@ export default function HackathonPage() {
           <div className="mt-9 border-t border-cei-shadow/25 pt-7">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="font-mono text-xs font-black uppercase text-cei-terminal">Borrador de trabajo</p>
+                <p className="ui-kicker text-cei-terminal">Borrador de trabajo</p>
                 <h2 className="mt-1 text-2xl font-black text-cei-shadow sm:text-3xl">Ejes preliminares</h2>
               </div>
-              <p className="text-sm text-slate-600">Pueden cambiar antes de abrir la inscripción.</p>
+              <p className="ui-small-copy text-slate-600">Pueden cambiar antes de abrir la inscripción.</p>
             </div>
 
             <div className="mt-5 grid border-y border-cei-shadow/20 md:grid-cols-3">
@@ -243,7 +243,7 @@ export default function HackathonPage() {
                 >
                   <span className="font-mono text-xs font-black text-cei-blue">{track.tag}</span>
                   <h3 className="mt-2 text-xl font-black text-cei-shadow">{track.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-700">{track.description}</p>
+                  <p className="ui-small-copy mt-2 text-slate-700">{track.description}</p>
                 </article>
               ))}
             </div>
@@ -255,10 +255,10 @@ export default function HackathonPage() {
         <XPWindow contentClassName="p-5 sm:p-7 lg:p-8" showControls={false} title="formato-previsto.txt">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="font-mono text-xs font-black uppercase text-cei-terminal">Dos días · fecha a definir</p>
+              <p className="ui-kicker text-cei-terminal">Dos días · fecha a definir</p>
               <h2 className="mt-1 text-3xl font-black text-cei-shadow sm:text-4xl">Formato previsto</h2>
             </div>
-            <p className="text-sm font-bold text-slate-600">Premios y reconocimientos: a confirmar.</p>
+            <p className="ui-small-copy font-semibold text-slate-600">Premios y reconocimientos: a confirmar.</p>
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-2">
@@ -267,7 +267,7 @@ export default function HackathonPage() {
                 <h3 className="text-2xl font-black text-cei-shadow">{day.day}</h3>
                 <ol className="mt-3 space-y-3">
                   {day.items.map((item, index) => (
-                    <li className="flex gap-3 text-sm font-bold leading-6 text-slate-700" key={item}>
+                    <li className="flex gap-3 text-base font-semibold leading-6 text-slate-700" key={item}>
                       <span className="font-mono text-cei-blue">{index + 1}.</span>
                       {item}
                     </li>
@@ -281,7 +281,7 @@ export default function HackathonPage() {
 
       <Section id="sponsors">
         <XPWindow contentClassName="p-5 sm:p-7 lg:p-8" showControls={false} title="informacion-para-sponsors.txt">
-          <p className="font-mono text-xs font-black uppercase text-cei-terminal">
+          <p className="ui-kicker text-cei-terminal">
             Para empresas, instituciones y comunidades
           </p>
           <h2 className="mt-2 text-3xl font-black text-cei-shadow sm:text-4xl">
@@ -300,23 +300,23 @@ export default function HackathonPage() {
               >
                 <span className="font-mono text-xs font-black text-cei-blue">0{index + 1}</span>
                 <h3 className="mt-2 text-xl font-black text-cei-shadow">{reason.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-700">{reason.description}</p>
+                <p className="ui-small-copy mt-2 text-slate-700">{reason.description}</p>
               </article>
             ))}
           </div>
 
           <div className="mt-7 grid gap-6 bg-white/70 p-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:p-6">
             <div>
-              <p className="font-mono text-xs font-black uppercase text-cei-blue">Sin paquetes cerrados</p>
+              <p className="ui-kicker text-cei-blue">Sin paquetes cerrados</p>
               <h3 className="mt-2 text-2xl font-black text-cei-shadow">Hay muchas formas de dar una mano</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
+              <p className="ui-small-copy mt-2 text-slate-600">
                 Vemos qué necesita el evento y qué puede aportar cada organización. La presencia y los agradecimientos
                 se acuerdan con claridad desde el principio.
               </p>
             </div>
             <ul className="divide-y divide-cei-shadow/15 border-y border-cei-shadow/15">
               {sponsorshipOptions.map((option) => (
-                <li className="flex gap-3 py-3 text-sm font-bold leading-6 text-slate-700" key={option}>
+                <li className="flex gap-3 py-3 text-base font-semibold leading-6 text-slate-700" key={option}>
                   <span aria-hidden="true" className="font-mono text-cei-terminal">+</span>
                   {option}
                 </li>
@@ -327,7 +327,7 @@ export default function HackathonPage() {
           <div className="mt-7 flex flex-col gap-4 border-t border-cei-shadow/20 pt-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="max-w-xl">
               <h3 className="text-lg font-black text-cei-shadow">¿Querés sumarte como sponsor?</h3>
-              <p className="mt-1 text-sm leading-6 text-slate-600">
+              <p className="ui-small-copy mt-1 text-slate-600">
                 Contactanos para conocer las formas de acompañar el evento.
               </p>
             </div>
@@ -350,14 +350,14 @@ export default function HackathonPage() {
                     +
                   </span>
                 </summary>
-                <p className="mt-3 pr-8 text-sm leading-6 text-slate-700">{faq.answer}</p>
+                <p className="ui-small-copy mt-3 pr-8 text-slate-700">{faq.answer}</p>
               </details>
             ))}
           </div>
         </XPWindow>
 
         <XPWindow contentClassName="p-5 sm:p-7" showControls={false} title="participantes.status">
-          <p className="font-mono text-xs font-black uppercase text-cei-terminal">Para participantes</p>
+          <p className="ui-kicker text-cei-terminal">Para participantes</p>
           <h2 className="mt-2 text-3xl font-black text-cei-shadow">
             {registrationIsOpen ? "Inscripción abierta" : "Inscripción próximamente"}
           </h2>

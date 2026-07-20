@@ -19,12 +19,12 @@ export default function ComisionPage() {
         <XPWindow title="comisión">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className="space-y-4">
-              <p className="terminal-text text-sm font-bold uppercase">about cei</p>
+              <p className="terminal-text ui-kicker">about cei</p>
               <h1 className="text-4xl font-black text-cei-shadow">Quiénes somos</h1>
               <div className="flex flex-wrap gap-2">
                 {careerLinks.map((career) => (
                   <a
-                    className="inline-flex min-h-11 items-center rounded-sm border border-cei-shadow/60 bg-white px-3 font-mono text-xs font-black text-cei-shadow transition hover:bg-cei-alert focus-visible:bg-cei-alert"
+                    className="inline-flex min-h-11 items-center rounded-sm border border-cei-shadow/60 bg-white px-3 text-sm font-semibold text-cei-shadow transition hover:bg-cei-alert focus-visible:bg-cei-alert"
                     href={career.href}
                     key={career.href}
                     rel="noopener noreferrer"
@@ -49,7 +49,7 @@ export default function ComisionPage() {
         <Card className="bg-[#eef2f7]">
           <div className="mb-5">
             <div>
-              <p className="terminal-text text-sm font-bold uppercase">documentos</p>
+              <p className="terminal-text ui-kicker">documentos</p>
               <h2 className="text-3xl font-black text-cei-shadow">Documentación institucional</h2>
             </div>
           </div>
@@ -62,9 +62,9 @@ export default function ComisionPage() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <p className="font-mono text-xs font-black uppercase text-cei-shadow">Abrir documento</p>
-                <h3 className="mt-2 font-mono text-lg font-black">{document.label}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-800">{document.description}</p>
+                <p className="ui-meta-label text-cei-shadow">Abrir documento</p>
+                <h3 className="mt-2 text-lg font-bold">{document.label}</h3>
+                <p className="ui-small-copy mt-2 text-slate-800">{document.description}</p>
               </a>
             ))}
           </div>
@@ -75,14 +75,14 @@ export default function ComisionPage() {
         <Card className="space-y-6 bg-[#eef2f7]">
           <div className="grid gap-5 md:grid-cols-2">
             <div>
-              <p className="font-mono text-xs font-black uppercase text-cei-shadow">misión</p>
+              <p className="ui-kicker text-cei-shadow">misión</p>
               <p className="mt-2 leading-7 text-slate-800">
                 Representar a estudiantes de informática, dar visibilidad a sus actividades y tender un puente con la
                 facultad.
               </p>
             </div>
             <div>
-              <p className="font-mono text-xs font-black uppercase text-cei-shadow">visión</p>
+              <p className="ui-kicker text-cei-shadow">visión</p>
               <p className="mt-2 leading-7 text-slate-800">
                 Construir una comunidad académica más fuerte, participativa y conectada con el mundo profesional.
               </p>
@@ -95,7 +95,7 @@ export default function ComisionPage() {
         <Card className="bg-[#eef2f7]">
           <div className="mb-5">
             <div>
-              <p className="terminal-text text-sm font-bold uppercase">áreas</p>
+              <p className="terminal-text ui-kicker">áreas</p>
               <h2 className="text-3xl font-black text-cei-shadow">Qué hacemos</h2>
             </div>
           </div>
@@ -106,8 +106,8 @@ export default function ComisionPage() {
                   {area.shortcut}
                 </span>
                 <div>
-                  <h3 className="font-mono text-base font-black text-cei-shadow">{area.title}</h3>
-                  <p className="mt-1 text-sm leading-6 text-slate-800">{area.description}</p>
+                  <h3 className="text-base font-bold text-cei-shadow">{area.title}</h3>
+                  <p className="ui-small-copy mt-1 text-slate-800">{area.description}</p>
                 </div>
               </div>
             ))}
@@ -118,14 +118,14 @@ export default function ComisionPage() {
       <Section>
         <Card className="bg-[#eef2f7]">
           <div className="mb-5">
-            <p className="terminal-text text-sm font-bold uppercase">directiva</p>
+            <p className="terminal-text ui-kicker">directiva</p>
             <h2 className="text-3xl font-black text-cei-shadow">Comisión directiva 2026</h2>
           </div>
           <div className="divide-y divide-cei-shadow/20 border-y border-cei-shadow/20">
             {commissionMembers.map((member) => (
               <div className="grid gap-1 py-3 sm:grid-cols-[220px_1fr] sm:items-center" key={member.name}>
-                <p className="font-mono text-xs font-black uppercase text-cei-shadow">{member.role}</p>
-                <p className="font-bold text-slate-900">{member.name}</p>
+                <p className="ui-meta-label text-cei-shadow">{member.role}</p>
+                <p className="font-semibold text-slate-900">{member.name}</p>
               </div>
             ))}
           </div>

@@ -13,7 +13,7 @@ export function Taskbar() {
         >
           CEI Start
         </Link>
-        <nav aria-label="Canales oficiales" className="flex flex-wrap gap-x-4 font-mono text-xs font-black sm:justify-end">
+        <nav aria-label="Canales oficiales" className="flex flex-wrap gap-x-4 text-sm font-semibold sm:justify-end">
           {taskbarLinks.map((link) => {
             const isExternal = link.href.startsWith("http");
 

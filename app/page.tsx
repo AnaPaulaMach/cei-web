@@ -36,7 +36,7 @@ export default async function HomePage() {
           title="CEI - Inicio"
         >
           <div className="border-l-[6px] border-cei-alert bg-[#18283a] px-5 py-8 text-white sm:px-8 sm:py-10 lg:px-10 lg:py-12">
-            <p className="w-fit bg-cei-alert px-2 py-1 font-mono text-[10px] font-black uppercase text-cei-shadow sm:text-xs">
+            <p className="ui-kicker w-fit bg-cei-alert px-2.5 py-1 text-cei-shadow">
               Universidad Nacional de Santiago del Estero
             </p>
             <h1 className="mt-4 max-w-4xl text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
@@ -55,7 +55,7 @@ export default async function HomePage() {
       >
         <div className="flex items-center gap-2 border-b border-cei-shadow/20 bg-[#dbe4ef] px-5 py-3 sm:px-6">
           <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-cei-terminal shadow-[0_0_0_3px_rgba(38,150,95,0.12)]" />
-          <h2 className="font-mono text-xs font-black uppercase text-cei-shadow" id="actualidad-title">
+          <h2 className="ui-kicker text-cei-shadow" id="actualidad-title">
             Ahora en la CEI
           </h2>
         </div>
@@ -66,24 +66,24 @@ export default async function HomePage() {
 
           <div className="grid gap-7 lg:grid-cols-[1.35fr_0.65fr]">
             <section>
-              <p className="font-mono text-xs font-black uppercase text-cei-blue">
+              <p className="ui-kicker text-cei-blue">
                 {nextEvent?.highlighted ? "Evento destacado" : "Próximo evento"}
               </p>
               {nextEvent ? (
                 <article className="mt-3 border-l-4 border-cei-alert pl-4 sm:pl-5">
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-bold text-slate-600">
-                    <span className="font-mono uppercase text-cei-shadow">{nextEvent.category}</span>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-semibold text-slate-600">
+                    <span className="ui-meta-label text-cei-shadow">{nextEvent.category}</span>
                     <span>{nextEvent.date}</span>
                   </div>
                   <h3 className="mt-2 text-2xl font-black leading-tight text-cei-shadow sm:text-3xl">
                     {nextEvent.title}
                   </h3>
-                  <p className="mt-1 text-sm font-bold text-slate-700">{nextEvent.place}</p>
-                  <p className="mt-2 hidden max-w-2xl text-sm leading-6 text-slate-700 sm:block">
+                  <p className="mt-1 text-base font-semibold leading-6 text-slate-700">{nextEvent.place}</p>
+                  <p className="mt-2 hidden max-w-2xl text-base leading-7 text-slate-700 sm:block">
                     {nextEvent.description}
                   </p>
                   <div className="mt-4 flex flex-wrap items-center gap-4">
-                    <Button className="px-4 text-xs" href={nextEvent.href}>
+                    <Button className="px-4" href={nextEvent.href}>
                       {nextEvent.cta}
                     </Button>
                     <Link
@@ -95,7 +95,7 @@ export default async function HomePage() {
                   </div>
                 </article>
               ) : (
-                <p className="mt-3 text-sm font-bold text-cei-shadow">No hay eventos cargados por ahora.</p>
+                <p className="mt-3 text-base font-semibold text-cei-shadow">No hay eventos cargados por ahora.</p>
               )}
             </section>
 
@@ -103,7 +103,7 @@ export default async function HomePage() {
               <div className="flex items-center justify-between gap-3">
                 <h3 className="text-lg font-black text-cei-shadow">Oportunidades</h3>
                 <Link
-                  className="inline-flex min-h-11 items-center gap-1 text-xs font-bold text-cei-blue underline-offset-4 hover:underline"
+                  className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-cei-blue underline-offset-4 hover:underline"
                   href="/novedades?seccion=oportunidades"
                 >
                   Ver todas <span aria-hidden="true">&gt;</span>
@@ -118,17 +118,17 @@ export default async function HomePage() {
                 >
                   <span aria-hidden="true" className="h-3 w-3 shrink-0 bg-cei-alert" />
                   <span className="min-w-0 flex-1">
-                    <span className="block text-sm font-black leading-tight group-hover:underline">
+                    <span className="block text-base font-bold leading-tight group-hover:underline">
                       {featuredOpportunity.title}
                     </span>
-                    <span className="mt-1 block truncate text-xs text-slate-600">{featuredOpportunity.source}</span>
+                    <span className="mt-1 block truncate text-sm text-slate-600">{featuredOpportunity.source}</span>
                   </span>
                   <span aria-hidden="true" className="font-mono font-black text-cei-blue">
                     &gt;
                   </span>
                 </a>
               ) : (
-                <p className="mt-3 text-sm font-bold text-cei-shadow">No hay oportunidades cargadas por ahora.</p>
+                <p className="mt-3 text-base font-semibold text-cei-shadow">No hay oportunidades cargadas por ahora.</p>
               )}
             </section>
           </div>

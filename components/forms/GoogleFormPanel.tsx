@@ -12,7 +12,7 @@ export function GoogleFormPanel({ title, description, href }: GoogleFormPanelPro
           FORM
         </span>
         <div>
-          <p className="terminal-text text-sm font-bold uppercase">google.forms.link</p>
+          <p className="terminal-text ui-kicker">google.forms.link</p>
           <h2 className="text-2xl font-black text-cei-shadow">{title}</h2>
         </div>
       </div>
@@ -20,7 +20,7 @@ export function GoogleFormPanel({ title, description, href }: GoogleFormPanelPro
       <div className="mt-5">
         {href ? (
           <a
-            className="xp-button inline-flex items-center justify-center rounded-sm px-4 py-2 font-mono text-sm font-black text-cei-shadow transition"
+            className="xp-button inline-flex items-center justify-center rounded-sm px-4 py-2 font-mono text-[15px] font-bold text-cei-shadow transition"
             href={href}
             rel="noreferrer"
             target="_blank"
@@ -28,7 +28,7 @@ export function GoogleFormPanel({ title, description, href }: GoogleFormPanelPro
             Abrir Google Forms
           </a>
         ) : (
-          <span className="inline-flex rounded-sm border-2 border-dashed border-cei-shadow bg-cei-window px-4 py-2 font-mono text-sm font-black text-cei-shadow">
+          <span className="inline-flex rounded-sm border-2 border-dashed border-cei-shadow bg-cei-window px-4 py-2 text-base font-semibold text-cei-shadow">
             Link de Google Forms pendiente
           </span>
         )}

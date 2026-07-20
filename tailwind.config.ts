@@ -21,7 +21,7 @@ const config: Config = {
         "pixel": "2px 2px 0 rgba(5, 15, 34, 0.58)"
       },
       fontFamily: {
-        sans: ["Inter", "Arial", "Helvetica", "sans-serif"],
+        sans: ["Segoe UI Variable", "Segoe UI", "Arial", "Helvetica", "sans-serif"],
         mono: ["ui-monospace", "SFMono-Regular", "Consolas", "monospace"],
         pixel: ["Courier New", "ui-monospace", "monospace"]
       }

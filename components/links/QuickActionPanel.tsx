@@ -19,10 +19,10 @@ export function QuickActionPanel({ actions, title, subtitle }: QuickActionPanelP
     <div className="rounded-sm border-2 border-cei-shadow bg-cei-window p-4 shadow-xp-window">
       <div className="mb-4 flex items-end justify-between gap-3">
         <div>
-          <p className="terminal-text text-xs font-bold uppercase">quick access</p>
+          <p className="terminal-text ui-kicker">quick access</p>
           <h2 className="text-2xl font-black text-cei-shadow">{title}</h2>
         </div>
-        {subtitle ? <p className="max-w-44 text-right text-xs leading-5 text-slate-700">{subtitle}</p> : null}
+        {subtitle ? <p className="ui-small-copy max-w-52 text-right text-slate-700">{subtitle}</p> : null}
       </div>
       <div className="grid grid-cols-2 gap-3">
         {actions.map((action) => {
@@ -35,11 +35,11 @@ export function QuickActionPanel({ actions, title, subtitle }: QuickActionPanelP
                 {action.shortcut}
               </span>
               <span>
-                <span className="block font-mono text-[10px] font-black uppercase text-cei-shadow/70">
+                <span className="ui-meta-label block text-cei-shadow/70">
                   {action.eyebrow}
                 </span>
-                <span className="mt-1 block font-mono text-sm font-black leading-5">{action.label}</span>
-                <span className="mt-1 block text-xs leading-5 text-slate-700">{action.description}</span>
+                <span className="mt-1 block text-base font-bold leading-5">{action.label}</span>
+                <span className="ui-small-copy mt-1 block text-slate-700">{action.description}</span>
               </span>
             </>
           );

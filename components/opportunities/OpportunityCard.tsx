@@ -36,11 +36,11 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
       </div>
       <div className="flex flex-1 flex-col p-4 sm:p-5">
         <h3 className="text-lg font-black leading-tight text-cei-shadow sm:text-xl">{opportunity.title}</h3>
-        <p className="mt-2 text-sm font-bold text-slate-700">{opportunity.source}</p>
-        <p className="mt-3 flex-1 text-sm leading-6 text-slate-800 sm:text-base sm:leading-7">
+        <p className="mt-2 text-base font-semibold leading-6 text-slate-700">{opportunity.source}</p>
+        <p className="mt-3 flex-1 text-base leading-7 text-slate-800">
           {opportunity.description}
         </p>
-        <div className="mt-4 grid gap-2 font-mono text-xs font-bold text-cei-shadow">
+        <div className="mt-4 grid gap-2 text-sm font-semibold leading-5 text-cei-shadow">
           {opportunity.publishedAt ? <span>Publicado: {opportunity.publishedAt}</span> : null}
           {opportunity.deadline ? <span>Límite: {opportunity.deadline}</span> : null}
         </div>
@@ -60,7 +60,7 @@ export function OpportunityCard({ opportunity }: OpportunityCardProps) {
             ) : null}
           </div>
         ) : (
-          <span className="inline-flex rounded-sm border border-dashed border-cei-shadow bg-white px-3 py-2 font-mono text-xs font-black uppercase text-cei-shadow">
+          <span className="ui-meta-label inline-flex rounded-sm border border-dashed border-cei-shadow bg-white px-3 py-2 text-cei-shadow">
             Link pendiente
           </span>
         )}

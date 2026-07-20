@@ -16,7 +16,7 @@ export default function CensoPage() {
     <PageShell>
       <XPWindow title="censo/formulario">
         <div className="space-y-4">
-          <p className="terminal-text text-sm font-bold uppercase">input required</p>
+          <p className="terminal-text ui-kicker">input required</p>
           <h1 className="text-4xl font-black text-cei-shadow">Censo estudiantil</h1>
           <p className="leading-7 text-slate-800">
             El censo ya está disponible para relevar necesidades de estudiantes de las tres carreras.

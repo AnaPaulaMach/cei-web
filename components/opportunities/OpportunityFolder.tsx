@@ -48,10 +48,10 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
     <XPWindow title="novedades/oportunidades">
       <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <p className="terminal-text text-sm font-bold uppercase">Cursos y búsquedas</p>
+          <p className="terminal-text ui-kicker">Cursos y búsquedas</p>
           <h2 className="text-3xl font-black text-cei-shadow sm:text-4xl">Oportunidades</h2>
         </div>
-        <div className="rounded-sm border border-cei-shadow/50 bg-white/80 px-3 py-2 font-mono text-xs font-black text-cei-shadow">
+        <div className="rounded-sm border border-cei-shadow/50 bg-white/80 px-3 py-2 text-sm font-semibold text-cei-shadow">
           {filteredOpportunities.length} elementos
         </div>
       </div>
@@ -63,7 +63,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
           return (
             <button
               aria-pressed={isActive}
-              className={`min-h-11 shrink-0 rounded-sm border border-cei-shadow/60 px-3 font-mono text-xs font-black uppercase transition ${
+              className={`min-h-11 shrink-0 rounded-sm border border-cei-shadow/60 px-3 text-sm font-bold transition ${
                 isActive ? "bg-cei-alert text-cei-shadow" : "bg-white text-cei-shadow hover:bg-cei-window"
               }`}
               key={category}
@@ -83,7 +83,7 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
           ))}
         </div>
       ) : (
-        <div className="rounded-sm border border-dashed border-cei-shadow bg-white p-6 text-center font-mono font-bold text-cei-shadow">
+        <div className="rounded-sm border border-dashed border-cei-shadow bg-white p-6 text-center font-semibold text-cei-shadow">
           No hay oportunidades cargadas en esta categoría por ahora.
         </div>
       )}
@@ -91,10 +91,10 @@ export function OpportunityFolder({ opportunities }: OpportunityFolderProps) {
       <div className="mt-7 flex flex-col gap-3 border-t border-cei-shadow/25 pt-5 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h3 className="font-black text-cei-shadow">¿Conocés una oportunidad útil?</h3>
-          <p className="mt-1 text-sm text-slate-700">Contanos y la compartimos con otros estudiantes.</p>
+          <p className="ui-small-copy mt-1 text-slate-700">Contanos y la compartimos con otros estudiantes.</p>
         </div>
         <Link
-          className="xp-button inline-flex min-h-11 items-center justify-center rounded-sm px-4 font-mono text-xs font-black text-cei-shadow"
+          className="xp-button inline-flex min-h-11 items-center justify-center rounded-sm px-4 font-mono text-[15px] font-bold text-cei-shadow"
           href="/contacto"
         >
           Contactanos

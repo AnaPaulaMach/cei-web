@@ -31,7 +31,7 @@ export default async function NovedadesPage({ searchParams }: NovedadesPageProps
     <PageShell>
       <Section>
         <XPWindow contentClassName="p-5 sm:p-6" showControls={false} title="Novedades">
-          <p className="font-mono text-xs font-black uppercase text-cei-terminal">Actualidad CEI</p>
+          <p className="ui-kicker text-cei-terminal">Actualidad CEI</p>
           <h1 className="mt-2 text-4xl font-black text-cei-shadow">Novedades</h1>
           <p className="mt-3 max-w-2xl leading-7 text-slate-800">
             Eventos, cursos, trabajos, prácticas y becas para estudiantes de informática.
@@ -39,7 +39,7 @@ export default async function NovedadesPage({ searchParams }: NovedadesPageProps
           <nav aria-label="Contenido de novedades" className="mt-5 flex flex-wrap gap-3">
             <a
               aria-current={activeSection === "agenda" ? "page" : undefined}
-              className={`inline-flex min-h-11 items-center rounded-sm border border-cei-shadow/45 px-4 font-mono text-xs font-black text-cei-shadow transition ${
+              className={`inline-flex min-h-11 items-center rounded-sm border border-cei-shadow/45 px-4 text-sm font-bold text-cei-shadow transition ${
                 activeSection === "agenda" ? "xp-button" : "bg-white/70 hover:bg-white"
               }`}
               href="/novedades?seccion=agenda"
@@ -48,7 +48,7 @@ export default async function NovedadesPage({ searchParams }: NovedadesPageProps
             </a>
             <a
               aria-current={activeSection === "oportunidades" ? "page" : undefined}
-              className={`inline-flex min-h-11 items-center rounded-sm border border-cei-shadow/45 px-4 font-mono text-xs font-black text-cei-shadow transition ${
+              className={`inline-flex min-h-11 items-center rounded-sm border border-cei-shadow/45 px-4 text-sm font-bold text-cei-shadow transition ${
                 activeSection === "oportunidades" ? "xp-button" : "bg-white/70 hover:bg-white"
               }`}
               href="/novedades?seccion=oportunidades"

@@ -42,17 +42,17 @@ export function EventCard({ event }: EventCardProps) {
       >
         {event.title}
       </h3>
-      <dl className="mt-3 grid gap-2 text-sm text-slate-800 sm:mt-4 sm:grid-cols-2">
+      <dl className="mt-3 grid gap-2 text-slate-800 sm:mt-4 sm:grid-cols-2">
         <div className="rounded-sm border border-cei-shadow/35 bg-white/80 px-3 py-2">
-          <dt className="font-mono text-xs font-black uppercase text-cei-shadow">{event.dateTitle ?? "Fecha"}</dt>
-          <dd className="font-bold">{event.date}</dd>
+          <dt className="ui-meta-label text-cei-shadow">{event.dateTitle ?? "Fecha"}</dt>
+          <dd className="ui-meta-value mt-0.5">{event.date}</dd>
         </div>
         <div className="rounded-sm border border-cei-shadow/35 bg-white/80 px-3 py-2">
-          <dt className="font-mono text-xs font-black uppercase text-cei-shadow">Lugar</dt>
-          <dd className="font-bold">{event.place}</dd>
+          <dt className="ui-meta-label text-cei-shadow">Lugar</dt>
+          <dd className="ui-meta-value mt-0.5">{event.place}</dd>
         </div>
       </dl>
-      <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-800 sm:mt-4 sm:text-base sm:leading-7">
+      <p className="mt-3 max-w-3xl text-base leading-7 text-slate-800 sm:mt-4">
         {event.description}
       </p>
       <div className="mt-4 sm:mt-5">

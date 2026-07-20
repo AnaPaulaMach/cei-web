@@ -29,13 +29,13 @@ export function EventBoard({
     <XPWindow title={windowTitle}>
       <div className="mb-4 flex flex-col gap-3 sm:mb-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <p className="terminal-text text-xs font-bold uppercase sm:text-sm">events.sys</p>
+          <p className="terminal-text ui-kicker">events.sys</p>
           <h2 className="text-2xl font-black text-cei-shadow sm:text-3xl md:text-4xl">{title}</h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-800 sm:text-base sm:leading-7">
+          <p className="mt-2 max-w-2xl text-base leading-7 text-slate-800">
             {description}
           </p>
         </div>
-        <div className="inline-flex min-h-11 w-fit items-center gap-2 rounded-sm border border-cei-shadow/50 bg-white/80 px-3 font-mono text-[11px] font-black text-cei-shadow sm:text-xs">
+        <div className="inline-flex min-h-11 w-fit items-center gap-2 rounded-sm border border-cei-shadow/50 bg-white/80 px-3 text-sm font-semibold text-cei-shadow">
           <span className="h-3 w-3 animate-pulse rounded-full bg-cei-terminal" />
           {events.length} {statusLabel}
         </div>
@@ -48,7 +48,7 @@ export function EventBoard({
           ))}
         </div>
       ) : (
-        <div className="rounded-sm border border-dashed border-cei-shadow bg-white p-6 text-center font-mono font-bold text-cei-shadow">
+        <div className="rounded-sm border border-dashed border-cei-shadow bg-white p-6 text-center font-semibold text-cei-shadow">
           {emptyMessage}
         </div>
       )}

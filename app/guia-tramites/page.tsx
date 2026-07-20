@@ -49,7 +49,7 @@ export default function GuiaTramitesPage() {
         <XPWindow title="guia/tramites">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
-              <p className="terminal-text text-sm font-bold uppercase">manual rápido</p>
+              <p className="terminal-text ui-kicker">manual rápido</p>
               <h1 className="mt-2 text-4xl font-black leading-tight text-cei-shadow">
                 Guía de trámites
               </h1>
@@ -59,7 +59,7 @@ export default function GuiaTramitesPage() {
                 Un espacio para reunir pasos, enlaces y recomendaciones sobre trámites frecuentes de las carreras de
                 informática de la Universidad Nacional de Santiago del Estero.
               </p>
-              <p className="text-sm font-bold text-cei-shadow">
+              <p className="ui-small-copy font-semibold text-cei-shadow">
                 Esta sección puede crecer con aportes de estudiantes y consultas que se repitan durante el cursado.
               </p>
             </div>
@@ -76,11 +76,11 @@ export default function GuiaTramitesPage() {
                   {group.shortName}
                 </span>
                 <div>
-                  <p className="font-mono text-xs font-black uppercase text-cei-shadow">carrera</p>
+                  <p className="ui-meta-label text-cei-shadow">carrera</p>
                   <h2 className="mt-1 text-xl font-black leading-tight text-cei-shadow">{group.career}</h2>
                 </div>
               </div>
-              <ul className="space-y-3 text-sm leading-6 text-slate-800">
+              <ul className="space-y-3 text-base leading-7 text-slate-800">
                 {group.items.map((item) => (
                   <li className="rounded-sm border border-cei-shadow/30 bg-cei-window px-3 py-2" key={item}>
                     {item}
@@ -95,7 +95,7 @@ export default function GuiaTramitesPage() {
       <Section>
         <Card className="flex flex-col gap-4 bg-cei-window sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="font-mono text-xs font-black uppercase text-cei-shadow">¿Falta algo?</p>
+            <p className="ui-kicker text-cei-shadow">¿Falta algo?</p>
             <p className="mt-1 max-w-2xl leading-7 text-slate-800">
               Si hay un trámite que se repite o una guía que conviene sumar, podés avisarnos por los canales oficiales.
             </p>

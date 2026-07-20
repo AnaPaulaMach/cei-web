@@ -10,7 +10,7 @@ type ButtonProps = {
 
 export function Button({ children, href, variant = "primary", className = "" }: ButtonProps) {
   const classes = [
-    "xp-button inline-flex items-center justify-center rounded-sm px-4 py-2 font-mono text-sm font-black transition",
+    "xp-button inline-flex items-center justify-center rounded-sm px-4 py-2 font-mono text-[15px] font-bold leading-5 transition",
     variant === "primary" ? "text-cei-shadow" : "bg-white text-cei-shadow",
     className
   ].join(" ");
